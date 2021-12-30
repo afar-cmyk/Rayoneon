@@ -1,10 +1,14 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
 
 export default function Portafolio() {
   return (
     <div>
-      <p>Esta es la pagina </p>
-      <bold>Portafolio</bold>
+      <NavBar />
+      <br />
+      <p>
+        Esta es la pagina <b>Portafolio</b>
+      </p>
     </div>
   )
 }

@@ -1,10 +1,14 @@
 import React from 'react'
+import NavBar from '../components/NavBar'
 
 export default function Contacto() {
   return (
     <div>
-      <p>Esta es la pagina </p>
-      <bold>Contacto</bold>
+      <NavBar />
+      <br />
+      <p>
+        Esta es la pagina <b>Contacto</b>
+      </p>
     </div>
   )
 }
