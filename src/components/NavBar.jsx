@@ -35,44 +35,22 @@ export default function NavBar(props) {
   }
   const inactivo = { color: 'inherit', textDecoration: 'none' }
 
-  let barraUno = false
-  let barraDos = false
-  let barraTres = false
-  let barraCuatro = false
-  let barraCinco = false
-
-  if (props.estado === 1) {
-    barraUno = true
-  }
-  if (props.estado === 2) {
-    barraDos = true
-  }
-  if (props.estado === 3) {
-    barraTres = true
-  }
-  if (props.estado === 4) {
-    barraCuatro = true
-  }
-  if (props.estado === 5) {
-    barraCinco = true
-  }
-
   return (
     <div>
       <Box sx={{ display: 'flex', flexDirection: 'row', gap: 3 }}>
-        <Link to={indice.ruta} style={barraUno ? activo : inactivo}>
+        <Link to={indice.ruta} activeStyle={activo} style={inactivo}>
           {indice.etiqueta}
         </Link>
-        <Link to={nosotros.ruta} style={barraDos ? activo : inactivo}>
+        <Link to={nosotros.ruta} activeStyle={activo} style={inactivo}>
           {nosotros.etiqueta}
         </Link>
-        <Link to={productos.ruta} style={barraTres ? activo : inactivo}>
+        <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
           {productos.etiqueta}
         </Link>
-        <Link to={portafolio.ruta} style={barraCuatro ? activo : inactivo}>
+        <Link to={portafolio.ruta} activeStyle={activo} style={inactivo}>
           {portafolio.etiqueta}
         </Link>
-        <Link to={contacto.ruta} style={barraCinco ? activo : inactivo}>
+        <Link to={contacto.ruta} activeStyle={activo} style={inactivo}>
           {contacto.etiqueta}
         </Link>
       </Box>
