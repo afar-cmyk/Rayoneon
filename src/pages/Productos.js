@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 export default function Productos() {
   return (
     <div>
-      <NavBar />
+      <NavBar estado={3} />
       <br />
       <p>
         Esta es la pagina <b>Productos</b>

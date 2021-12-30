@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 export default function index() {
   return (
     <div>
-      <NavBar />
+      <NavBar estado={1} />
       <br />
       <p>
         Esta es la pagina <b>Index</b>

@@ -4,7 +4,7 @@ import NavBar from '../components/NavBar'
 export default function Portafolio() {
   return (
     <div>
-      <NavBar />
+      <NavBar estado={4} />
       <br />
       <p>
         Esta es la pagina <b>Portafolio</b>
