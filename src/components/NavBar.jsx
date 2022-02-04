@@ -8,10 +8,6 @@ export default function NavBar(props) {
       ruta: '/',
       etiqueta: 'Index'
     },
-    nosotros: {
-      ruta: '/Nosotros/',
-      etiqueta: 'Nosotros'
-    },
     productos: {
       ruta: '/Productos/',
       etiqueta: 'Productos'
@@ -26,7 +22,7 @@ export default function NavBar(props) {
     }
   }
 
-  const { indice, nosotros, productos, portafolio, contacto } = rutas
+  const { indice, productos, portafolio, contacto } = rutas
 
   const activo = {
     color: '#F2F2F2',
@@ -41,9 +37,6 @@ export default function NavBar(props) {
         <Box sx={{ ...links }}>
           <Link to={indice.ruta} activeStyle={activo} style={inactivo}>
             {indice.etiqueta}
-          </Link>
-          <Link to={nosotros.ruta} activeStyle={activo} style={inactivo}>
-            {nosotros.etiqueta}
           </Link>
           <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
             {productos.etiqueta}
