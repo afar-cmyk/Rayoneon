@@ -61,6 +61,9 @@ export default function NavBar(props) {
 }
 
 const links = {
+  fontFamily: `'Baloo 2'`,
+  fontStyle: 'normal',
+  fontWeight: 600,
   display: 'flex',
   flexDirection: 'row',
   gap: 3,
