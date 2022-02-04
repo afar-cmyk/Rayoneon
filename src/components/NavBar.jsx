@@ -29,7 +29,7 @@ export default function NavBar(props) {
   const { indice, nosotros, productos, portafolio, contacto } = rutas
 
   const activo = {
-    color: 'red',
+    color: '#F2F2F2',
     textDecoration: 'none',
     fontWeight: '700'
   }
