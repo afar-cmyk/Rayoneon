@@ -37,23 +37,37 @@ export default function NavBar(props) {
 
   return (
     <div>
-      <Box sx={{ display: 'flex', flexDirection: 'row', gap: 3 }}>
-        <Link to={indice.ruta} activeStyle={activo} style={inactivo}>
-          {indice.etiqueta}
-        </Link>
-        <Link to={nosotros.ruta} activeStyle={activo} style={inactivo}>
-          {nosotros.etiqueta}
-        </Link>
-        <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
-          {productos.etiqueta}
-        </Link>
-        <Link to={portafolio.ruta} activeStyle={activo} style={inactivo}>
-          {portafolio.etiqueta}
-        </Link>
-        <Link to={contacto.ruta} activeStyle={activo} style={inactivo}>
-          {contacto.etiqueta}
-        </Link>
+      <Box sx={{ ...barraPrincipal }}>
+        <Box sx={{ ...links }}>
+          <Link to={indice.ruta} activeStyle={activo} style={inactivo}>
+            {indice.etiqueta}
+          </Link>
+          <Link to={nosotros.ruta} activeStyle={activo} style={inactivo}>
+            {nosotros.etiqueta}
+          </Link>
+          <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
+            {productos.etiqueta}
+          </Link>
+          <Link to={portafolio.ruta} activeStyle={activo} style={inactivo}>
+            {portafolio.etiqueta}
+          </Link>
+          <Link to={contacto.ruta} activeStyle={activo} style={inactivo}>
+            {contacto.etiqueta}
+          </Link>
+        </Box>
       </Box>
     </div>
   )
+}
+
+const links = {
+  display: 'flex',
+  flexDirection: 'row',
+  gap: 3,
+  color: '#CCCCCC'
+}
+
+const barraPrincipal = {
+  height: '3.646vw',
+  background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
 }
