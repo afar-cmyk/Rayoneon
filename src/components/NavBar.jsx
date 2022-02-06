@@ -55,15 +55,16 @@ export default function NavBar(props) {
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
           <Box
+            className='padre'
             sx={{
               display: 'flex'
             }}
           >
-            <Box className='padre' sx={{ ...dosPrueba }}>
+            <Box className='fondoBoton' sx={{ ...fondoBoton }}>
               <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
                 {productos.etiqueta}
               </Link>
-              <Box className='indicador' sx={{ ...unoPrueba }} />
+              <Box className='indicador' sx={{ ...indicador }} />
             </Box>
           </Box>
 
@@ -82,7 +83,7 @@ export default function NavBar(props) {
   )
 }
 
-const unoPrueba = {
+const indicador = {
   background: 'rgba(175, 40, 162, 1)',
   border: '1px solid rgba(175, 40, 162, 1)',
   boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
@@ -90,14 +91,13 @@ const unoPrueba = {
   width: '100%',
   height: '3px',
   borderRadius: '4px',
-  '&:active': {
-    background: '#E61ED3'
+  ':active': {
+    background: '#E61ED3',
+    border: '1px solid #E61ED3'
   }
 }
 
-const khe = { backgroundColor: '#FFFFFF1A' }
-
-const dosPrueba = {
+const fondoBoton = {
   backgroundColor: '#FFFFFF00',
   width: '100%',
   borderRadius: '6px',
@@ -105,8 +105,7 @@ const dosPrueba = {
   display: 'flex',
   flexDirection: 'column',
   gap: '1px',
-  ':active': khe
-  // '.indicador:active': { background: '#FFFFFF' }
+  ':active': { backgroundColor: '#FFFFFF1A' }
 }
 
 const logo = {
@@ -114,7 +113,7 @@ const logo = {
   fontWeight: 600,
   fontSize: { xs: '21.3px', sm: '43px' },
   marginLeft: '75px',
-  '&:hover': {
+  ':hover': {
     color: 'yellow'
   }
 }
