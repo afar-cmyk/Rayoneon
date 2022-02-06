@@ -37,6 +37,8 @@ export default function NavBar(props) {
     }
   }
 
+  // Crear un componente que contenga a los links y tenga el comportamiento de activo y hover
+
   return (
     <div>
       <Box sx={{ ...barraPrincipal }}>
@@ -52,11 +54,17 @@ export default function NavBar(props) {
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <Box>
-            <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
-              {productos.etiqueta}
-            </Link>
-            <Box sx={{ ...unoPrueba }} />
+          <Box
+            sx={{
+              display: 'flex'
+            }}
+          >
+            <Box className='padre' sx={{ ...dosPrueba }}>
+              <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
+                {productos.etiqueta}
+              </Link>
+              <Box className='indicador' sx={{ ...unoPrueba }} />
+            </Box>
           </Box>
 
           <Link to={productos.ruta} activeStyle={activo} style={inactivo}>
@@ -81,7 +89,24 @@ const unoPrueba = {
   boxSizing: 'border-box',
   width: '100%',
   height: '3px',
-  borderRadius: '4px'
+  borderRadius: '4px',
+  '&:active': {
+    background: '#E61ED3'
+  }
+}
+
+const khe = { backgroundColor: '#FFFFFF1A' }
+
+const dosPrueba = {
+  backgroundColor: '#FFFFFF00',
+  width: '100%',
+  borderRadius: '6px',
+  padding: '6px',
+  display: 'flex',
+  flexDirection: 'column',
+  gap: '1px',
+  ':active': khe
+  // '.indicador:active': { background: '#FFFFFF' }
 }
 
 const logo = {
