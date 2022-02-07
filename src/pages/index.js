@@ -1,5 +1,5 @@
 import React from 'react'
-import NavBar from '../components/NavBar'
+import NavBar from '../components/navigation/NavBar'
 import '../styles/global.css'
 
 export default function index() {
