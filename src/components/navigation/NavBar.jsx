@@ -35,28 +35,33 @@ export default function NavBar(props) {
     <div>
       <Box sx={{ ...barraPrincipal }}>
         {/* Logo que al presionarlo lleva al index */}
-        <Box sx={{ ...logo }}>
-          <Link to='/' activeStyle={{ ...activo }} style={{ ...inactivo }}>
+        <Box sx={{ ...contenedorLogo }}>
+          <Link
+            to='/'
+            activeClassName='activo'
+            className='logo'
+            activeStyle={{ ...activo }}
+            style={{ ...inactivo }}
+          >
             diluminar
           </Link>
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <SeccionesBarra rutas={rutasArray} />
+          <SeccionesBarra datos={rutasArray} />
         </Box>
       </Box>
     </div>
   )
 }
 
-const logo = {
+const contenedorLogo = {
   fontFamily: `'Baloo 2'`,
   fontWeight: 600,
   fontSize: { xs: '21.3px', sm: '43px' },
   marginLeft: '75px',
-  ':hover': {
-    color: 'yellow'
-  }
+  '&:hover .logo': { color: '#F2F2F2 !important' },
+  '&:hover .logo.activo': { color: '#CCCCCC !important' }
 }
 
 const links = {

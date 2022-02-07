@@ -4,7 +4,7 @@ import { Box } from '@mui/material'
 
 export default function SeccionesBarra(props) {
   // Array con rutas que llegan desde el padre de este componente
-  const rutasMenu = props.rutas
+  const rutasMenu = props.datos
 
   // Estilos para los enlaces
   const activo = {
