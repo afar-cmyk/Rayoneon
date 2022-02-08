@@ -106,5 +106,4 @@ const fondoBoton = {
   alignContent: 'center',
   justifyContent: 'center',
   alignItems: 'center'
-  // gap: '1px'
 }
