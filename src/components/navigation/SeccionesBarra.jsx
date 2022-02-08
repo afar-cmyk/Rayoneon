@@ -27,9 +27,13 @@ export default function SeccionesBarra(props) {
     border: '1px solid rgba(175, 40, 162, 1)',
     boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
     boxSizing: 'border-box',
-    width: '100%',
+    width: '95%',
     height: '3px',
-    borderRadius: '4px'
+    borderRadius: '4px',
+    alignContent: 'center',
+    alignItems: 'center',
+    flexDirection: 'column',
+    marginTop: '-2px'
   }
 
   return (
@@ -42,8 +46,13 @@ export default function SeccionesBarra(props) {
             className='contenedorPrincipal'
             sx={contenedorPrincipal}
           >
-            <Box className='fondoBoton' sx={fondoBoton}>
+            <Box
+              onClick={() => document.getElementById('link' + etiqueta).click()}
+              className='fondoBoton'
+              sx={fondoBoton}
+            >
               <Link
+                id={'link' + etiqueta}
                 to={ruta}
                 activeClassName='activo'
                 className='enlace'
@@ -52,11 +61,11 @@ export default function SeccionesBarra(props) {
               >
                 {etiqueta}
               </Link>
-              <Box
-                className='indicador'
-                sx={{ ...indicador, display: activo ? 'flex' : 'none' }}
-              />
             </Box>
+            <Box
+              className='indicador'
+              sx={{ ...indicador, display: activo ? 'flex' : 'none' }}
+            />
           </Box>
         )
       })}
@@ -66,6 +75,10 @@ export default function SeccionesBarra(props) {
 
 const contenedorPrincipal = {
   display: 'flex',
+  flexDirection: 'column',
+  alignContent: 'center',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 
   '&:active .fondoBoton': {
     backgroundColor: '#FFFFFF1A'
@@ -87,8 +100,11 @@ const fondoBoton = {
   backgroundColor: '#FFFFFF00',
   width: '100%',
   borderRadius: '6px',
-  padding: '6px',
+  padding: '2px',
   display: 'flex',
   flexDirection: 'column',
-  gap: '1px'
+  alignContent: 'center',
+  justifyContent: 'center',
+  alignItems: 'center'
+  // gap: '1px'
 }

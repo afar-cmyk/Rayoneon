@@ -86,7 +86,7 @@ const links = {
   fontSize: '18px',
   display: 'flex',
   flexDirection: 'row',
-  gap: 3,
+  gap: 4,
   color: '#CCCCCC',
   marginRight: '75px'
 }
