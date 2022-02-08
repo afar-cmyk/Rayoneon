@@ -25,14 +25,13 @@ export default function NavBar(props) {
     }
   ]
 
+  // Comprueba que pagina se ecuentra activa y asigna el estado en el arrego
   if (estado === 0) {
     rutasArray[0].activo = true
   } else if (estado === 1) {
     rutasArray[1].activo = true
   } else if (estado === 2) {
     rutasArray[2].activo = true
-  } else {
-    console.log('Agregue el estado correspondiente al componente navBar')
   }
 
   // Estilos para los enlaces
@@ -63,7 +62,7 @@ export default function NavBar(props) {
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <SeccionesBarra estado={estado} datos={rutasArray} />
+          <SeccionesBarra datos={rutasArray} />
         </Box>
       </Box>
     </div>
@@ -86,6 +85,9 @@ const links = {
   fontSize: '18px',
   display: 'flex',
   flexDirection: 'row',
+  alignContent: 'center',
+  alignItems: 'center',
+  justifyContent: 'center',
   gap: 4,
   color: '#CCCCCC',
   marginRight: '75px'

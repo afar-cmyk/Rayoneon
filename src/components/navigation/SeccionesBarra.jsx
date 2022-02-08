@@ -5,9 +5,6 @@ import { Box } from '@mui/material'
 export default function SeccionesBarra(props) {
   // Array con rutas que llegan desde el padre de este componente
   const rutasMenu = props.datos
-  const estado = props.estado
-
-  console.log(estado)
 
   // Estilos para los enlaces
   const estiloActivo = {
@@ -20,8 +17,7 @@ export default function SeccionesBarra(props) {
     textDecoration: 'none'
   }
 
-  // hacer que el indicador solo aparezca en la pagina activa
-
+  // Estilos del indicador
   const indicador = {
     background: 'rgba(175, 40, 162, 1)',
     border: '1px solid rgba(175, 40, 162, 1)',
