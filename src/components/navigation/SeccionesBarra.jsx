@@ -5,39 +5,57 @@ import { Box } from '@mui/material'
 export default function SeccionesBarra(props) {
   // Array con rutas que llegan desde el padre de este componente
   const rutasMenu = props.datos
+  const estado = props.estado
+
+  console.log(estado)
 
   // Estilos para los enlaces
-  const activo = {
+  const estiloActivo = {
     color: '#F2F2F2',
     textDecoration: 'none'
   }
 
-  const inactivo = {
+  const estiloInactivo = {
     color: '#CCCCCC',
     textDecoration: 'none'
+  }
+
+  // hacer que el indicador solo aparezca en la pagina activa
+
+  const indicador = {
+    background: 'rgba(175, 40, 162, 1)',
+    border: '1px solid rgba(175, 40, 162, 1)',
+    boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
+    boxSizing: 'border-box',
+    width: '100%',
+    height: '3px',
+    borderRadius: '4px'
   }
 
   return (
     <>
       {rutasMenu.map((datos, index) => {
-        const { ruta, etiqueta } = datos
+        const { ruta, etiqueta, activo } = datos
         return (
           <Box
             key={index}
             className='contenedorPrincipal'
-            sx={{ ...contenedorPrincipal }}
+            sx={contenedorPrincipal}
           >
-            <Box className='fondoBoton' sx={{ ...fondoBoton }}>
+            <Box className='fondoBoton' sx={fondoBoton}>
               <Link
                 to={ruta}
                 activeClassName='activo'
                 className='enlace'
-                activeStyle={activo}
-                style={inactivo}
+                activeStyle={estiloActivo}
+                style={estiloInactivo}
               >
                 {etiqueta}
               </Link>
-              <Box className='indicador' sx={{ ...indicador }} />
+              <Box
+                className='indicador'
+                sx={{ ...indicador, display: activo ? 'flex' : 'none' }}
+              />
             </Box>
           </Box>
         )
@@ -63,16 +81,6 @@ const contenedorPrincipal = {
     color: '#F2F2F2 !important'
   },
   cursor: 'pointer'
-}
-
-const indicador = {
-  background: 'rgba(175, 40, 162, 1)',
-  border: '1px solid rgba(175, 40, 162, 1)',
-  boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
-  boxSizing: 'border-box',
-  width: '100%',
-  height: '3px',
-  borderRadius: '4px'
 }
 
 const fondoBoton = {

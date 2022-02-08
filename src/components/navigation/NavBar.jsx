@@ -4,29 +4,44 @@ import { Box } from '@mui/material'
 import SeccionesBarra from '../navigation/SeccionesBarra'
 
 export default function NavBar(props) {
+  const estado = props.estado
+
   // Arreglo con los enlaces que tendra la barra de navegación
   const rutasArray = [
     {
       ruta: '/Productos/',
-      etiqueta: 'Productos'
+      etiqueta: 'Productos',
+      activo: false
     },
     {
       ruta: '/Portafolio/',
-      etiqueta: 'Portafolio'
+      etiqueta: 'Portafolio',
+      activo: false
     },
     {
       ruta: '/Contacto/',
-      etiqueta: 'Contacto'
+      etiqueta: 'Contacto',
+      activo: false
     }
   ]
 
+  if (estado === 0) {
+    rutasArray[0].activo = true
+  } else if (estado === 1) {
+    rutasArray[1].activo = true
+  } else if (estado === 2) {
+    rutasArray[2].activo = true
+  } else {
+    console.log('Agregue el estado correspondiente al componente navBar')
+  }
+
   // Estilos para los enlaces
-  const activo = {
+  const estiloActivo = {
     color: '#F2F2F2',
     textDecoration: 'none'
   }
 
-  const inactivo = {
+  const estiloInactivo = {
     color: '#CCCCCC',
     textDecoration: 'none'
   }
@@ -40,15 +55,15 @@ export default function NavBar(props) {
             to='/'
             activeClassName='activo'
             className='logo'
-            activeStyle={{ ...activo }}
-            style={{ ...inactivo }}
+            activeStyle={{ ...estiloActivo }}
+            style={{ ...estiloInactivo }}
           >
             diluminar
           </Link>
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <SeccionesBarra datos={rutasArray} />
+          <SeccionesBarra estado={estado} datos={rutasArray} />
         </Box>
       </Box>
     </div>
