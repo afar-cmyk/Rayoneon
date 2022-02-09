@@ -29,7 +29,16 @@ export default function SeccionesBarra(props) {
     alignContent: 'center',
     alignItems: 'center',
     flexDirection: 'column',
-    marginTop: '-2px'
+    marginTop: '-2px',
+    animation: 'fadeIn 550ms',
+    '@keyframes fadeIn': {
+      from: {
+        opacity: 0
+      },
+      to: {
+        opacity: 1
+      }
+    }
   }
 
   return (
