@@ -24,11 +24,8 @@ const StyledMenu = styled((props) => (
   '& .MuiPaper-root': {
     borderRadius: 4,
     marginTop: theme.spacing(0.5),
-    minWidth: 130,
-    color:
-      theme.palette.mode === 'light'
-        ? 'rgb(55, 65, 81)'
-        : theme.palette.grey[300],
+    minWidth: 120,
+    background: '#192940',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
@@ -137,7 +134,16 @@ export default function NavBar(props) {
             open={open}
             onClose={handleClose}
           >
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                '&:hover': {
+                  textDecoration: 'none',
+                  backgroundColor: 'rgb(255 255 255 / 8%)'
+                }
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               <Link
                 to='/Productos/'
                 activeClassName='activo'
@@ -148,7 +154,16 @@ export default function NavBar(props) {
                 Productos
               </Link>
             </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                '&:hover': {
+                  textDecoration: 'none',
+                  backgroundColor: 'rgb(255 255 255 / 8%)'
+                }
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               <Link
                 to='/Portafolio/'
                 activeClassName='activo'
@@ -159,7 +174,16 @@ export default function NavBar(props) {
                 Portafolio
               </Link>
             </MenuItem>
-            <MenuItem onClick={handleClose} disableRipple>
+            <MenuItem
+              sx={{
+                '&:hover': {
+                  textDecoration: 'none',
+                  backgroundColor: 'rgb(255 255 255 / 8%)'
+                }
+              }}
+              onClick={handleClose}
+              disableRipple
+            >
               <Link
                 to='/Contacto/'
                 activeClassName='activo'
