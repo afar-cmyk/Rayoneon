@@ -64,7 +64,7 @@ export default function NavBar(props) {
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
           <SeccionesBarra datos={rutasArray} />
-          <SeccionesResponsive></SeccionesResponsive>
+          <SeccionesResponsive datos={rutasArray} />
         </Box>
       </Box>
     </div>

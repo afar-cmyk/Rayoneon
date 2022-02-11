@@ -22,7 +22,7 @@ const StyledMenu = styled((props) => (
   '& .MuiPaper-root': {
     borderRadius: 4,
     marginTop: theme.spacing(0.5),
-    minWidth: 120,
+    minWidth: 100,
     background: '#192940',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
@@ -33,6 +33,9 @@ const StyledMenu = styled((props) => (
 }))
 
 export default function SeccionesResponsive(props) {
+  // Array con rutas que llegan desde el padre de este componente
+  const rutasMenu = props.datos
+
   // Estilos para los enlaces
   const estiloActivo = {
     color: '#F2F2F2',
@@ -42,12 +45,6 @@ export default function SeccionesResponsive(props) {
   const estiloInactivo = {
     color: '#CCCCCC',
     textDecoration: 'none'
-  }
-
-  const [checked, setChecked] = React.useState(false)
-
-  const handleChange = () => {
-    setChecked((prev) => !prev)
   }
 
   const containerRef = React.useRef(null)
@@ -60,10 +57,16 @@ export default function SeccionesResponsive(props) {
   const handleClose = () => {
     setAnchorEl(null)
   }
+
+  if (document.getElementById('demo-customized-menu') === 'display="none"') {
+    console.log('escondido')
+  } else {
+    console.log('no funciono')
+  }
+
   return (
     <>
       <MenuRoundedIcon
-        checked={checked}
         onClick={handleClick}
         className='menuHambuerguesa'
         ref={containerRef}
@@ -84,67 +87,40 @@ export default function SeccionesResponsive(props) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
+        sx={{ display: { xs: 'flex', sm: 'none' } }}
       >
-        <MenuItem
-          sx={{
-            '&:hover': {
-              textDecoration: 'none',
-              backgroundColor: 'rgb(255 255 255 / 8%)'
-            }
-          }}
-          onClick={handleClose}
-          disableRipple
-        >
-          <Link
-            to='/Productos/'
-            activeClassName='activo'
-            className='logo'
-            activeStyle={{ ...estiloActivo }}
-            style={{ ...estiloInactivo }}
-          >
-            Productos
-          </Link>
-        </MenuItem>
-        <MenuItem
-          sx={{
-            '&:hover': {
-              textDecoration: 'none',
-              backgroundColor: 'rgb(255 255 255 / 8%)'
-            }
-          }}
-          onClick={handleClose}
-          disableRipple
-        >
-          <Link
-            to='/Portafolio/'
-            activeClassName='activo'
-            className='logo'
-            activeStyle={{ ...estiloActivo }}
-            style={{ ...estiloInactivo }}
-          >
-            Portafolio
-          </Link>
-        </MenuItem>
-        <MenuItem
-          sx={{
-            '&:hover': {
-              textDecoration: 'none',
-              backgroundColor: 'rgb(255 255 255 / 8%)'
-            }
-          }}
-          onClick={handleClose}
-          disableRipple
-        >
-          <Link
-            to='/Contacto/'
-            activeClassName='activo'
-            className='logo'
-            activeStyle={{ ...estiloActivo }}
-            style={{ ...estiloInactivo }}
-          >
-            Contacto
-          </Link>
-        </MenuItem>
+        {rutasMenu.map((datos, index) => {
+          const { ruta, etiqueta, activo } = datos
+          return (
+            <MenuItem
+              key={index}
+              sx={{
+                border: activo ? '1px solid rgba(175, 40, 162, 1)' : 'none',
+                borderRadius: 1,
+                '&:hover': {
+                  textDecoration: 'none',
+                  backgroundColor: 'rgb(255 255 255 / 8%)'
+                }
+              }}
+              onClick={() => {
+                document.getElementById('link' + etiqueta).click()
+                handleClose()
+              }}
+              disableRipple
+            >
+              <Link
+                id={'link' + etiqueta}
+                to={ruta}
+                activeClassName='activo'
+                className='enlace'
+                activeStyle={estiloActivo}
+                style={estiloInactivo}
+              >
+                {etiqueta}
+              </Link>
+            </MenuItem>
+          )
+        })}
       </StyledMenu>
     </>
   )
