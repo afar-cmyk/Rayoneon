@@ -30,7 +30,7 @@ export default function SeccionesBarra(props) {
     alignItems: 'center',
     flexDirection: 'column',
     marginTop: '-2px',
-    animation: 'fadeIn 550ms',
+    animation: 'fadeIn 500ms',
     '@keyframes fadeIn': {
       from: {
         opacity: 0
@@ -79,7 +79,7 @@ export default function SeccionesBarra(props) {
 }
 
 const contenedorPrincipal = {
-  display: 'flex',
+  display: { xs: 'none', sm: 'flex' },
   flexDirection: 'column',
   alignContent: 'center',
   justifyContent: 'space-between',
