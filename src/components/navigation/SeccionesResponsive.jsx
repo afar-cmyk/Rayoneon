@@ -1,9 +1,12 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
+import CloseIcon from '@mui/icons-material/Close'
 import Menu from '@mui/material/Menu'
 import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
+import useMediaQuery from '@mui/material/useMediaQuery'
+import { useTheme } from '@mui/material/styles'
 
 const StyledMenu = styled((props) => (
   <Menu
@@ -39,13 +42,23 @@ export default function SeccionesResponsive(props) {
   // Estilos para los enlaces
   const estiloActivo = {
     color: '#F2F2F2',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontFamily: 'Assistant',
+    fontStyle: 'normal',
+    fontWeight: 600,
+    fontSize: '18px'
   }
 
   const estiloInactivo = {
     color: '#CCCCCC',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    fontFamily: 'Assistant',
+    fontStyle: 'normal',
+    fontWeight: 400,
+    fontSize: '18px'
   }
+
+  const [menuActivo, setmenuActivo] = React.useState(false)
 
   const containerRef = React.useRef(null)
 
@@ -58,15 +71,19 @@ export default function SeccionesResponsive(props) {
     setAnchorEl(null)
   }
 
-  if (document.getElementById('demo-customized-menu') === 'display="none"') {
-    console.log('escondido')
-  } else {
-    console.log('no funciono')
-  }
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.up('sm'))
+
+  React.useEffect(() => {
+    if (matches === true) {
+      handleClose()
+    }
+  }, [matches])
 
   return (
     <>
       <MenuRoundedIcon
+        component={menuActivo ? CloseIcon : MenuRoundedIcon}
         onClick={handleClick}
         className='menuHambuerguesa'
         ref={containerRef}
@@ -95,12 +112,24 @@ export default function SeccionesResponsive(props) {
             <MenuItem
               key={index}
               sx={{
+                ...contenedorPrincipal,
                 border: activo ? '1px solid rgba(175, 40, 162, 1)' : 'none',
+                boxShadow: activo
+                  ? '0px 0px 7px 4px rgba(175, 40, 162, 0.25)'
+                  : 'none',
+                boxSizing: 'border-box',
                 borderRadius: 1,
                 '&:hover': {
                   textDecoration: 'none',
                   backgroundColor: 'rgb(255 255 255 / 8%)'
-                }
+                },
+                '&:hover .activo': {
+                  color: '#FFFFFF !important'
+                },
+                '&:hover .enlace': {
+                  color: '#F2F2F2 !important'
+                },
+                cursor: 'pointer'
               }}
               onClick={() => {
                 document.getElementById('link' + etiqueta).click()
@@ -124,4 +153,19 @@ export default function SeccionesResponsive(props) {
       </StyledMenu>
     </>
   )
+}
+
+const contenedorPrincipal = {
+  display: 'flex',
+  flexDirection: 'column',
+  alignContent: 'center',
+  justifyContent: 'center',
+  alignItems: 'center',
+  '&:hover .activo': {
+    color: '#FFFFFF !important'
+  },
+  '&:hover .enlace': {
+    color: '#F2F2F2 !important'
+  },
+  cursor: 'pointer'
 }
