@@ -7,12 +7,14 @@ import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
+import IconoMenuResponsive from './IconoMenuResponsive'
+import IconButton from '@mui/material/IconButton'
 
 const StyledMenu = styled((props) => (
   <Menu
     elevation={0}
     anchorOrigin={{
-      vertical: 'bottom',
+      vertical: 'top',
       horizontal: 'right'
     }}
     transformOrigin={{
@@ -58,8 +60,6 @@ export default function SeccionesResponsive(props) {
     fontSize: '18px'
   }
 
-  const [menuActivo, setmenuActivo] = React.useState(false)
-
   const containerRef = React.useRef(null)
 
   const [anchorEl, setAnchorEl] = React.useState(null)
@@ -74,16 +74,19 @@ export default function SeccionesResponsive(props) {
   const theme = useTheme()
   const matches = useMediaQuery(theme.breakpoints.up('sm'))
 
+  const [clicked, setClicked] = React.useState()
+
   React.useEffect(() => {
     if (matches === true) {
       handleClose()
+      setClicked(false)
     }
   }, [matches])
 
   return (
     <>
-      <MenuRoundedIcon
-        component={menuActivo ? CloseIcon : MenuRoundedIcon}
+      {/* <MenuRoundedIcon
+        component={open ? CloseIcon : MenuRoundedIcon}
         onClick={handleClick}
         className='menuHambuerguesa'
         ref={containerRef}
@@ -95,16 +98,43 @@ export default function SeccionesResponsive(props) {
           display: { xs: 'flex', sm: 'none' },
           cursor: 'pointer'
         }}
-      />
+      /> */}
+      <IconButton
+        sx={{
+          width: '1.2em',
+          height: '1.2em',
+          color: '#CCCCCC',
+          '&:hover': { color: '#f2f2f2' },
+          display: { xs: 'flex', sm: 'none' },
+          cursor: 'pointer'
+        }}
+        onClick={() => setClicked(!clicked)}
+      >
+        {clicked ? (
+          <CloseIcon
+            sx={{
+              cursor: 'pointer !important'
+            }}
+          />
+        ) : (
+          <MenuRoundedIcon onClick={handleClick} anchorEl={anchorEl} />
+        )}
+      </IconButton>
       <StyledMenu
         id='demo-customized-menu'
         MenuListProps={{
           'aria-labelledby': 'demo-customized-button'
         }}
-        anchorEl={anchorEl}
         open={open}
-        onClose={handleClose}
-        sx={{ display: { xs: 'flex', sm: 'none' } }}
+        onClose={() => {
+          setClicked(!clicked)
+          handleClose()
+        }}
+        sx={{
+          marginTop: '30px',
+          left: '-25px',
+          display: { xs: 'flex', sm: 'none' }
+        }}
       >
         {rutasMenu.map((datos, index) => {
           const { ruta, etiqueta, activo } = datos
