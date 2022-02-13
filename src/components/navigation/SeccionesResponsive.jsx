@@ -109,15 +109,12 @@ export default function SeccionesResponsive(props) {
           cursor: 'pointer'
         }}
         onClick={() => setClicked(!clicked)}
+        anchorel={anchorEl}
       >
         {clicked ? (
-          <CloseIcon
-            sx={{
-              cursor: 'pointer !important'
-            }}
-          />
+          <CloseIcon />
         ) : (
-          <MenuRoundedIcon onClick={handleClick} anchorEl={anchorEl} />
+          <MenuRoundedIcon onClick={handleClick} anchorel={anchorEl} />
         )}
       </IconButton>
       <StyledMenu
