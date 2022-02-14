@@ -9,6 +9,7 @@ import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
 import IconButton from '@mui/material/IconButton'
 
+// Componente con estilos para el menu responsive
 const MenuResponsive = styled((props) => (
   <Menu
     elevation={0}
@@ -59,6 +60,7 @@ export default function SeccionesResponsive(props) {
     fontSize: '18px'
   }
 
+  // Manejador de estados y comportamiento del menu responsive
   const [elementoBase, setElementoBase] = React.useState(null)
   const menuAbierto = Boolean(elementoBase)
   const activadorMenu = (e) => {
@@ -69,6 +71,7 @@ export default function SeccionesResponsive(props) {
     setElementoBase(null)
   }
 
+  // Cierra el menu en caso de que la pantalla se haga grande mientras el menu esta abierto
   const theme = useTheme()
   const paginaGrande = useMediaQuery(theme.breakpoints.up('sm'))
 
