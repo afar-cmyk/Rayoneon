@@ -7,10 +7,9 @@ import MenuItem from '@mui/material/MenuItem'
 import { styled } from '@mui/material/styles'
 import useMediaQuery from '@mui/material/useMediaQuery'
 import { useTheme } from '@mui/material/styles'
-import IconoMenuResponsive from './IconoMenuResponsive'
 import IconButton from '@mui/material/IconButton'
 
-const StyledMenu = styled((props) => (
+const MenuResponsive = styled((props) => (
   <Menu
     elevation={0}
     anchorOrigin={{
@@ -60,24 +59,12 @@ export default function SeccionesResponsive(props) {
     fontSize: '18px'
   }
 
-  // const containerRef = React.useRef(null)
-
-  // const [anchorEl, setAnchorEl] = React.useState(null)
-  // const open = Boolean(anchorEl)
-  // const handleClick = (event) => {
-  //   setAnchorEl(event.currentTarget)
-  // }
-  // const handleClose = () => {
-  //   setAnchorEl(null)
-  // }
-
-  // const [clicked, setClicked] = React.useState()
-
   const [elementoBase, setElementoBase] = React.useState(null)
+  const menuAbierto = Boolean(elementoBase)
   const activadorMenu = (e) => {
+    e.preventDefault()
     setElementoBase(e.currentTarget)
   }
-  const menuAbierto = Boolean(elementoBase)
   const menuCerrado = () => {
     setElementoBase(null)
   }
@@ -92,17 +79,6 @@ export default function SeccionesResponsive(props) {
     }
   }, [paginaGrande])
 
-  const [anchorEl, setAnchorEl] = React.useState(null)
-  const popoverOpen = Boolean(anchorEl)
-  const handleTogglePopover = (event) => {
-    event.preventDefault()
-    if (anchorEl === null) {
-      setAnchorEl(event.currentTarget)
-    } else {
-      setAnchorEl(null)
-    }
-  }
-
   return (
     <>
       <IconButton
@@ -116,21 +92,21 @@ export default function SeccionesResponsive(props) {
           cursor: 'pointer'
         }}
         aria-controls='boton-menu'
-        onClick={handleTogglePopover}
+        onClick={activadorMenu}
       >
         {menuAbierto ? <CloseIcon /> : <MenuRoundedIcon />}
       </IconButton>
-      <StyledMenu
+      <MenuResponsive
         id='menu-responsive'
-        open={popoverOpen}
-        anchorEl={anchorEl}
+        open={menuAbierto}
+        anchorEl={elementoBase}
         onClose={() => {
           setElementoBase(!elementoBase)
           menuCerrado()
         }}
         sx={{
-          marginTop: '30px',
-          left: '-25px',
+          marginTop: '27px',
+          left: '-7px',
           display: { xs: 'flex', sm: 'none' }
         }}
         MenuListProps={{
@@ -181,100 +157,7 @@ export default function SeccionesResponsive(props) {
             </MenuItem>
           )
         })}
-      </StyledMenu>
-      {/* <MenuRoundedIcon
-        component={open ? CloseIcon : MenuRoundedIcon}
-        onClick={handleClick}
-        className='menuHambuerguesa'
-        ref={containerRef}
-        sx={{
-          width: '1.2em',
-          height: '1.2em',
-          color: '#CCCCCC',
-          '&:hover': { color: '#f2f2f2' },
-          display: { xs: 'flex', sm: 'none' },
-          cursor: 'pointer'
-        }}
-      /> */}
-      {/* <IconButton
-        sx={{
-          width: '1.2em',
-          height: '1.2em',
-          color: '#CCCCCC',
-          '&:hover': { color: '#f2f2f2' },
-          display: { xs: 'flex', sm: 'none' },
-          cursor: 'pointer'
-        }}
-        onClick={() => setClicked(!clicked)}
-        anchorel={anchorEl}
-      >
-        {clicked ? (
-          <CloseIcon />
-        ) : (
-          <MenuRoundedIcon onClick={handleClick} anchorel={anchorEl} />
-        )}
-      </IconButton>
-      <StyledMenu
-        id='demo-customized-menu'
-        MenuListProps={{
-          'aria-labelledby': 'demo-customized-button'
-        }}
-        open={open}
-        onClose={() => {
-          setClicked(!clicked)
-          handleClose()
-        }}
-        sx={{
-          marginTop: '30px',
-          left: '-25px',
-          display: { xs: 'flex', sm: 'none' }
-        }}
-      >
-        {rutasMenu.map((datos, index) => {
-          const { ruta, etiqueta, activo } = datos
-          return (
-            <MenuItem
-              key={index}
-              sx={{
-                ...contenedorPrincipal,
-                border: activo ? '1px solid rgba(175, 40, 162, 1)' : 'none',
-                boxShadow: activo
-                  ? '0px 0px 7px 4px rgba(175, 40, 162, 0.25)'
-                  : 'none',
-                boxSizing: 'border-box',
-                borderRadius: 1,
-                '&:hover': {
-                  textDecoration: 'none',
-                  backgroundColor: 'rgb(255 255 255 / 8%)'
-                },
-                '&:hover .activo': {
-                  color: '#FFFFFF !important'
-                },
-                '&:hover .enlace': {
-                  color: '#F2F2F2 !important'
-                },
-                cursor: 'pointer'
-              }}
-              onClick={() => {
-                document.getElementById('link' + etiqueta).click()
-                handleClose()
-              }}
-              disableRipple
-            >
-              <Link
-                id={'link' + etiqueta}
-                to={ruta}
-                activeClassName='activo'
-                className='enlace'
-                activeStyle={estiloActivo}
-                style={estiloInactivo}
-              >
-                {etiqueta}
-              </Link>
-            </MenuItem>
-          )
-        })}
-      </StyledMenu> */}
+      </MenuResponsive>
     </>
   )
 }
