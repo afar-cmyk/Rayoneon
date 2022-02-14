@@ -7,7 +7,7 @@ import SeccionesResponsive from './SeccionesResponsive'
 export default function NavBar(props) {
   const estado = props.estado
 
-  // Arreglo con los enlaces que tendra la barra de navegación
+  // Arreglo con los enlaces que tiene la barra de navegación
   const rutasArray = [
     {
       ruta: '/Productos/',
