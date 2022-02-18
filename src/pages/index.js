@@ -1,13 +1,13 @@
 import React from 'react'
 import NavBar from '../components/navigation/NavBar'
 import '../styles/global.css'
+import BackgroundImages from '../components/BackgroundImages.jsx'
 
 export default function index() {
   return (
     <div>
       <NavBar estado={null} />
-      <br />
-      <p>
+      <BackgroundImages>
         <h1>diluminar</h1>
         <h2>Avisos de Neón</h2>
         <p>
@@ -17,7 +17,7 @@ export default function index() {
           servicio puntual y de <b>excelente calidad</b> siempre a tiempo y en
           el lugar donde nos indique.
         </p>
-      </p>
+      </BackgroundImages>
     </div>
   )
 }
