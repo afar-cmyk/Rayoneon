@@ -2,7 +2,7 @@ import React from 'react'
 import { Box } from '@mui/material'
 import { StaticImage } from 'gatsby-plugin-image'
 
-export default function BackgroundImages({ children }) {
+export default function BackgroundImages() {
   return (
     <>
       <Box
@@ -13,7 +13,6 @@ export default function BackgroundImages({ children }) {
           height: '100vh'
         }}
       >
-        {children}
         <StaticImage
           alt='Imagen de fondo'
           placeholder='blurred'
