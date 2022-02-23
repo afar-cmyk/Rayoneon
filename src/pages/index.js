@@ -29,6 +29,7 @@ export default function index() {
         // className={className}
         fluid={imageData}
         backgroundColor={`#040e18`}
+        style={{ width: '100vw' }}
       >
         <Box component='div'>
           <h1>diluminar</h1>
