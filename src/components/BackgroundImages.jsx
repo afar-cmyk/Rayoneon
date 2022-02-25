@@ -24,7 +24,7 @@ export default function BackgroundImages({ children }) {
         // className={className}
         fluid={imageData}
         backgroundColor={`#040e18`}
-        style={{ width: '100vw' }}
+        style={{ width: '100vw', height: '100vh' }}
       >
         {children}
       </BackgroundImage>
