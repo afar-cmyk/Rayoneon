@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box } from '@mui/material'
 import { useStaticQuery, graphql } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
 
@@ -19,15 +20,17 @@ export default function BackgroundImages({ children }) {
   const imageData = desktop.childImageSharp.fluid
   return (
     <>
-      <BackgroundImage
-        Tag='section'
-        // className={className}
-        fluid={imageData}
-        backgroundColor={`#040e18`}
-        style={{ width: '100vw', height: '90.5vh' }}
-      >
-        {children}
-      </BackgroundImage>
+      <Box component='div' id='fondo_color' sx={{ backgroundColor: 'red' }}>
+        <BackgroundImage
+          Tag='section'
+          // className={className}
+          fluid={imageData}
+          backgroundColor={`#040e18`}
+          style={{ width: '100vw', height: '90.5vh' }}
+        >
+          {children}
+        </BackgroundImage>
+      </Box>
     </>
   )
 }
