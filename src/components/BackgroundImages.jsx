@@ -30,11 +30,12 @@ export default function BackgroundImages({ children }) {
       >
         <BackgroundImage
           Tag='section'
-          // className={className}
           fluid={imageData}
-          backgroundColor={`#040e18`}
+          backgroundColor={
+            'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
+          }
           preserveStackingContext
-          style={{ width: '100vw', height: '90.5vh', opacity: '0.3' }}
+          style={{ width: '100vw', height: '90.5vh', opacity: '0.2' }}
         >
           {children}
         </BackgroundImage>
