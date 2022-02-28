@@ -20,13 +20,21 @@ export default function BackgroundImages({ children }) {
   const imageData = desktop.childImageSharp.fluid
   return (
     <>
-      <Box component='div' id='fondo_color' sx={{ backgroundColor: 'red' }}>
+      <Box
+        component='div'
+        id='fondo_color'
+        sx={{
+          backgroundColor:
+            'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
+        }}
+      >
         <BackgroundImage
           Tag='section'
           // className={className}
           fluid={imageData}
           backgroundColor={`#040e18`}
-          style={{ width: '100vw', height: '90.5vh' }}
+          preserveStackingContext
+          style={{ width: '100vw', height: '90.5vh', opacity: '0.3' }}
         >
           {children}
         </BackgroundImage>
