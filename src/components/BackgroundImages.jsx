@@ -20,14 +20,8 @@ export default function BackgroundImages({ children }) {
   const imageData = desktop.childImageSharp.fluid
   return (
     <>
-      <Box
-        component='div'
-        id='fondo_color'
-        sx={{
-          backgroundColor:
-            'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
-        }}
-      >
+      <Box>
+        {children}
         <BackgroundImage
           Tag='section'
           fluid={imageData}
@@ -37,7 +31,7 @@ export default function BackgroundImages({ children }) {
           preserveStackingContext
           style={{ width: '100vw', height: '90.5vh', opacity: '0.2' }}
         >
-          {children}
+          <p>aaaaaaaa</p>
         </BackgroundImage>
       </Box>
     </>
