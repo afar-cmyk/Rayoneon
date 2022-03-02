@@ -25,14 +25,12 @@ export default function BackgroundImages({ children }) {
         <BackgroundImage
           Tag='section'
           fluid={imageData}
+          preserveStackingContext
           backgroundColor={
             'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
           }
-          preserveStackingContext
           style={{ width: '100vw', height: '90.5vh', opacity: '0.2' }}
-        >
-          <p>aaaaaaaa</p>
-        </BackgroundImage>
+        ></BackgroundImage>
       </Box>
     </>
   )
