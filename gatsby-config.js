@@ -5,6 +5,14 @@ module.exports = {
   },
   plugins: [
     'gatsby-plugin-image',
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`
+      },
+      __key: 'images'
+    },
     'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-manifest',
@@ -14,14 +22,6 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: './src/images/'
-      },
-      __key: 'images'
-    },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -34,3 +34,13 @@ module.exports = {
     }
   ]
 }
+
+// 'gatsby-transformer-sharp',
+//     {
+//       resolve: 'gatsby-source-filesystem',
+//       options: {
+//         name: 'images',
+//         path: './src/images/'
+//       },
+//       __key: 'images'
+//     },
