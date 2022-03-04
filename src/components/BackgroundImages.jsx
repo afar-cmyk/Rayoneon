@@ -114,8 +114,8 @@ const BackgroundImages = ({ children }) => {
       <BackgroundImage
         Tag='section'
         {...fondoPantalla}
-        // preserveStackingContext
-        style={{ width: '100vw', height: '90.5vh' }}
+        preserveStackingContext
+        style={{ width: '100vw', height: '90.5vh', opacity: '0.3' }}
       >
         {children}
       </BackgroundImage>
