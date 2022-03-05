@@ -3,6 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { getImage } from 'gatsby-plugin-image'
 import { convertToBgImage } from 'gbimage-bridge'
 import BackgroundImage from 'gatsby-background-image'
+import '../styles/backgroundImages.css'
 
 // export default function BackgroundImages({ children }) {
 // const { desktop } = useStaticQuery(
@@ -99,6 +100,7 @@ const BackgroundImages = ({ children }) => {
           childImageSharp {
             gatsbyImageData(
               quality: 90
+              webpOptions: { quality: 70 }
               layout: FULL_WIDTH
               placeholder: DOMINANT_COLOR
             )
@@ -115,9 +117,10 @@ const BackgroundImages = ({ children }) => {
         Tag='section'
         {...fondoPantalla}
         preserveStackingContext
-        style={{ width: '100vw', height: '90.5vh', opacity: '0.3' }}
+        // style={{ width: '100vw', height: '90.5vh' }}
+        className='mascarafondo'
       >
-        {children}
+        <div className='envoltura-oscura'>{children}</div>
       </BackgroundImage>
     </>
   )
