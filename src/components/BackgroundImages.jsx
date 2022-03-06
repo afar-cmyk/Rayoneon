@@ -6,16 +6,18 @@ import BackgroundImage from 'gatsby-background-image'
 import '../styles/backgroundImages.css'
 
 const BackgroundImages = ({ children }) => {
+  // const listaFondos = ['bck_img001.png', 'bck_img002.png', 'bck_img003.png']
+
   const { imagenFondo } = useStaticQuery(
     graphql`
       query {
-        imagenFondo: file(relativePath: { eq: "bck_img001.png" }) {
+        imagenFondo: file(relativePath: { eq: "bck_img003.jpg" }) {
           childImageSharp {
             gatsbyImageData(
               quality: 90
               webpOptions: { quality: 70 }
               layout: FULL_WIDTH
-              placeholder: DOMINANT_COLOR
+              placeholder: BLURRED
             )
           }
         }
