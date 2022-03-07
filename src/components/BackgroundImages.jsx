@@ -41,3 +41,18 @@ const BackgroundImages = ({ children }) => {
 }
 
 export default BackgroundImages
+
+// CSS
+// .mascarafondo {
+//   width: 100%;
+//   min-height: 100vh;
+// }
+
+// .envoltura-oscura {
+//   background: linear-gradient(270deg, #041426d5 7.34%, #192940d5 80.71%);
+//   height: 100vh;
+// }
+
+// .envoltura-oscura h1 {
+//   margin: 0;
+// }

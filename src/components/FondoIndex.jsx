@@ -12,12 +12,9 @@ export default function FondoIndex({ children }) {
         {children}
       </Box>
       <BackgroundSlider
-        style={{
-          ...overlayFondo
-        }}
         images={[imagen1, imagen2, imagen3]}
         duration={5}
-        transition={1}
+        transition={0.3}
       />
     </>
   )
