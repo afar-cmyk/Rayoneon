@@ -1,0 +1,5 @@
+import BackgroundSlider from 'react-background-slider'
+import imagen1 from '../images/bck_img001.png'
+import imagen2 from '../images/bck_img002.jpg'
+import imagen3 from '../images/bck_img003.jpg'
+import { Box } from '@mui/material'
