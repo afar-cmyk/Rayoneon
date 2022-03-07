@@ -8,7 +8,7 @@ import imagen3 from '../images/bck_img003.jpg'
 export default function FondoIndex({ children }) {
   return (
     <>
-      <Box component='div' style={{ ...overlayFondo }}>
+      <Box component='div' sx={{ ...overlayFondo }}>
         {children}
       </Box>
       <BackgroundSlider
@@ -21,6 +21,5 @@ export default function FondoIndex({ children }) {
 }
 
 let overlayFondo = {
-  background: 'linear-gradient(270deg, #041426d5 7.34%, #192940d5 80.71%)',
-  height: '100vh'
+  background: 'linear-gradient(270deg, #041426d5 7.34%, #192940d5 80.71%)'
 }
