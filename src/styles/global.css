@@ -47,3 +47,10 @@ b {
 p {
   margin: 0;
 }
+
+.contenido-indice h2 {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  margin: 0;
+}
