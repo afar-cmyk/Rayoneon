@@ -14,12 +14,12 @@ export default function index() {
         <div className='contenido-indice'>
           <h2>Avisos de Neón</h2>
           <p>
-            Somos una empresa <b>100% colombiana</b>, dedicada a la{' '}
-            <b>fabricación de material publicitario</b>
+            Somos una empresa <strong>100% colombiana</strong>, dedicada a la{' '}
+            <strong>fabricación de material publicitario</strong>
             {' ('}neón, avisos en acrílico, letras 3D, material p.o.p{') '}
             Nuestra razón de ser es proporcionarle un servicio puntual y de{' '}
-            <b>excelente calidad</b> siempre a tiempo y en el lugar donde nos
-            indique.
+            <strong>excelente calidad</strong> siempre a tiempo y en el lugar
+            donde nos indique.
           </p>
         </div>
       </FondoIndex>
