@@ -43,14 +43,17 @@ b {
   margin-top: 0;
 }
 
-.contenido-indice h2,
-p {
-  margin: 0;
-}
-
 .contenido-indice h2 {
   font-family: 'Assistant', sans-serif;
   font-weight: 700;
   font-size: 40px;
+  margin: 0;
+}
+
+.contenido-indice p {
+  font-family: 'Assistant', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
   margin: 0;
 }
