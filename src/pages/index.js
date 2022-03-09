@@ -22,7 +22,7 @@ const SeccionPrincipal = () => {
         <div className='titulo-principal'>
           <h1>diluminar</h1>
         </div>
-        <div className='contenido-indice'>
+        <div className='contenido-principal'>
           <h2>Avisos de Neón</h2>
           <p>
             Somos una empresa <strong>100% colombiana</strong>, dedicada a la{' '}
