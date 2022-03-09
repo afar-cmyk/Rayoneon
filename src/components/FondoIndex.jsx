@@ -8,14 +8,14 @@ import imagen3 from '../images/bck_img003.jpg'
 export default function FondoIndex({ children }) {
   return (
     <>
-      <Box component='div' sx={{ ...overlayFondo }}>
+      <Box id='seccion-principal' component='section' sx={{ ...overlayFondo }}>
         {children}
+        <BackgroundSlider
+          images={[imagen1, imagen2, imagen3]}
+          duration={5}
+          transition={0.3}
+        />
       </Box>
-      <BackgroundSlider
-        images={[imagen1, imagen2, imagen3]}
-        duration={5}
-        transition={0.3}
-      />
     </>
   )
 }

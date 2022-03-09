@@ -7,7 +7,7 @@ export default function index() {
   return (
     <>
       <NavBar estado={null} />
-      <main className='seccion-principal'>
+      <main id='contenedor-padre'>
         <SeccionPrincipal />
         <SeccionInferior />
       </main>
