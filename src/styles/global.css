@@ -11,6 +11,12 @@ body {
   color: #cccccc;
 }
 
+#contenedor-padre {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
 .titulo-principal {
   height: 100%;
   display: flex;
@@ -60,17 +66,17 @@ body {
   font-weight: 600;
 }
 
-.nav-bar {
-  position: absolute;
-}
-
 .seccion-inferior {
   background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
   height: 100%;
+  padding-left: 37px;
+  padding-right: 37px;
 }
 
-#contenedor-padre {
-  width: 100vw;
-  height: 100vh;
+.seccion-inferior h3 {
+  margin: 0;
+}
+
+.seccion-inferior p {
   margin: 0;
 }

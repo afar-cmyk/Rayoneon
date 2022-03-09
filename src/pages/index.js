@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from '../components/navigation/NavBar'
 import FondoIndex from '../components/FondoIndex'
 import '../styles/global.css'
+import Button from '@mui/material/Button'
 
 export default function index() {
   return (
@@ -41,7 +42,16 @@ const SeccionPrincipal = () => {
 const SeccionInferior = () => {
   return (
     <>
-      <div className='seccion-inferior'>Seccion inferior</div>
+      <section className='seccion-inferior'>
+        <h3>¡Puede contar con nuestros servicios!</h3>
+        <p>
+          Todo el material utilizado en nuestra producción es Importado de los
+          EEUU y homologados por las normas Internacionales.* ( egl.lighting )
+        </p>
+        <Button variant='outlined' color='primary' sx={{ color: '#CCCCCC' }}>
+          Acerca de nosotros
+        </Button>
+      </section>
     </>
   )
 }
