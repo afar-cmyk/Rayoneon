@@ -42,7 +42,7 @@ const SeccionPrincipal = () => {
 const SeccionInferior = () => {
   return (
     <>
-      <section className='seccion-inferior'>
+      <section id='seccion-inferior'>
         <h3>¡Puede contar con nuestros servicios!</h3>
         <p>
           Todo el material utilizado en nuestra producción es Importado de los
