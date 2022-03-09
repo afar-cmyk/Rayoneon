@@ -6,7 +6,9 @@ import '../styles/global.css'
 export default function index() {
   return (
     <>
-      <NavBar estado={null} />
+      <nav className='nav-bar'>
+        <NavBar estado={null} />
+      </nav>
       <FondoIndex>
         <div className='titulo-principal'>
           <h1>diluminar</h1>
