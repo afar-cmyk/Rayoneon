@@ -47,8 +47,8 @@ export default function NavBar(props) {
   }
 
   return (
-    <div>
-      <Box sx={{ ...barraPrincipal }}>
+    <>
+      <Box component='nav' sx={{ ...barraPrincipal }}>
         {/* Logo que al presionarlo lleva al index */}
         <Box sx={{ ...contenedorLogo }}>
           <Link
@@ -67,7 +67,7 @@ export default function NavBar(props) {
           <SeccionesResponsive datos={rutasArray} />
         </Box>
       </Box>
-    </div>
+    </>
   )
 }
 
@@ -96,6 +96,7 @@ const links = {
 }
 
 const barraPrincipal = {
+  position: 'absolute',
   display: 'flex',
   flexDirection: 'row',
   alignContent: 'center',

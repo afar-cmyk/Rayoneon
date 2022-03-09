@@ -6,9 +6,8 @@ import '../styles/global.css'
 export default function index() {
   return (
     <>
-      <nav className='nav-bar'>
-        <NavBar estado={null} />
-      </nav>
+      <NavBar estado={null} />
+
       <FondoIndex>
         <div className='titulo-principal'>
           <h1>diluminar</h1>
@@ -25,6 +24,15 @@ export default function index() {
           </p>
         </div>
       </FondoIndex>
+      <SeccionInferior />
+    </>
+  )
+}
+
+const SeccionInferior = () => {
+  return (
+    <>
+      <div className='seccion-inferior'>Seccion inferior</div>
     </>
   )
 }

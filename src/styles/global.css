@@ -63,3 +63,7 @@ body {
 .nav-bar {
   position: absolute;
 }
+
+.seccion-inferior {
+  background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
+}
