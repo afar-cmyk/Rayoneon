@@ -7,7 +7,17 @@ export default function index() {
   return (
     <>
       <NavBar estado={null} />
+      <main className='seccion-principal'>
+        <SeccionPrincipal />
+        <SeccionInferior />
+      </main>
+    </>
+  )
+}
 
+const SeccionPrincipal = () => {
+  return (
+    <>
       <FondoIndex>
         <div className='titulo-principal'>
           <h1>diluminar</h1>
@@ -24,7 +34,6 @@ export default function index() {
           </p>
         </div>
       </FondoIndex>
-      <SeccionInferior />
     </>
   )
 }

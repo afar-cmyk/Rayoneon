@@ -66,4 +66,11 @@ body {
 
 .seccion-inferior {
   background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
+  height: 100%;
+}
+
+.seccion-principal {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
