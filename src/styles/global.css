@@ -84,4 +84,15 @@ body {
 
 #seccion-inferior p {
   margin: 0;
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  width: 608px;
+}
+
+#seccion-inferior sub {
+  vertical-align: baseline;
+  color: #f2f2f2;
 }

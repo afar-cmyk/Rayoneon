@@ -49,8 +49,9 @@ const SeccionInferior = () => {
           nuestros servicios!
         </h3>
         <p>
-          Todo el material utilizado en nuestra producción es Importado de los
-          EEUU y homologados por las normas Internacionales.* ( egl.lighting )
+          Todo el <strong>material</strong> utilizado en nuestra producción es
+          <strong> Importado</strong> de los EEUU y homologados por las normas
+          Internacionales.* <sub>(egl.lighting)</sub>
         </p>
         <Button variant='outlined' color='primary' sx={{ color: '#CCCCCC' }}>
           Acerca de nosotros
