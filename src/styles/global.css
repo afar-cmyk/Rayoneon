@@ -68,7 +68,7 @@ body {
 
 #seccion-inferior {
   background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
-  height: 100vmin;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -96,7 +96,7 @@ body {
 }
 
 #seccion-inferior sub,
-a {
+#seccion-inferior a {
   font-family: 'Assistant';
   font-style: normal;
   vertical-align: baseline;
