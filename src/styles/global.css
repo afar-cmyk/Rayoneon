@@ -83,7 +83,6 @@ body {
 }
 
 #seccion-inferior p {
-  margin: 0;
   font-family: 'Assistant';
   font-style: normal;
   font-weight: 400;
@@ -104,4 +103,9 @@ a {
 #seccion-inferior a:hover {
   text-decoration: none;
   color: #f2f2f2;
+}
+
+.contenido-inferior {
+  margin-top: 23px;
+  margin-bottom: 45px;
 }

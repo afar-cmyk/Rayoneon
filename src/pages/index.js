@@ -48,7 +48,7 @@ const SeccionInferior = () => {
           <br />
           nuestros servicios!
         </h3>
-        <p>
+        <p className='contenido-inferior'>
           Todo el <strong>material</strong> utilizado en nuestra producción es
           <strong> Importado</strong> de los EEUU y homologados por las {''}
           <a
