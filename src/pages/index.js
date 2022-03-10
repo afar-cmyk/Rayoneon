@@ -43,7 +43,11 @@ const SeccionInferior = () => {
   return (
     <>
       <section id='seccion-inferior'>
-        <h3>¡Puede contar con nuestros servicios!</h3>
+        <h3>
+          ¡Puede contar con
+          <br />
+          nuestros servicios!
+        </h3>
         <p>
           Todo el material utilizado en nuestra producción es Importado de los
           EEUU y homologados por las normas Internacionales.* ( egl.lighting )
