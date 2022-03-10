@@ -61,10 +61,22 @@ const SeccionInferior = () => {
           </a>
           .
         </p>
-        <Button variant='outlined' color='primary' sx={{ color: '#CCCCCC' }}>
+        <Button variant='outlined' color='primary' sx={{ ...botonMui }}>
           Acerca de nosotros
         </Button>
       </section>
     </>
   )
+}
+
+let botonMui = {
+  fontFamily: 'Assistant',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  fontSize: '24px',
+  color: '#CCCCCC',
+  textTransform: 'initial',
+  border: '3px solid rgba(175, 6, 159, 0.7)',
+  boxSizing: 'border-box',
+  borderRadius: '4px'
 }
