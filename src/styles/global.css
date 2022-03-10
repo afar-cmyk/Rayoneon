@@ -98,6 +98,7 @@ a {
   font-style: normal;
   vertical-align: baseline;
   color: #cccccc;
+  text-underline-offset: 1.5px;
 }
 
 #seccion-inferior a:hover {
