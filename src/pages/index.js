@@ -50,8 +50,18 @@ const SeccionInferior = () => {
         </h3>
         <p>
           Todo el <strong>material</strong> utilizado en nuestra producción es
-          <strong> Importado</strong> de los EEUU y homologados por las normas
-          Internacionales.* <sub>(egl.lighting)</sub>
+          <strong> Importado</strong> de los EEUU y homologados por las {''}
+          <strong>
+            <a
+              href='https://www.egl-lighting.com/'
+              hreflang='en'
+              rel='noreferrer'
+              target='_blank'
+            >
+              normas Internacionales
+            </a>
+          </strong>
+          .
         </p>
         <Button variant='outlined' color='primary' sx={{ color: '#CCCCCC' }}>
           Acerca de nosotros

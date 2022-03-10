@@ -92,7 +92,15 @@ body {
   width: 608px;
 }
 
-#seccion-inferior sub {
+#seccion-inferior sub,
+a {
+  font-family: 'Assistant';
+  font-style: normal;
   vertical-align: baseline;
+  color: #cccccc;
+}
+
+#seccion-inferior a:hover {
+  text-decoration: none;
   color: #f2f2f2;
 }
