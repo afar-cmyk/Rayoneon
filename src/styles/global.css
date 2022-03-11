@@ -113,3 +113,9 @@ body {
   margin-top: 23px;
   margin-bottom: 45px;
 }
+
+#icono-svg {
+  width: 75px;
+  height: 75px;
+  color: greenyellow;
+}
