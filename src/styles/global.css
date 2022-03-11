@@ -128,3 +128,7 @@ body {
   font-weight: 600;
   font-size: 18px;
 }
+
+.icono-contacto p:hover {
+  color: #f2f2f2;
+}
