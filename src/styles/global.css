@@ -119,3 +119,12 @@ body {
   height: 75px;
   color: greenyellow;
 }
+
+.icono-contacto p {
+  font-family: 'Assistant';
+  font-style: normal;
+  vertical-align: baseline;
+  color: #cccccc;
+  font-weight: 600;
+  font-size: 18px;
+}
