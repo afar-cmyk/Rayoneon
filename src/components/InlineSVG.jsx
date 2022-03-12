@@ -14,7 +14,7 @@ const InlineSVG = (props) => {
         width={tamaño}
         height={tamaño}
         fill='currentColor'
-        class={`icono-svg-${icono}`}
+        className={`icono-svg-${icono}`}
         viewBox={`0 0 24 24`}
       >
         <path d={inlineText[icono]} />

@@ -51,7 +51,7 @@ const SeccionInferior = () => {
           <strong> Importado</strong> de los EEUU y homologados por las {''}
           <a
             href='https://www.egl-lighting.com/'
-            hreflang='en'
+            hrefLang='en'
             rel='noreferrer'
             target='_blank'
           >
