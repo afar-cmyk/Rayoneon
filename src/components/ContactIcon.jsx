@@ -6,7 +6,7 @@ import '../styles/global.css'
 const ContactIcon = () => {
   return (
     <div className='icono-contacto'>
-      <InlineSVG icono='whatsapp' />
+      <InlineSVG icono='whatsapp' tamaño='48' />
       {/* <img
         width='48px'
         id='icono-svg'

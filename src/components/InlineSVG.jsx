@@ -11,11 +11,11 @@ const InlineSVG = (props) => {
     <>
       <svg
         xmlns='http://www.w3.org/2000/svg'
-        width='16'
-        height='16'
+        width={tamaño}
+        height={tamaño}
         fill='currentColor'
-        class='bi bi-whatsapp'
-        viewBox='0 0 16 16'
+        class={`icono-svg-${icono}`}
+        viewBox={`0 0 16 16`}
       >
         <path d={inlineText[icono]} />
       </svg>
