@@ -120,7 +120,7 @@ body {
   flex-direction: column;
   align-items: center;
   left: 90%;
-  top: 87%;
+  top: 88%;
 }
 
 .icono-contacto p {
@@ -135,4 +135,8 @@ body {
 
 .icono-contacto p:hover {
   color: #f2f2f2;
+}
+
+.icono-svg-whatsapp {
+  fill: #25d366;
 }
