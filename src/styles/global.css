@@ -114,6 +114,15 @@ body {
   margin-bottom: 45px;
 }
 
+.icono-contacto {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  left: 90%;
+  top: 87%;
+}
+
 .icono-contacto p {
   font-family: 'Assistant';
   font-style: normal;

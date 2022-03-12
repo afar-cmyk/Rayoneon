@@ -7,12 +7,6 @@ const ContactIcon = () => {
   return (
     <div className='icono-contacto'>
       <InlineSVG icono='whatsapp' tamaño='48' />
-      {/* <img
-        width='48px'
-        id='icono-svg'
-        alt='Logo whatsapp'
-        src={iconoWhatsapp}
-      /> */}
       <p>¡Contactenos!</p>
     </div>
   )
