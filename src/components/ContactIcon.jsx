@@ -5,7 +5,12 @@ import '../styles/global.css'
 const ContactIcon = () => {
   return (
     <div className='icono-contacto'>
-      <img id='icono-svg' alt='Logo whatsapp' src={iconoWhatsapp} />
+      <img
+        width='48px'
+        id='icono-svg'
+        alt='Logo whatsapp'
+        src={iconoWhatsapp}
+      />
       <p>¡Contactenos!</p>
     </div>
   )
