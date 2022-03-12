@@ -131,6 +131,7 @@ body {
   align-items: center;
   bottom: 35px;
   right: 35px;
+  cursor: pointer;
 }
 
 .icono-contacto p {
@@ -150,5 +151,9 @@ body {
 }
 
 .icono-svg-whatsapp {
+  fill: #72db99;
+}
+
+.icono-svg-whatsapp:hover {
   fill: #25d366;
 }
