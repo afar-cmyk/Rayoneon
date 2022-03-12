@@ -3,6 +3,7 @@ import NavBar from '../components/navigation/NavBar'
 import FondoIndex from '../components/FondoIndex'
 import '../styles/global.css'
 import Button from '@mui/material/Button'
+import ContactIcon from '../components/ContactIcon.jsx'
 
 export default function index() {
   return (
@@ -11,6 +12,7 @@ export default function index() {
       <main id='contenedor-padre'>
         <SeccionPrincipal />
         <SeccionInferior />
+        <ContactIcon />
       </main>
     </>
   )
