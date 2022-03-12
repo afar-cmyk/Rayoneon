@@ -28,7 +28,8 @@ body {
 }
 
 .titulo-principal h1 {
-  margin: 0;
+  margin-top: 100px;
+  margin-bottom: 0;
   font-family: 'Baloo 2';
   font-weight: 600;
   font-size: 144px;
@@ -77,7 +78,7 @@ body {
 }
 
 #seccion-inferior h3 {
-  margin: 0;
+  margin-top: 0;
   font-size: 72px;
   font-family: 'Assistant', sans-serif;
   font-weight: 700;
@@ -114,7 +115,7 @@ body {
   margin-bottom: 45px;
 }
 
-.icono-contacto {
+.icono-contacto1 {
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -123,14 +124,25 @@ body {
   top: 88%;
 }
 
+.icono-contacto {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  bottom: 35px;
+  right: 35px;
+}
+
 .icono-contacto p {
   font-family: 'Assistant';
   font-style: normal;
   vertical-align: baseline;
   color: #cccccc;
-  font-weight: 600;
-  font-size: 18px;
-  margin: 0;
+  font-weight: 700;
+  font-size: 14.6506px;
+  line-height: 18px;
+  margin-top: 3.49px;
+  margin-bottom: 0;
 }
 
 .icono-contacto p:hover {
