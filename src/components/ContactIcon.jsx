@@ -1,15 +1,24 @@
 import React from 'react'
-// import iconoWhatsapp from '../images/whatsapp.svg'
+import { Box } from '@mui/material'
 import InlineSVG from './InlineSVG'
 import '../styles/global.css'
 
 const ContactIcon = () => {
   return (
-    <div className='icono-contacto'>
+    <Box
+      component='div'
+      className='icono-contacto'
+      sx={{ ...contenedorContacto }}
+    >
       <InlineSVG icono='whatsapp' tamaño='48' />
-      <p>¡Contactenos!</p>
-    </div>
+      <p className='texto-contacto'>¡Contactenos!</p>
+    </Box>
   )
+}
+
+const contenedorContacto = {
+  '&:hover .icono-svg-whatsapp': { fill: '#25d366 !important' },
+  '&:hover .texto-contacto': { color: '#f2f2f2 !important' }
 }
 
 export default ContactIcon
