@@ -18,7 +18,7 @@ const ContactIcon = () => {
 
 const contenedorContacto = {
   '&:hover .icono-svg-whatsapp': { fill: '#25d366 !important' },
-  '&:hover .texto-contacto': { color: '#f2f2f2 !important' }
+  '&:hover .texto-contacto': { color: '#ffffff !important' }
 }
 
 export default ContactIcon
