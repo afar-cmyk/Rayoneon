@@ -10,7 +10,9 @@ const ContactIcon = () => {
       className='icono-contacto'
       sx={{ ...contenedorContacto }}
     >
-      <InlineSVG icono='whatsapp' tamaño='48' />
+      <a href='https://wa.me/573164148051'>
+        <InlineSVG icono='whatsapp' tamaño='48' />
+      </a>
       <p className='texto-contacto'>¡Contactenos!</p>
     </Box>
   )
