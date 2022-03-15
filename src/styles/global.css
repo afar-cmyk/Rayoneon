@@ -132,6 +132,7 @@ body {
   bottom: 35px;
   right: 35px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .icono-contacto p {
