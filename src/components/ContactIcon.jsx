@@ -6,13 +6,13 @@ import '../styles/global.css'
 const ContactIcon = () => {
   return (
     <Box
-      component='div'
+      component='a'
       className='icono-contacto'
+      href='https://wa.me/573164148051'
+      target='_blank'
       sx={{ ...contenedorContacto }}
     >
-      <a href='https://wa.me/573164148051'>
-        <InlineSVG icono='whatsapp' tamaño='48' />
-      </a>
+      <InlineSVG icono='whatsapp' tamaño='48' />
       <p className='texto-contacto'>¡Contactenos!</p>
     </Box>
   )
