@@ -71,13 +71,21 @@ const SeccionServicios = () => {
   return (
     <>
       <section id='seccion-servicios'>
-        <p>Atención personalizada por vía telefónica.</p>
-        <p>Garantía de entrega a tiempo.</p>
-        <p>Envío e instalación a nivel nacional.</p>
-        <p>
-          Envoltura impermeable y a prueba de golpes.* (impactos ligeros durante
-          el transporte).
-        </p>
+        <div className='cuadro-servicio'>
+          <p>Atención personalizada por vía telefónica.</p>
+        </div>
+        <div className='cuadro-servicio'>
+          <p>Garantía de entrega a tiempo.</p>
+        </div>
+        <div className='cuadro-servicio'>
+          <p>Envío e instalación a nivel nacional.</p>
+        </div>
+        <div className='cuadro-servicio'>
+          <p>
+            Envoltura impermeable y a prueba de golpes.* (impactos ligeros
+            durante el transporte).
+          </p>
+        </div>
       </section>
     </>
   )
