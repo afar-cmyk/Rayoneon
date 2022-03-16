@@ -150,3 +150,13 @@ body {
 .icono-svg-whatsapp {
   fill: #1c8a4d;
 }
+
+#seccion-servicios {
+  background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+}

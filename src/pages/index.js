@@ -12,6 +12,7 @@ export default function index() {
       <main id='contenedor-padre'>
         <SeccionPrincipal />
         <SeccionInferior />
+        <SeccionServicios />
         <ContactIcon />
       </main>
     </>
