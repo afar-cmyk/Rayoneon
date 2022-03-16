@@ -67,6 +67,22 @@ const SeccionInferior = () => {
   )
 }
 
+const SeccionServicios = () => {
+  return (
+    <>
+      <section id='seccion-servicios'>
+        <p>Atención personalizada por vía telefónica.</p>
+        <p>Garantía de entrega a tiempo.</p>
+        <p>Envío e instalación a nivel nacional.</p>
+        <p>
+          Envoltura impermeable y a prueba de golpes.* (impactos ligeros durante
+          el transporte).
+        </p>
+      </section>
+    </>
+  )
+}
+
 let botonMUI = {
   fontFamily: 'Assistant',
   fontStyle: 'normal',
