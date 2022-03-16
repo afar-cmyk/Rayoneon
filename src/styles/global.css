@@ -160,3 +160,23 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.cuadro-servicio {
+  width: 273px;
+  height: 84px;
+  background: #192940;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.cuadro-servicio p {
+  margin: 0;
+  padding-left: 25px;
+  width: 223px;
+}
