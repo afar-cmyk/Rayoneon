@@ -176,7 +176,21 @@ body {
 }
 
 .cuadro-servicio p {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
   margin: 0;
   padding-left: 25px;
   width: 223px;
+}
+
+.cuadro-servicio sub {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 20px;
+  margin: 0;
 }
