@@ -168,11 +168,11 @@ body {
   border-radius: 12px;
   margin-bottom: 40px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: nowrap;
-  align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  align-content: flex-start;
 }
 
 .cuadro-servicio p {
@@ -182,7 +182,6 @@ body {
   font-size: 20px;
   line-height: 20px;
   margin: 0;
-  padding-left: 25px;
   width: 223px;
 }
 

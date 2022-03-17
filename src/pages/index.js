@@ -92,11 +92,10 @@ const SeccionServicios = () => {
           <p>
             Envoltura impermeable y<br />
             <strong>a prueba de golpes. *</strong>
-            <br />
-            <sub>
-              {' ('}impactos ligeros durante el transporte{').'}
-            </sub>
           </p>
+          <sub>
+            {'('}impactos ligeros durante el transporte{').'}
+          </sub>
         </div>
       </section>
     </>
