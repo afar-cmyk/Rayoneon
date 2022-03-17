@@ -193,3 +193,9 @@ body {
   line-height: 20px;
   margin: 0;
 }
+
+.envoltura-servicios {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

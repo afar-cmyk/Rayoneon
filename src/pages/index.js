@@ -89,13 +89,15 @@ const SeccionServicios = () => {
           </p>
         </div>
         <div className='cuadro-servicio'>
-          <p>
-            Envoltura impermeable y<br />
-            <strong>a prueba de golpes. *</strong>
-          </p>
-          <sub>
-            {'('}impactos ligeros durante el transporte{').'}
-          </sub>
+          <div className='envoltura-servicios'>
+            <p>
+              Envoltura impermeable y<br />
+              <strong>a prueba de golpes. *</strong>
+            </p>
+            <sub>
+              {'('}impactos ligeros durante el transporte{').'}
+            </sub>
+          </div>
         </div>
       </section>
     </>
