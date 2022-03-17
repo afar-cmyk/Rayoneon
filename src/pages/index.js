@@ -72,31 +72,39 @@ const SeccionServicios = () => {
   return (
     <>
       <section id='seccion-servicios'>
-        <div className='cuadro-servicio'>
-          <p>
-            Atención <strong>personalizada</strong> por vía telefónica.
-          </p>
+        <div className='contenedor-servicios-iconos'>
+          <div className='cuadro-servicio-icono'>uno</div>
+          <div className='cuadro-servicio-icono'>dos</div>
+          <div className='cuadro-servicio-icono'>tres</div>
+          <div className='cuadro-servicio-icono'>cuatro</div>
         </div>
-        <div className='cuadro-servicio'>
-          <p>
-            Garantía de entrega a <strong>tiempo</strong>.
-          </p>
-        </div>
-        <div className='cuadro-servicio'>
-          <p>
-            <strong>Envío</strong> e instalación a nivel{' '}
-            <strong>nacional</strong>.
-          </p>
-        </div>
-        <div className='cuadro-servicio'>
-          <div className='envoltura-servicios'>
+        <div className='contenedor-servicios-texto'>
+          <div className='cuadro-servicio'>
             <p>
-              Envoltura impermeable y<br />
-              <strong>a prueba de golpes. *</strong>
+              Atención <strong>personalizada</strong> por vía telefónica.
             </p>
-            <sub>
-              {'('}impactos ligeros durante el transporte{').'}
-            </sub>
+          </div>
+          <div className='cuadro-servicio'>
+            <p>
+              Garantía de entrega a <strong>tiempo</strong>.
+            </p>
+          </div>
+          <div className='cuadro-servicio'>
+            <p>
+              <strong>Envío</strong> e instalación a nivel{' '}
+              <strong>nacional</strong>.
+            </p>
+          </div>
+          <div className='cuadro-servicio'>
+            <div className='envoltura-servicios'>
+              <p>
+                Envoltura impermeable y<br />
+                <strong>a prueba de golpes. *</strong>
+              </p>
+              <sub>
+                {'('}impactos ligeros durante el transporte{').'}
+              </sub>
+            </div>
           </div>
         </div>
       </section>

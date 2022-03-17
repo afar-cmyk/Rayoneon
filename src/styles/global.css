@@ -199,3 +199,10 @@ body {
   flex-direction: column;
   justify-content: center;
 }
+
+.cuadro-servicio-icono {
+  width: 84.88px;
+  height: 84px;
+  background: #192940;
+  border-radius: 12px;
+}
