@@ -6,6 +6,7 @@ import Button from '@mui/material/Button'
 import ContactIcon from '../components/ContactIcon.jsx'
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'
+import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined'
 
 export default function index() {
   return (
@@ -81,7 +82,9 @@ const SeccionServicios = () => {
           <div className='cuadro-servicio-icono'>
             <LocalShippingOutlinedIcon />
           </div>
-          <div className='cuadro-servicio-icono'>tres</div>
+          <div className='cuadro-servicio-icono'>
+            <AccessTimeOutlinedIcon />
+          </div>
           <div className='cuadro-servicio-icono'>cuatro</div>
         </div>
         <div className='contenedor-servicios-texto'>
