@@ -4,6 +4,7 @@ import FondoIndex from '../components/FondoIndex'
 import '../styles/global.css'
 import Button from '@mui/material/Button'
 import ContactIcon from '../components/ContactIcon.jsx'
+import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
 
 export default function index() {
   return (
@@ -73,7 +74,9 @@ const SeccionServicios = () => {
     <>
       <section id='seccion-servicios'>
         <div className='contenedor-servicios-iconos'>
-          <div className='cuadro-servicio-icono'>uno</div>
+          <div className='cuadro-servicio-icono'>
+            <GppGoodOutlinedIcon />
+          </div>
           <div className='cuadro-servicio-icono'>dos</div>
           <div className='cuadro-servicio-icono'>tres</div>
           <div className='cuadro-servicio-icono'>cuatro</div>
