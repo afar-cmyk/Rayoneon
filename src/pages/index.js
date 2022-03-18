@@ -78,16 +78,16 @@ const SeccionServicios = () => {
       <section id='seccion-servicios'>
         <div className='contenedor-servicios-iconos'>
           <div className='cuadro-servicio-icono'>
-            <GppGoodOutlinedIcon />
+            <GppGoodOutlinedIcon sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <LocalShippingOutlinedIcon />
+            <LocalShippingOutlinedIcon sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <AccessTimeOutlinedIcon />
+            <AccessTimeOutlinedIcon sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <SupportAgentOutlinedIcon />
+            <SupportAgentOutlinedIcon sx={{ ...iconoMUI }} />
           </div>
         </div>
         <div className='contenedor-servicios-texto'>
@@ -141,4 +141,9 @@ let botonMUI = {
     boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
     borderRadius: '4px'
   }
+}
+
+let iconoMUI = {
+  fontSize: 52,
+  color: '#f2f2f2'
 }
