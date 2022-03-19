@@ -15,8 +15,10 @@ export default function index() {
       <NavBar estado={null} />
       <main id='contenedor-padre'>
         <SeccionPrincipal />
-        <SeccionInferior />
-        <SeccionServicios />
+        <div className='seccion-servicios'>
+          <ServciosTexto />
+          <ServiciosIconos />
+        </div>
         <ContactIcon />
       </main>
     </>
@@ -46,10 +48,10 @@ const SeccionPrincipal = () => {
   )
 }
 
-const SeccionInferior = () => {
+const ServciosTexto = () => {
   return (
     <>
-      <section id='seccion-inferior'>
+      <section id='servicios-texto'>
         <h3>¡Puede contar con nuestros servicios!</h3>
         <p className='contenido-inferior'>
           Todo el <strong>material</strong> utilizado en nuestra producción es
@@ -72,10 +74,10 @@ const SeccionInferior = () => {
   )
 }
 
-const SeccionServicios = () => {
+const ServiciosIconos = () => {
   return (
     <>
-      <section id='seccion-servicios'>
+      <section id='servicios-iconos'>
         <div className='contenedor-servicios-iconos'>
           <div className='cuadro-servicio-icono'>
             <SupportAgentOutlinedIcon sx={{ ...iconoMUI }} />
