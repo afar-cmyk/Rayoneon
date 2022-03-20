@@ -8,6 +8,7 @@ import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined'
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined'
+import SocialMedia from '../components/SocialMedia'
 
 export default function index() {
   return (
@@ -20,6 +21,7 @@ export default function index() {
           <ServiciosIconos />
         </div>
         <ContactIcon />
+        <SocialMedia />
       </main>
     </>
   )
