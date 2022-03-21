@@ -20,9 +20,13 @@ const SocialMedia = () => {
   return (
     <>
       <Box omponent='div' className='contenedor-social-media'>
-        <Box component='div' sx={{ ...cuadroSocialMedia }}>
-          <Box component={iconosSocialmedia[0]} sx={{ fontSize: '26px' }} />
-        </Box>
+        {iconosSocialmedia.map((datos, index) => {
+          return (
+            <Box key={index} component='div' sx={{ ...cuadroSocialMedia }}>
+              <Box component={datos} sx={{ fontSize: '26px' }} />
+            </Box>
+          )
+        })}
       </Box>
     </>
   )
@@ -37,7 +41,8 @@ let cuadroSocialMedia = {
   width: '36px',
   border: '2px solid rgba(242, 242, 242, 0.4)',
   boxSizing: 'border-box',
-  borderRadius: '4px'
+  borderRadius: '4px',
+  gap: '12px'
 }
 
 export default SocialMedia
