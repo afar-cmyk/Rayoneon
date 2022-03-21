@@ -19,9 +19,9 @@ export default function index() {
         <div className='seccion-servicios'>
           <ServciosTexto />
           <ServiciosIconos />
+          <SocialMedia />
         </div>
         <ContactIcon />
-        <SocialMedia />
       </main>
     </>
   )

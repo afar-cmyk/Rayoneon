@@ -73,10 +73,13 @@ body {
   align-items: center;
   justify-content: center;
   align-items: center;
+  width: 50%;
+  height: 95%;
 }
 
 #servicios-texto h3 {
   margin-top: 0;
+  margin-bottom: 10px;
   font-size: 72px;
   font-family: 'Assistant', sans-serif;
   font-weight: 700;
@@ -155,6 +158,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
+  width: 50%;
+  height: 95%;
 }
 
 .cuadro-servicio {
@@ -224,10 +229,11 @@ body {
 .seccion-servicios {
   background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
   display: flex;
-  gap: 20%;
+  flex-wrap: wrap;
   flex-direction: row;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   height: 100vh;
+  width: 100vw;
 }

@@ -33,7 +33,10 @@ let contenedorSocialMedia = {
   flexDirection: 'row',
   alignContent: 'center',
   alignItems: 'center',
-  justifyContent: 'flex-start'
+  justifyContent: 'flex-start',
+  position: 'relative',
+  bottom: '25px',
+  left: '25px'
 }
 
 let cuadroSocialMedia = {
