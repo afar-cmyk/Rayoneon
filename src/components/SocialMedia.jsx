@@ -23,7 +23,7 @@ const SocialMedia = () => {
         {iconosSocialmedia.map((datos, index) => {
           return (
             <Box key={index} component='div' sx={{ ...cuadroSocialMedia }}>
-              <Box component={datos} sx={{ fontSize: '26px' }} />
+              <Box component={datos} sx={{ fontSize: '22px' }} />
             </Box>
           )
         })}
@@ -37,8 +37,8 @@ let cuadroSocialMedia = {
   alignContent: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  height: '36px',
-  width: '36px',
+  height: '32px',
+  width: '32px',
   border: '2px solid rgba(242, 242, 242, 0.4)',
   boxSizing: 'border-box',
   borderRadius: '4px',
