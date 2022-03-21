@@ -19,7 +19,7 @@ const SocialMedia = () => {
 
   return (
     <>
-      <Box omponent='div' sx={{ ...contenedorSocialMedia }}>
+      <Box omponent='div' className='contenedor-social-media'>
         <Box component='div' sx={{ ...cuadroSocialMedia }}>
           <Box component={iconosSocialmedia[0]} sx={{ fontSize: '26px' }} />
         </Box>
@@ -28,25 +28,11 @@ const SocialMedia = () => {
   )
 }
 
-let contenedorSocialMedia = {
-  display: 'flex',
-  flexDirection: 'row',
-  alignContent: 'center',
-  alignItems: 'center',
-  justifyContent: 'flex-start',
-  position: 'relative',
-  bottom: '25px',
-  left: '25px'
-}
-
 let cuadroSocialMedia = {
   display: 'flex',
   alignContent: 'center',
   alignItems: 'center',
   justifyContent: 'center',
-  // position: 'fixed',
-  // bottom: '35px',
-  // left: '35px',
   height: '36px',
   width: '36px',
   border: '2px solid rgba(242, 242, 242, 0.4)',
