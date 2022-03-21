@@ -8,22 +8,38 @@ import EmailIcon from '@mui/icons-material/Email'
 import { Box } from '@mui/material'
 
 const SocialMedia = () => {
+  // let iconosSocialmedia = [
+  //   InstagramIcon,
+  //   FacebookIcon,
+  //   TwitterIcon,
+  //   PinterestIcon,
+  //   YouTubeIcon,
+  //   EmailIcon
+  // ]
+
   let iconosSocialmedia = [
-    InstagramIcon,
-    FacebookIcon,
-    TwitterIcon,
-    PinterestIcon,
-    YouTubeIcon,
-    EmailIcon
+    { icono: InstagramIcon, enlace: 'https://pagina1.com/rayoneon' },
+    { icono: FacebookIcon, enlace: 'https://pagina2.com/rayoneon' },
+    { icono: TwitterIcon, enlace: 'https://pagina3.com/rayoneon' },
+    { icono: PinterestIcon, enlace: 'https://pagin4a.com/rayoneon' },
+    { icono: YouTubeIcon, enlace: 'https://pagina5.com/rayoneon' },
+    { icono: EmailIcon, enlace: 'https://pagina6.com/rayoneon' }
   ]
 
   return (
     <>
       <Box omponent='div' className='contenedor-social-media'>
         {iconosSocialmedia.map((datos, index) => {
+          const { icono, enlace } = datos
           return (
-            <Box key={index} component='div' sx={{ ...cuadroSocialMedia }}>
-              <Box component={datos} sx={{ fontSize: '22px' }} />
+            <Box
+              key={index}
+              component='a'
+              href={enlace}
+              target='_blank'
+              sx={{ ...cuadroSocialMedia }}
+            >
+              <Box component={icono} sx={{ fontSize: '22px' }} />
             </Box>
           )
         })}
