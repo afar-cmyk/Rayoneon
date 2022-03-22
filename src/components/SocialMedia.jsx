@@ -64,7 +64,10 @@ const SocialMedia = () => {
               rel='noreferrer'
               className={`cuadro-social-media ${clase}`}
             >
-              <Box component={icono} sx={{ fontSize: '22px' }} />
+              <Box
+                component={icono}
+                sx={{ color: '#ffffff99', fontSize: '22px' }}
+              />
             </a>
           )
         })}
