@@ -20,32 +20,32 @@ const SocialMedia = () => {
   let iconosSocialmedia = [
     {
       icono: InstagramIcon,
-      enlace: 'https://pagina1.com/rayoneon',
+      enlace: 'https://www.instagram.com/rayoneon/',
       clase: 'instagram'
     },
     {
       icono: FacebookIcon,
-      enlace: 'https://pagina2.com/rayoneon',
+      enlace: 'https://www.facebook.com/Rayo-neon-1400859480129814',
       clase: 'facebook'
     },
     {
       icono: TwitterIcon,
-      enlace: 'https://pagina3.com/rayoneon',
+      enlace: 'https://twitter.com/rayoneon',
       clase: 'twitter'
     },
     {
       icono: PinterestIcon,
-      enlace: 'https://pagin4a.com/rayoneon',
+      enlace: 'https://es.pinterest.com/rayoneon/pins/',
       clase: 'pinterest'
     },
     {
       icono: YouTubeIcon,
-      enlace: 'https://pagina5.com/rayoneon',
+      enlace: 'https://www.youtube.com/watch?v=Qwcv8hzs5Hc',
       clase: 'youtube'
     },
     {
       icono: EmailIcon,
-      enlace: 'https://pagina6.com/rayoneon',
+      enlace: 'ventas@rayoneon.com',
       clase: 'email'
     }
   ]
