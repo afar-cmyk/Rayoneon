@@ -18,47 +18,59 @@ const SocialMedia = () => {
   // ]
 
   let iconosSocialmedia = [
-    { icono: InstagramIcon, enlace: 'https://pagina1.com/rayoneon' },
-    { icono: FacebookIcon, enlace: 'https://pagina2.com/rayoneon' },
-    { icono: TwitterIcon, enlace: 'https://pagina3.com/rayoneon' },
-    { icono: PinterestIcon, enlace: 'https://pagin4a.com/rayoneon' },
-    { icono: YouTubeIcon, enlace: 'https://pagina5.com/rayoneon' },
-    { icono: EmailIcon, enlace: 'https://pagina6.com/rayoneon' }
+    {
+      icono: InstagramIcon,
+      enlace: 'https://pagina1.com/rayoneon',
+      clase: 'instagram'
+    },
+    {
+      icono: FacebookIcon,
+      enlace: 'https://pagina2.com/rayoneon',
+      clase: 'facebook'
+    },
+    {
+      icono: TwitterIcon,
+      enlace: 'https://pagina3.com/rayoneon',
+      clase: 'twitter'
+    },
+    {
+      icono: PinterestIcon,
+      enlace: 'https://pagin4a.com/rayoneon',
+      clase: 'pinterest'
+    },
+    {
+      icono: YouTubeIcon,
+      enlace: 'https://pagina5.com/rayoneon',
+      clase: 'youtube'
+    },
+    {
+      icono: EmailIcon,
+      enlace: 'https://pagina6.com/rayoneon',
+      clase: 'email'
+    }
   ]
 
   return (
     <>
-      <Box omponent='div' className='contenedor-social-media'>
+      <div className='contenedor-social-media'>
         {iconosSocialmedia.map((datos, index) => {
-          const { icono, enlace } = datos
+          const { icono, enlace, clase } = datos
           return (
-            <Box
+            <a
               key={index}
               component='a'
               href={enlace}
               target='_blank'
-              sx={{ ...cuadroSocialMedia }}
+              rel='noreferrer'
+              className={`cuadro-social-media ${clase}`}
             >
               <Box component={icono} sx={{ fontSize: '22px' }} />
-            </Box>
+            </a>
           )
         })}
-      </Box>
+      </div>
     </>
   )
-}
-
-let cuadroSocialMedia = {
-  display: 'flex',
-  alignContent: 'center',
-  alignItems: 'center',
-  justifyContent: 'center',
-  height: '32px',
-  width: '32px',
-  border: '2px solid rgba(242, 242, 242, 0.4)',
-  boxSizing: 'border-box',
-  borderRadius: '4px',
-  gap: '12px'
 }
 
 export default SocialMedia
