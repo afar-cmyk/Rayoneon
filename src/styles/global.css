@@ -256,8 +256,21 @@ body {
   justify-content: center;
   height: 32px;
   width: 32px;
-  border: 2px solid rgba(242, 242, 242, 0.4);
+  border: 2px solid #f2f2f266;
   box-sizing: border-box;
   border-radius: 4px;
   gap: 12px;
+}
+
+.cuadro-social-media:hover {
+  border: 2px solid #f2f2f2b3;
+}
+
+.iconoMUI {
+  color: #ffffff99;
+  font-size: 22px;
+}
+
+.cuadro-social-media:hover .iconoMUI {
+  color: #ffffffe6;
 }

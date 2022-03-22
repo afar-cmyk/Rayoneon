@@ -58,7 +58,6 @@ const SocialMedia = () => {
           return (
             <a
               key={index}
-              component='a'
               href={enlace}
               target='_blank'
               rel='noreferrer'
@@ -66,7 +65,14 @@ const SocialMedia = () => {
             >
               <Box
                 component={icono}
-                sx={{ color: '#ffffff99', fontSize: '22px' }}
+                className='iconoMUI'
+                sx={
+                  {
+                    // color: '#ffffff99',
+                    // fontSize: '22px',
+                    // '&:hover': { color: '#ffffffe6' }
+                  }
+                }
               />
             </a>
           )
