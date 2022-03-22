@@ -1,22 +1,13 @@
 import React from 'react'
 import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
-import TwitterIcon from '@mui/icons-material/Twitter'
+import ReviewsIcon from '@mui/icons-material/Reviews'
 import PinterestIcon from '@mui/icons-material/Pinterest'
 import YouTubeIcon from '@mui/icons-material/YouTube'
 import EmailIcon from '@mui/icons-material/Email'
 import { Box } from '@mui/material'
 
 const SocialMedia = () => {
-  // let iconosSocialmedia = [
-  //   InstagramIcon,
-  //   FacebookIcon,
-  //   TwitterIcon,
-  //   PinterestIcon,
-  //   YouTubeIcon,
-  //   EmailIcon
-  // ]
-
   let iconosSocialmedia = [
     {
       icono: InstagramIcon,
@@ -29,9 +20,9 @@ const SocialMedia = () => {
       clase: 'facebook'
     },
     {
-      icono: TwitterIcon,
-      enlace: 'https://twitter.com/rayoneon',
-      clase: 'twitter'
+      icono: YouTubeIcon,
+      enlace: 'https://www.youtube.com/watch?v=Qwcv8hzs5Hc',
+      clase: 'youtube'
     },
     {
       icono: PinterestIcon,
@@ -39,15 +30,21 @@ const SocialMedia = () => {
       clase: 'pinterest'
     },
     {
-      icono: YouTubeIcon,
-      enlace: 'https://www.youtube.com/watch?v=Qwcv8hzs5Hc',
-      clase: 'youtube'
+      icono: ReviewsIcon,
+      enlace:
+        'https://www.google.com/search?q=rayo+neon&oq=rayo+neon&aqs=chrome..69i57j0i22i30l4j69i60l3.1247j1j4&sourceid=chrome&ie=UTF-8#lrd=0x8e3f999d072db581:0xf451a327625f2cf9,1,,,',
+      clase: 'reviews'
     },
     {
       icono: EmailIcon,
-      enlace: 'ventas@rayoneon.com',
+      enlace: 'mailto:ventas@rayoneon.com',
       clase: 'email'
     }
+    // {
+    //   icono: 'google maps',
+    //   enlace: 'https://search.google.com/local/writereview?placeid=ChIJgbUtB52ZP44R-SxfYiejUfQ',
+    //   clase:'google-maps'
+    // }
   ]
 
   return (
