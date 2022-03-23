@@ -274,3 +274,15 @@ body {
 .cuadro-social-media:hover .iconoMUI {
   color: #ffffffe6;
 }
+
+.css-1k51tf5-MuiTooltip-tooltip {
+  background-color: #314664 !important;
+  color: #f2f2f2 !important;
+  font-family: 'Assistant' !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+}
+
+.css-kudwh-MuiTooltip-arrow {
+  color: #314664 !important;
+}

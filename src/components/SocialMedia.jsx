@@ -34,12 +34,12 @@ const SocialMedia = () => {
       icono: ReviewsIcon,
       enlace:
         'https://www.google.com/search?q=rayo+neon&oq=rayo+neon&aqs=chrome..69i57j0i22i30l4j69i60l3.1247j1j4&sourceid=chrome&ie=UTF-8#lrd=0x8e3f999d072db581:0xf451a327625f2cf9,1,,,',
-      clase: 'Reviews'
+      clase: 'Reseñas'
     },
     {
       icono: EmailIcon,
       enlace: 'mailto:ventas@rayoneon.com',
-      clase: 'Email'
+      clase: 'E-mail'
     }
     // {
     //   icono: 'google maps',
@@ -54,7 +54,7 @@ const SocialMedia = () => {
         {iconosSocialmedia.map((datos, index) => {
           const { icono, enlace, clase } = datos
           return (
-            <Tooltip title={clase} arrow>
+            <Tooltip title={clase} arrow sx={{ color: 'red' }}>
               <a
                 key={index}
                 href={enlace}
