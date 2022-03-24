@@ -54,7 +54,7 @@ const SocialMedia = () => {
         {iconosSocialmedia.map((datos, index) => {
           const { icono, enlace, clase } = datos
           return (
-            <Tooltip title={clase} arrow sx={{ color: 'red' }}>
+            <Tooltip title={clase} arrow>
               <a
                 key={index}
                 href={enlace}
