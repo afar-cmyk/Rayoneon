@@ -36,6 +36,18 @@ const ModalMain = () => {
             p: 4
           }}
         >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              alignContent: 'center',
+              gap: '20px'
+            }}
+          >
+            <button>atras</button>
+            <button>adelante</button>
+            <button onClick={modalCerrado}>cerrar</button>
+          </div>
           <PageOne />
           <PageTwo />
           <PageThree />
