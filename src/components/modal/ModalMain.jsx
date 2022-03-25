@@ -12,7 +12,16 @@ const ModalMain = () => {
   return (
     <>
       <button onClick={modalAbierto}>Boton</button>
-      <Modal open={abrirModal} onClose={modalCerrado}>
+      <Modal
+        open={abrirModal}
+        onClose={modalCerrado}
+        sx={{
+          '& .MuiBackdrop-root': {
+            backgroundColor: 'rgba(0, 0, 0, 0.7)',
+            backdropFilter: 'blur(4px)'
+          }
+        }}
+      >
         <Box
           sx={{
             position: 'absolute',
@@ -23,6 +32,7 @@ const ModalMain = () => {
             background:
               'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
             boxShadow: 24,
+            borderRadius: '6px',
             p: 4
           }}
         >
