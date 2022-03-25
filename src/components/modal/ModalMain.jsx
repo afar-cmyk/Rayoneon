@@ -3,6 +3,7 @@ import PageOne from './PageOne'
 import PageTwo from './PageTwo'
 import PageThree from './PageThree'
 import Modal from '@mui/material/Modal'
+import Box from '@mui/material/Box'
 
 const ModalMain = () => {
   const [abrirModal, setAbrirModal] = React.useState(false)
@@ -12,11 +13,23 @@ const ModalMain = () => {
     <>
       <button onClick={modalAbierto}>Boton</button>
       <Modal open={abrirModal} onClose={modalCerrado}>
-        <div>
+        <Box
+          sx={{
+            position: 'absolute',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            width: '38.214vw',
+            background:
+              'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
+            boxShadow: 24,
+            p: 4
+          }}
+        >
           <PageOne />
           <PageTwo />
           <PageThree />
-        </div>
+        </Box>
       </Modal>
     </>
   )
