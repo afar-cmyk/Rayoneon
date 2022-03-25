@@ -6,10 +6,12 @@ import Modal from '@mui/material/Modal'
 
 const ModalMain = () => {
   const [abrirModal, setAbrirModal] = React.useState(false)
+  const modalAbierto = () => setAbrirModal(true)
+  const modalCerrado = () => setAbrirModal(false)
   return (
     <>
-      <button onClick={() => setAbrirModal(!abrirModal)}>Boton</button>
-      <Modal open={abrirModal}>
+      <button onClick={modalAbierto}>Boton</button>
+      <Modal open={abrirModal} onClose={modalCerrado}>
         <div>
           <PageOne />
           <PageTwo />
