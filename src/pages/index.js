@@ -9,6 +9,7 @@ import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined
 import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined'
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined'
 import SocialMedia from '../components/SocialMedia'
+import ModalMain from '../components/modal/ModalMain'
 
 export default function index() {
   return (
@@ -22,6 +23,7 @@ export default function index() {
           <SocialMedia />
         </div>
         <ContactIcon />
+        <ModalMain />
       </main>
     </>
   )
