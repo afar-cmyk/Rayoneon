@@ -1,7 +1,11 @@
 import React from 'react'
 
 const pageone = () => {
-  return <div>pageone</div>
+  return (
+    <>
+      <p>pagina uno</p>
+    </>
+  )
 }
 
 export default pageone

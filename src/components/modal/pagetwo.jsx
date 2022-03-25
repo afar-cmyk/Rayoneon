@@ -1,7 +1,11 @@
 import React from 'react'
 
 const pagetwo = () => {
-  return <div>pagetwo</div>
+  return (
+    <>
+      <p>pagina dos</p>
+    </>
+  )
 }
 
 export default pagetwo
