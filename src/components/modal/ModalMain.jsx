@@ -4,6 +4,9 @@ import PageTwo from './PageTwo'
 import PageThree from './PageThree'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
+import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
+import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
+import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 
 const ModalMain = () => {
   // Estados y comportamiento para abrir y cerrar la ventana modal
