@@ -9,6 +9,35 @@ const ModalMain = () => {
   const [abrirModal, setAbrirModal] = React.useState(false)
   const modalAbierto = () => setAbrirModal(true)
   const modalCerrado = () => setAbrirModal(false)
+
+  let listaPaginasModal = [PageOne, PageTwo, PageThree]
+
+  const [paginaModalActiva, setPaginaModalActiva] = React.useState(0)
+
+  const totalPaginas = () => {
+    return listaPaginasModal.length
+  }
+
+  const comprobarFinalPaginas = () => {
+    return paginaModalActiva === totalPaginas() - 1
+  }
+
+  const siguientePagina = () => {
+    const establecePaginaActual = comprobarFinalPaginas()
+      ? paginaModalActiva - (totalPaginas() - 1)
+      : paginaModalActiva + 1
+    setPaginaModalActiva(establecePaginaActual)
+  }
+
+  const anteriorPagina = () => {
+    const establecePaginaActual = comprobarFinalPaginas()
+      ? paginaModalActiva - 1
+      : paginaModalActiva === 0
+      ? paginaModalActiva + (totalPaginas() - 1)
+      : paginaModalActiva - 1
+    setPaginaModalActiva(establecePaginaActual)
+  }
+
   return (
     <>
       <button onClick={modalAbierto}>Boton</button>
@@ -44,13 +73,11 @@ const ModalMain = () => {
               gap: '20px'
             }}
           >
-            <button>atras</button>
-            <button>adelante</button>
+            <button onClick={anteriorPagina}>atras</button>
+            <button onClick={siguientePagina}>adelante</button>
             <button onClick={modalCerrado}>cerrar</button>
           </div>
-          <PageOne />
-          <PageTwo />
-          <PageThree />
+          <Box component={listaPaginasModal[paginaModalActiva]} />
         </Box>
       </Modal>
     </>
