@@ -6,22 +6,28 @@ import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
 
 const ModalMain = () => {
+  // Estados y comportamiento para abrir y cerrar la ventana modal
   const [abrirModal, setAbrirModal] = React.useState(false)
   const modalAbierto = () => setAbrirModal(true)
   const modalCerrado = () => setAbrirModal(false)
 
+  // Lista de los componentes internos de la ventana modal
   let listaPaginasModal = [PageOne, PageTwo, PageThree]
 
+  // Estado inicial de la pagina interna de la ventana modal
   const [paginaModalActiva, setPaginaModalActiva] = React.useState(0)
 
+  // Funcion que devuelve el tamaño de la lista de componentes
   const totalPaginas = () => {
     return listaPaginasModal.length
   }
 
+  // Funcion que comprueba si se encuentra en la iteracion final de la lista de componentes
   const comprobarFinalPaginas = () => {
     return paginaModalActiva === totalPaginas() - 1
   }
 
+  // Funcion en bucle que itera sobre la lista de componentes en forma positiva
   const siguientePagina = () => {
     const establecePaginaActual = comprobarFinalPaginas()
       ? paginaModalActiva - (totalPaginas() - 1)
@@ -29,6 +35,7 @@ const ModalMain = () => {
     setPaginaModalActiva(establecePaginaActual)
   }
 
+  // Funcion en bucle que itera sobre la lista de componentes en forma negativa
   const anteriorPagina = () => {
     const establecePaginaActual = comprobarFinalPaginas()
       ? paginaModalActiva - 1
