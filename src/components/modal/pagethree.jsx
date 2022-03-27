@@ -3,7 +3,7 @@ import React from 'react'
 const pagethree = () => {
   return (
     <>
-      <p>pagina tres</p>
+      <p style={{ width: '100%' }}>pagina tres</p>
     </>
   )
 }

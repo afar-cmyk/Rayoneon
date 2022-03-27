@@ -3,7 +3,7 @@ import React from 'react'
 const pageone = () => {
   return (
     <>
-      <p>pagina uno</p>
+      <p style={{ width: '100%' }}>pagina uno</p>
     </>
   )
 }

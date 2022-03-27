@@ -8,6 +8,7 @@ import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import IconButton from '@mui/material/IconButton'
+import { display } from '@mui/system'
 
 const ModalMain = () => {
   // Estados y comportamiento para abrir y cerrar la ventana modal
@@ -49,6 +50,35 @@ const ModalMain = () => {
     setPaginaModalActiva(establecePaginaActual)
   }
 
+  const ContenedorNavegacion = ({ children }) => {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignContent: 'center',
+          gap: '20px'
+        }}
+      >
+        <IconButton
+          onClick={anteriorPagina}
+          aria-label='anterior pagina'
+          component='span'
+        >
+          <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
+        </IconButton>
+        {children}
+        <IconButton
+          onClick={siguientePagina}
+          aria-label='siguiente pagina'
+          component='span'
+        >
+          <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
+        </IconButton>
+      </div>
+    )
+  }
+
   return (
     <>
       <button onClick={modalAbierto}>Boton</button>
@@ -73,7 +103,10 @@ const ModalMain = () => {
               'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
             boxShadow: 24,
             borderRadius: '6px',
-            p: 4
+            display: 'flex',
+            flexDirection: 'column',
+            flexWrap: 'wrap',
+            alignContent: 'center'
           }}
         >
           <div
@@ -81,36 +114,35 @@ const ModalMain = () => {
               display: 'flex',
               flexDirection: 'row',
               alignContent: 'center',
-              gap: '20px'
+              justifyContent: 'flex-end',
+              width: '100%'
             }}
           >
-            <IconButton
-              onClick={anteriorPagina}
-              aria-label='anterior pagina'
-              component='span'
-            >
-              <ArrowLeftOutlinedIcon />
-            </IconButton>
-            <IconButton
-              onClick={siguientePagina}
-              aria-label='siguiente pagina'
-              component='span'
-            >
-              <ArrowRightOutlinedIcon />
-            </IconButton>
             <IconButton
               onClick={modalCerrado}
               aria-label='cerrar ventana'
               component='span'
             >
-              <CloseOutlinedIcon />
+              <CloseOutlinedIcon sx={{ ...botonCerrar }} />
             </IconButton>
           </div>
-          <Box component={listaPaginasModal[paginaModalActiva]} />
+          <ContenedorNavegacion>
+            <Box component={listaPaginasModal[paginaModalActiva]} />
+          </ContenedorNavegacion>
         </Box>
       </Modal>
     </>
   )
+}
+
+const botonesNavegacion = {
+  color: '#A7E5E5',
+  fontSize: '5.5rem'
+}
+
+const botonCerrar = {
+  color: '#CCCCCC',
+  fontSize: '2.680rem'
 }
 
 export default ModalMain
