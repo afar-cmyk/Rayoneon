@@ -80,10 +80,18 @@ const ModalMain = () => {
   }
 
   const IndicadorPaginaActual = () => {
-    const estiloIndicador = {
-      width: '41px',
-      height: '10px',
-      backgroundColor: 'rgba(42, 74, 128, 0.4)'
+    const compIndicadorActual = (numero) => {
+      return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
+    }
+
+    const estiloIndicador = (numero) => {
+      return {
+        backgroundColor: compIndicadorActual(numero)
+          ? '#29E8E8'
+          : 'rgba(42, 74, 128, 0.4)',
+        width: '41px',
+        height: '10px'
+      }
     }
     return (
       <>
@@ -103,9 +111,9 @@ const ModalMain = () => {
               gap: 15
             }}
           >
-            <div style={{ ...estiloIndicador }} />
-            <div style={{ ...estiloIndicador }} />
-            <div style={{ ...estiloIndicador }} />
+            <div style={estiloIndicador(0)} />
+            <div style={estiloIndicador(1)} />
+            <div style={estiloIndicador(2)} />
           </div>
         </div>
       </>
