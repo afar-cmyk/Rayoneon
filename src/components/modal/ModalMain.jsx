@@ -78,6 +78,16 @@ const ModalMain = () => {
     )
   }
 
+  const IndicadorPaginaActual = () => {
+    return (
+      <>
+        <div style={{ display: 'flex', justifyContent: 'center' }}>
+          indicaor de la pagina actual
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <button onClick={modalAbierto}>Boton</button>
@@ -128,6 +138,7 @@ const ModalMain = () => {
           <ContenedorNavegacion>
             <Box component={listaPaginasModal[paginaModalActiva]} />
           </ContenedorNavegacion>
+          <IndicadorPaginaActual />
         </Box>
       </Modal>
     </>
