@@ -136,12 +136,18 @@ const ModalMain = () => {
 
 const botonesNavegacion = {
   color: '#A7E5E5',
-  fontSize: '5.5rem'
+  fontSize: '5.5rem',
+  '&:hover': {
+    color: '#29E8E8'
+  }
 }
 
 const botonCerrar = {
   color: '#CCCCCC',
-  fontSize: '2.680rem'
+  fontSize: '2.680rem',
+  '&:hover': {
+    color: '#F2F2F2'
+  }
 }
 
 export default ModalMain
