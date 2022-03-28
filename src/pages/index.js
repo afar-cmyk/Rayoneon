@@ -2,7 +2,6 @@ import React from 'react'
 import NavBar from '../components/navigation/NavBar'
 import FondoIndex from '../components/FondoIndex'
 import '../styles/global.css'
-import Button from '@mui/material/Button'
 import ContactIcon from '../components/ContactIcon.jsx'
 import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
 import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'
@@ -23,7 +22,6 @@ export default function index() {
           <SocialMedia />
         </div>
         <ContactIcon />
-        <ModalMain />
       </main>
     </>
   )
@@ -70,9 +68,7 @@ const ServciosTexto = () => {
           </a>
           .
         </p>
-        <Button variant='outlined' color='primary' sx={{ ...botonMUI }}>
-          Acerca de nosotros
-        </Button>
+        <ModalMain />
       </section>
     </>
   )
@@ -128,25 +124,6 @@ const ServiciosIconos = () => {
       </section>
     </>
   )
-}
-
-let botonMUI = {
-  fontFamily: 'Assistant',
-  fontStyle: 'normal',
-  fontWeight: 700,
-  fontSize: '24px',
-  color: '#cccccc',
-  textTransform: 'initial',
-  border: '3px solid rgba(175, 6, 159, 0.7)',
-  boxSizing: 'border-box',
-  borderRadius: '4px',
-  '&:hover': {
-    color: '#F2F2F2',
-    border: '3px solid #AF069F',
-    boxSizing: 'border-box',
-    boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
-    borderRadius: '4px'
-  }
 }
 
 let iconoMUI = {

@@ -80,10 +80,12 @@ const ModalMain = () => {
   }
 
   const IndicadorPaginaActual = () => {
+    // Comprueba si la pagina actual es la misma que se ha renderizado
     const compIndicadorActual = (numero) => {
       return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
     }
 
+    // Agrega estilos al indicador dependiendo si es la pagina actual o no
     const estiloIndicador = (numero) => {
       return {
         backgroundColor: compIndicadorActual(numero)
@@ -122,7 +124,14 @@ const ModalMain = () => {
 
   return (
     <>
-      <button onClick={modalAbierto}>Boton</button>
+      <Button
+        onClick={modalAbierto}
+        variant='outlined'
+        color='primary'
+        sx={{ ...botonMUI }}
+      >
+        Acerca de nosotros
+      </Button>
       <Modal
         open={abrirModal}
         onClose={modalCerrado}
@@ -175,6 +184,25 @@ const ModalMain = () => {
       </Modal>
     </>
   )
+}
+
+let botonMUI = {
+  fontFamily: 'Assistant',
+  fontStyle: 'normal',
+  fontWeight: 700,
+  fontSize: '24px',
+  color: '#cccccc',
+  textTransform: 'initial',
+  border: '3px solid rgba(175, 6, 159, 0.7)',
+  boxSizing: 'border-box',
+  borderRadius: '4px',
+  '&:hover': {
+    color: '#F2F2F2',
+    border: '3px solid #AF069F',
+    boxSizing: 'border-box',
+    boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
+    borderRadius: '4px'
+  }
 }
 
 const botonesNavegacion = {
