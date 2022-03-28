@@ -81,8 +81,32 @@ const ModalMain = () => {
   const IndicadorPaginaActual = () => {
     return (
       <>
-        <div style={{ display: 'flex', justifyContent: 'center' }}>
-          indicaor de la pagina actual
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignContent: 'center',
+            alignItems: 'center',
+            height: '40px'
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              gap: 15
+            }}
+          >
+            <div
+              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
+            />
+            <div
+              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
+            />
+            <div
+              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
+            />
+          </div>
         </div>
       </>
     )
