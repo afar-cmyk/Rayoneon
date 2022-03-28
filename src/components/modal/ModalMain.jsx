@@ -7,8 +7,7 @@ import Box from '@mui/material/Box'
 import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
-import IconButton from '@mui/material/IconButton'
-import { display } from '@mui/system'
+import Button from '@mui/material/Button'
 
 const ModalMain = () => {
   // Estados y comportamiento para abrir y cerrar la ventana modal
@@ -60,21 +59,21 @@ const ModalMain = () => {
           gap: '20px'
         }}
       >
-        <IconButton
+        <Button
           onClick={anteriorPagina}
           aria-label='anterior pagina'
-          component='span'
+          component='button'
         >
           <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
-        </IconButton>
+        </Button>
         {children}
-        <IconButton
+        <Button
           onClick={siguientePagina}
           aria-label='siguiente pagina'
-          component='span'
+          component='button'
         >
           <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
-        </IconButton>
+        </Button>
       </div>
     )
   }
@@ -118,13 +117,13 @@ const ModalMain = () => {
               width: '100%'
             }}
           >
-            <IconButton
+            <Button
               onClick={modalCerrado}
               aria-label='cerrar ventana'
               component='span'
             >
               <CloseOutlinedIcon sx={{ ...botonCerrar }} />
-            </IconButton>
+            </Button>
           </div>
           <ContenedorNavegacion>
             <Box component={listaPaginasModal[paginaModalActiva]} />
