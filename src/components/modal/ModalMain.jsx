@@ -71,6 +71,7 @@ const ModalMain = () => {
           onClick={siguientePagina}
           aria-label='siguiente pagina'
           component='button'
+          sx={{ width: '40px' }}
         >
           <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
         </Button>
@@ -79,6 +80,11 @@ const ModalMain = () => {
   }
 
   const IndicadorPaginaActual = () => {
+    const estiloIndicador = {
+      width: '41px',
+      height: '10px',
+      backgroundColor: 'rgba(42, 74, 128, 0.4)'
+    }
     return (
       <>
         <div
@@ -97,15 +103,9 @@ const ModalMain = () => {
               gap: 15
             }}
           >
-            <div
-              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
-            />
-            <div
-              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
-            />
-            <div
-              style={{ width: '41px', height: '10px', backgroundColor: 'red' }}
-            />
+            <div style={{ ...estiloIndicador }} />
+            <div style={{ ...estiloIndicador }} />
+            <div style={{ ...estiloIndicador }} />
           </div>
         </div>
       </>
