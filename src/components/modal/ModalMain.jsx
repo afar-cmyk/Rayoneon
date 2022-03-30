@@ -1,8 +1,6 @@
 import React from 'react'
-import Modal from '@mui/material/Modal'
-import Box from '@mui/material/Box'
-import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
-import Button from '@mui/material/Button'
+import { Modal, Box, Button } from '@mui/material'
+import { CloseOutlined } from '@mui/icons-material'
 import ContenedorNavegacion from './ContenedorNavegacion'
 import IndicadorPaginaActual from './IndicadorPaginaActual'
 import ModalContext from './ModalContext'
@@ -46,7 +44,7 @@ const ModalMain = () => {
               aria-label='cerrar ventana'
               component='span'
             >
-              <CloseOutlinedIcon sx={{ ...botonCerrar }} />
+              <CloseOutlined sx={{ ...botonCerrar }} />
             </Button>
           </div>
           <ContenedorNavegacion>

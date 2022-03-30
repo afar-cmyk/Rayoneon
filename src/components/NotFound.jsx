@@ -1,10 +1,10 @@
 import React from 'react'
-import ErrorIcon from '@mui/icons-material/Error'
+import { Error } from '@mui/icons-material'
 
 export default function NotFound() {
   return (
     <div>
-      <ErrorIcon />
+      <Error />
       <p>Pagina no encontrada</p>
     </div>
   )

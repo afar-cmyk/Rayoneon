@@ -1,7 +1,6 @@
 import React from 'react'
-import Button from '@mui/material/Button'
-import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
-import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
+import { Button } from '@mui/material'
+import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import ModalContext from './ModalContext'
 
 const ContenedorNavegacion = ({ children }) => {
@@ -20,7 +19,7 @@ const ContenedorNavegacion = ({ children }) => {
         aria-label='anterior pagina'
         component='button'
       >
-        <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
+        <ArrowLeftOutlined sx={{ ...botonesNavegacion }} />
       </Button>
       {children}
       <Button
@@ -29,7 +28,7 @@ const ContenedorNavegacion = ({ children }) => {
         component='button'
         sx={{ width: '40px' }}
       >
-        <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
+        <ArrowRightOutlined sx={{ ...botonesNavegacion }} />
       </Button>
     </div>
   )

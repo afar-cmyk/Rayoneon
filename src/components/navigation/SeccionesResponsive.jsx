@@ -1,13 +1,8 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import MenuRoundedIcon from '@mui/icons-material/MenuRounded'
-import CloseIcon from '@mui/icons-material/Close'
-import Menu from '@mui/material/Menu'
-import MenuItem from '@mui/material/MenuItem'
-import { styled } from '@mui/material/styles'
-import useMediaQuery from '@mui/material/useMediaQuery'
-import { useTheme } from '@mui/material/styles'
-import IconButton from '@mui/material/IconButton'
+import { MenuRounded, Close } from '@mui/icons-material'
+import { Menu, MenuItem, useMediaQuery, IconButton } from '@mui/material'
+import { styled, useTheme } from '@mui/material/styles'
 
 // Componente con estilos para el menu responsive
 const MenuResponsive = styled((props) => (
@@ -97,7 +92,7 @@ export default function SeccionesResponsive(props) {
         aria-controls='boton-menu'
         onClick={activadorMenu}
       >
-        {menuAbierto ? <CloseIcon /> : <MenuRoundedIcon />}
+        {menuAbierto ? <Close /> : <MenuRounded />}
       </IconButton>
       <MenuResponsive
         id='menu-responsive'

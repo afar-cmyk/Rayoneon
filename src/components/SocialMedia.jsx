@@ -1,43 +1,44 @@
 import React from 'react'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import ReviewsIcon from '@mui/icons-material/Reviews'
-import PinterestIcon from '@mui/icons-material/Pinterest'
-import YouTubeIcon from '@mui/icons-material/YouTube'
-import EmailIcon from '@mui/icons-material/Email'
-import { Box } from '@mui/material'
-import Tooltip from '@mui/material/Tooltip'
+import {
+  Instagram,
+  Facebook,
+  Reviews,
+  Pinterest,
+  YouTube,
+  Email
+} from '@mui/icons-material'
+import { Box, Tooltip } from '@mui/material'
 
 const SocialMedia = () => {
   let iconosSocialmedia = [
     {
-      icono: InstagramIcon,
+      icono: Instagram,
       enlace: 'https://www.instagram.com/rayoneon/',
       clase: 'Instagram'
     },
     {
-      icono: FacebookIcon,
+      icono: Facebook,
       enlace: 'https://www.facebook.com/Rayo-neon-1400859480129814',
       clase: 'Facebook'
     },
     {
-      icono: YouTubeIcon,
+      icono: YouTube,
       enlace: 'https://www.youtube.com/watch?v=Qwcv8hzs5Hc',
       clase: 'Youtube'
     },
     {
-      icono: PinterestIcon,
+      icono: Pinterest,
       enlace: 'https://es.pinterest.com/rayoneon/pins/',
       clase: 'Pinterest'
     },
     {
-      icono: ReviewsIcon,
+      icono: Reviews,
       enlace:
         'https://www.google.com/search?q=rayo+neon&oq=rayo+neon&aqs=chrome..69i57j0i22i30l4j69i60l3.1247j1j4&sourceid=chrome&ie=UTF-8#lrd=0x8e3f999d072db581:0xf451a327625f2cf9,1,,,',
       clase: 'Reseñas'
     },
     {
-      icono: EmailIcon,
+      icono: Email,
       enlace: 'mailto:ventas@rayoneon.com',
       clase: 'E-mail'
     }

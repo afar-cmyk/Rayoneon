@@ -3,10 +3,12 @@ import NavBar from '../components/navigation/NavBar'
 import FondoIndex from '../components/FondoIndex'
 import '../styles/global.css'
 import ContactIcon from '../components/ContactIcon.jsx'
-import GppGoodOutlinedIcon from '@mui/icons-material/GppGoodOutlined'
-import LocalShippingOutlinedIcon from '@mui/icons-material/LocalShippingOutlined'
-import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined'
-import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined'
+import {
+  SupportAgentOutlined,
+  AccessTimeOutlined,
+  LocalShippingOutlined,
+  GppGoodOutlined
+} from '@mui/icons-material'
 import SocialMedia from '../components/SocialMedia'
 import ModalMain from '../components/modal/ModalMain'
 import { ModalProvider } from '../components/modal/ModalContext'
@@ -83,16 +85,16 @@ const ServiciosIconos = () => {
       <section id='servicios-iconos'>
         <div className='contenedor-servicios-iconos'>
           <div className='cuadro-servicio-icono'>
-            <SupportAgentOutlinedIcon sx={{ ...iconoMUI }} />
+            <SupportAgentOutlined sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <AccessTimeOutlinedIcon sx={{ ...iconoMUI }} />
+            <AccessTimeOutlined sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <LocalShippingOutlinedIcon sx={{ ...iconoMUI }} />
+            <LocalShippingOutlined sx={{ ...iconoMUI }} />
           </div>
           <div className='cuadro-servicio-icono'>
-            <GppGoodOutlinedIcon sx={{ ...iconoMUI }} />
+            <GppGoodOutlined sx={{ ...iconoMUI }} />
           </div>
         </div>
         <div className='contenedor-servicios-texto'>
