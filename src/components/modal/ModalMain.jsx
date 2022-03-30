@@ -8,6 +8,8 @@ import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import Button from '@mui/material/Button'
+import { DataProvider } from './ModalContext'
+import ModalContext from './ModalContext'
 
 const ModalMain = () => {
   // Estados y comportamiento para abrir y cerrar la ventana modal
@@ -50,6 +52,7 @@ const ModalMain = () => {
   }
 
   const ContenedorNavegacion = ({ children }) => {
+    const { prueba } = React.useContext(ModalContext)
     return (
       <div
         style={{
@@ -66,6 +69,7 @@ const ModalMain = () => {
         >
           <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
         </Button>
+        {prueba}
         {children}
         <Button
           onClick={siguientePagina}
@@ -124,64 +128,66 @@ const ModalMain = () => {
 
   return (
     <>
-      <Button
-        onClick={modalAbierto}
-        variant='outlined'
-        color='primary'
-        sx={{ ...botonMUI }}
-      >
-        Acerca de nosotros
-      </Button>
-      <Modal
-        open={abrirModal}
-        onClose={modalCerrado}
-        sx={{
-          '& .MuiBackdrop-root': {
-            backgroundColor: 'rgba(0, 0, 0, 0.7)',
-            backdropFilter: 'blur(4px)'
-          }
-        }}
-      >
-        <Box
+      <DataProvider>
+        <Button
+          onClick={modalAbierto}
+          variant='outlined'
+          color='primary'
+          sx={{ ...botonMUI }}
+        >
+          Acerca de nosotros
+        </Button>
+        <Modal
+          open={abrirModal}
+          onClose={modalCerrado}
           sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '38.214vw',
-            background:
-              'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
-            boxShadow: 24,
-            borderRadius: '6px',
-            display: 'flex',
-            flexDirection: 'column',
-            flexWrap: 'wrap',
-            alignContent: 'center'
+            '& .MuiBackdrop-root': {
+              backgroundColor: 'rgba(0, 0, 0, 0.7)',
+              backdropFilter: 'blur(4px)'
+            }
           }}
         >
-          <div
-            style={{
+          <Box
+            sx={{
+              position: 'absolute',
+              top: '50%',
+              left: '50%',
+              transform: 'translate(-50%, -50%)',
+              width: '38.214vw',
+              background:
+                'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
+              boxShadow: 24,
+              borderRadius: '6px',
               display: 'flex',
-              flexDirection: 'row',
-              alignContent: 'center',
-              justifyContent: 'flex-end',
-              width: '100%'
+              flexDirection: 'column',
+              flexWrap: 'wrap',
+              alignContent: 'center'
             }}
           >
-            <Button
-              onClick={modalCerrado}
-              aria-label='cerrar ventana'
-              component='span'
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignContent: 'center',
+                justifyContent: 'flex-end',
+                width: '100%'
+              }}
             >
-              <CloseOutlinedIcon sx={{ ...botonCerrar }} />
-            </Button>
-          </div>
-          <ContenedorNavegacion>
-            <Box component={listaPaginasModal[paginaModalActiva]} />
-          </ContenedorNavegacion>
-          <IndicadorPaginaActual />
-        </Box>
-      </Modal>
+              <Button
+                onClick={modalCerrado}
+                aria-label='cerrar ventana'
+                component='span'
+              >
+                <CloseOutlinedIcon sx={{ ...botonCerrar }} />
+              </Button>
+            </div>
+            <ContenedorNavegacion>
+              <Box component={listaPaginasModal[paginaModalActiva]} />
+            </ContenedorNavegacion>
+            <IndicadorPaginaActual />
+          </Box>
+        </Modal>
+      </DataProvider>
     </>
   )
 }
