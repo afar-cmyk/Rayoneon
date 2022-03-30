@@ -5,7 +5,7 @@ import PageThree from './PageThree'
 
 const ModalContext = React.createContext()
 
-export const ModalProvider = (props) => {
+export const ModalProvider = ({ children }) => {
   // Estados y comportamiento para abrir y cerrar la ventana modal
   const [abrirModal, setAbrirModal] = React.useState(false)
   const modalAbierto = () => setAbrirModal(true)
@@ -62,7 +62,7 @@ export const ModalProvider = (props) => {
         compIndicadorActual
       }}
     >
-      {props.children}
+      {children}
     </ModalContext.Provider>
   )
 }
