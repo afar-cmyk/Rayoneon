@@ -44,6 +44,11 @@ export const DataProvider = ({ children }) => {
       : paginaModalActiva - 1
     setPaginaModalActiva(establecePaginaActual)
   }
+
+  // Comprueba si la pagina actual es la misma que se ha renderizado
+  const compIndicadorActual = (numero) => {
+    return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
+  }
   return (
     <ModalContext.Provider
       value={{
@@ -51,7 +56,8 @@ export const DataProvider = ({ children }) => {
         modalAbierto,
         modalCerrado,
         siguientePagina,
-        anteriorPagina
+        anteriorPagina,
+        compIndicadorActual
       }}
     >
       {children}

@@ -9,7 +9,7 @@ import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import Button from '@mui/material/Button'
 import { DataProvider } from './ModalContext'
-import ModalContext from './ModalContext'
+import ContenedorNavegacion from './ContenedorNavegacion'
 
 const ModalMain = () => {
   // // Estados y comportamiento para abrir y cerrar la ventana modal
@@ -51,37 +51,37 @@ const ModalMain = () => {
   //   setPaginaModalActiva(establecePaginaActual)
   // }
 
-  const ContenedorNavegacion = ({ children }) => {
-    const { prueba } = React.useContext(ModalContext)
-    return (
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignContent: 'center',
-          gap: '20px'
-        }}
-      >
-        <Button
-          onClick={anteriorPagina}
-          aria-label='anterior pagina'
-          component='button'
-        >
-          <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
-        </Button>
-        {prueba}
-        {children}
-        <Button
-          onClick={siguientePagina}
-          aria-label='siguiente pagina'
-          component='button'
-          sx={{ width: '40px' }}
-        >
-          <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
-        </Button>
-      </div>
-    )
-  }
+  // const ContenedorNavegacion = ({ children }) => {
+  //   const { prueba } = React.useContext(ModalContext)
+  //   return (
+  //     <div
+  //       style={{
+  //         display: 'flex',
+  //         flexDirection: 'row',
+  //         alignContent: 'center',
+  //         gap: '20px'
+  //       }}
+  //     >
+  //       <Button
+  //         onClick={anteriorPagina}
+  //         aria-label='anterior pagina'
+  //         component='button'
+  //       >
+  //         <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
+  //       </Button>
+  //       {prueba}
+  //       {children}
+  //       <Button
+  //         onClick={siguientePagina}
+  //         aria-label='siguiente pagina'
+  //         component='button'
+  //         sx={{ width: '40px' }}
+  //       >
+  //         <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
+  //       </Button>
+  //     </div>
+  //   )
+  // }
 
   const IndicadorPaginaActual = () => {
     // Comprueba si la pagina actual es la misma que se ha renderizado
@@ -211,13 +211,13 @@ let botonMUI = {
   }
 }
 
-const botonesNavegacion = {
-  color: '#A7E5E5',
-  fontSize: '5.5rem',
-  '&:hover': {
-    color: '#29E8E8'
-  }
-}
+// const botonesNavegacion = {
+//   color: '#A7E5E5',
+//   fontSize: '5.5rem',
+//   '&:hover': {
+//     color: '#29E8E8'
+//   }
+// }
 
 const botonCerrar = {
   color: '#CCCCCC',
