@@ -2,13 +2,7 @@ import React from 'react'
 import ModalContext from './ModalContext'
 
 const IndicadorPaginaActual = () => {
-  const { listaPaginasModal, paginaModalActiva } =
-    React.useContext(ModalContext)
-
-  // Comprueba si la pagina actual es la misma que se ha renderizado
-  const compIndicadorActual = (numero) => {
-    return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
-  }
+  const { compIndicadorActual } = React.useContext(ModalContext)
 
   // Agrega estilos al indicador dependiendo si es la pagina actual o no
   const estiloIndicador = (numero) => {
