@@ -1,14 +1,8 @@
 import React from 'react'
-// import PageOne from './PageOne'
-// import PageTwo from './PageTwo'
-// import PageThree from './PageThree'
 import Modal from '@mui/material/Modal'
 import Box from '@mui/material/Box'
-// import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
-// import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import Button from '@mui/material/Button'
-
 import ContenedorNavegacion from './ContenedorNavegacion'
 import IndicadorPaginaActual from './IndicadorPaginaActual'
 import ModalContext from './ModalContext'
@@ -21,120 +15,6 @@ const ModalMain = () => {
     listaPaginasModal,
     paginaModalActiva
   } = React.useContext(ModalContext)
-
-  // // Estados y comportamiento para abrir y cerrar la ventana modal
-  // const [abrirModal, setAbrirModal] = React.useState(false)
-  // const modalAbierto = () => setAbrirModal(true)
-  // const modalCerrado = () => setAbrirModal(false)
-
-  // // Lista de los componentes internos de la ventana modal
-  // let listaPaginasModal = [PageOne, PageTwo, PageThree]
-
-  // // Estado inicial de la pagina interna de la ventana modal
-  // const [paginaModalActiva, setPaginaModalActiva] = React.useState(0)
-
-  // // Funcion que devuelve el tamaño de la lista de componentes
-  // const totalPaginas = () => {
-  //   return listaPaginasModal.length
-  // }
-
-  // // Funcion que comprueba si se encuentra en la iteracion final de la lista de componentes
-  // const comprobarFinalPaginas = () => {
-  //   return paginaModalActiva === totalPaginas() - 1
-  // }
-
-  // // Funcion en bucle que itera sobre la lista de componentes en forma positiva
-  // const siguientePagina = () => {
-  //   const establecePaginaActual = comprobarFinalPaginas()
-  //     ? paginaModalActiva - (totalPaginas() - 1)
-  //     : paginaModalActiva + 1
-  //   setPaginaModalActiva(establecePaginaActual)
-  // }
-
-  // // Funcion en bucle que itera sobre la lista de componentes en forma negativa
-  // const anteriorPagina = () => {
-  //   const establecePaginaActual = comprobarFinalPaginas()
-  //     ? paginaModalActiva - 1
-  //     : paginaModalActiva === 0
-  //     ? paginaModalActiva + (totalPaginas() - 1)
-  //     : paginaModalActiva - 1
-  //   setPaginaModalActiva(establecePaginaActual)
-  // }
-
-  // const ContenedorNavegacion = ({ children }) => {
-  //   const { prueba } = React.useContext(ModalContext)
-  //   return (
-  //     <div
-  //       style={{
-  //         display: 'flex',
-  //         flexDirection: 'row',
-  //         alignContent: 'center',
-  //         gap: '20px'
-  //       }}
-  //     >
-  //       <Button
-  //         onClick={anteriorPagina}
-  //         aria-label='anterior pagina'
-  //         component='button'
-  //       >
-  //         <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
-  //       </Button>
-  //       {prueba}
-  //       {children}
-  //       <Button
-  //         onClick={siguientePagina}
-  //         aria-label='siguiente pagina'
-  //         component='button'
-  //         sx={{ width: '40px' }}
-  //       >
-  //         <ArrowRightOutlinedIcon sx={{ ...botonesNavegacion }} />
-  //       </Button>
-  //     </div>
-  //   )
-  // }
-
-  // const IndicadorPaginaActual = () => {
-  //   // Comprueba si la pagina actual es la misma que se ha renderizado
-  //   const compIndicadorActual = (numero) => {
-  //     return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
-  //   }
-
-  //   // Agrega estilos al indicador dependiendo si es la pagina actual o no
-  //   const estiloIndicador = (numero) => {
-  //     return {
-  //       backgroundColor: compIndicadorActual(numero)
-  //         ? '#29E8E8'
-  //         : 'rgba(42, 74, 128, 0.4)',
-  //       width: '41px',
-  //       height: '10px'
-  //     }
-  //   }
-  //   return (
-  //     <>
-  //       <div
-  //         style={{
-  //           display: 'flex',
-  //           justifyContent: 'center',
-  //           alignContent: 'center',
-  //           alignItems: 'center',
-  //           height: '40px'
-  //         }}
-  //       >
-  //         <div
-  //           style={{
-  //             display: 'flex',
-  //             flexDirection: 'row',
-  //             gap: 15
-  //           }}
-  //         >
-  //           <div style={estiloIndicador(0)} />
-  //           <div style={estiloIndicador(1)} />
-  //           <div style={estiloIndicador(2)} />
-  //         </div>
-  //       </div>
-  //     </>
-  //   )
-  // }
 
   return (
     <>
@@ -218,14 +98,6 @@ let botonMUI = {
     borderRadius: '4px'
   }
 }
-
-// const botonesNavegacion = {
-//   color: '#A7E5E5',
-//   fontSize: '5.5rem',
-//   '&:hover': {
-//     color: '#29E8E8'
-//   }
-// }
 
 const botonCerrar = {
   color: '#CCCCCC',
