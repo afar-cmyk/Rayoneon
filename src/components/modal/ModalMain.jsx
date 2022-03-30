@@ -18,12 +18,7 @@ const ModalMain = () => {
 
   return (
     <>
-      <Button
-        onClick={modalAbierto}
-        variant='outlined'
-        color='primary'
-        sx={{ ...botonMUI }}
-      >
+      <Button onClick={modalAbierto} variant='outlined' sx={{ ...botonMUI }}>
         Acerca de nosotros
       </Button>
       <Modal
@@ -36,23 +31,7 @@ const ModalMain = () => {
           }
         }}
       >
-        <Box
-          sx={{
-            position: 'absolute',
-            top: '50%',
-            left: '50%',
-            transform: 'translate(-50%, -50%)',
-            width: '38.214vw',
-            background:
-              'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
-            boxShadow: 24,
-            borderRadius: '6px',
-            display: 'flex',
-            flexDirection: 'column',
-            flexWrap: 'wrap',
-            alignContent: 'center'
-          }}
-        >
+        <Box sx={{ ...modalCanvas }}>
           <div
             style={{
               display: 'flex',
@@ -97,6 +76,21 @@ let botonMUI = {
     boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
     borderRadius: '4px'
   }
+}
+
+const modalCanvas = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: '38.214vw',
+  background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
+  boxShadow: 24,
+  borderRadius: '6px',
+  display: 'flex',
+  flexDirection: 'column',
+  flexWrap: 'wrap',
+  alignContent: 'center'
 }
 
 const botonCerrar = {
