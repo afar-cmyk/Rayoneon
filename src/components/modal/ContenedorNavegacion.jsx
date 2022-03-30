@@ -4,7 +4,7 @@ import ArrowRightOutlinedIcon from '@mui/icons-material/ArrowRightOutlined'
 import ArrowLeftOutlinedIcon from '@mui/icons-material/ArrowLeftOutlined'
 import ModalContext from './ModalContext'
 
-export default ContenedorNavegacion = ({ children }) => {
+const ContenedorNavegacion = ({ children }) => {
   const { anteriorPagina, siguientePagina } = React.useContext(ModalContext)
   return (
     <div
@@ -22,7 +22,6 @@ export default ContenedorNavegacion = ({ children }) => {
       >
         <ArrowLeftOutlinedIcon sx={{ ...botonesNavegacion }} />
       </Button>
-      {prueba}
       {children}
       <Button
         onClick={siguientePagina}
@@ -35,6 +34,8 @@ export default ContenedorNavegacion = ({ children }) => {
     </div>
   )
 }
+
+export default ContenedorNavegacion
 
 const botonesNavegacion = {
   color: '#A7E5E5',

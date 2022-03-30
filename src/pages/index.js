@@ -9,6 +9,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined'
 import SupportAgentOutlinedIcon from '@mui/icons-material/SupportAgentOutlined'
 import SocialMedia from '../components/SocialMedia'
 import ModalMain from '../components/modal/ModalMain'
+import { ModalProvider } from '../components/modal/ModalContext'
 
 export default function index() {
   return (
@@ -68,7 +69,9 @@ const ServciosTexto = () => {
           </a>
           .
         </p>
-        <ModalMain />
+        <ModalProvider>
+          <ModalMain />
+        </ModalProvider>
       </section>
     </>
   )
