@@ -10,6 +10,7 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined'
 import Button from '@mui/material/Button'
 import { DataProvider } from './ModalContext'
 import ContenedorNavegacion from './ContenedorNavegacion'
+import IndicadorPaginaActual from './IndicadorPaginaActual'
 
 const ModalMain = () => {
   // // Estados y comportamiento para abrir y cerrar la ventana modal
@@ -83,48 +84,48 @@ const ModalMain = () => {
   //   )
   // }
 
-  const IndicadorPaginaActual = () => {
-    // Comprueba si la pagina actual es la misma que se ha renderizado
-    const compIndicadorActual = (numero) => {
-      return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
-    }
+  // const IndicadorPaginaActual = () => {
+  //   // Comprueba si la pagina actual es la misma que se ha renderizado
+  //   const compIndicadorActual = (numero) => {
+  //     return listaPaginasModal[paginaModalActiva] === listaPaginasModal[numero]
+  //   }
 
-    // Agrega estilos al indicador dependiendo si es la pagina actual o no
-    const estiloIndicador = (numero) => {
-      return {
-        backgroundColor: compIndicadorActual(numero)
-          ? '#29E8E8'
-          : 'rgba(42, 74, 128, 0.4)',
-        width: '41px',
-        height: '10px'
-      }
-    }
-    return (
-      <>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignContent: 'center',
-            alignItems: 'center',
-            height: '40px'
-          }}
-        >
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: 15
-            }}
-          >
-            <div style={estiloIndicador(0)} />
-            <div style={estiloIndicador(1)} />
-            <div style={estiloIndicador(2)} />
-          </div>
-        </div>
-      </>
-    )
-  }
+  //   // Agrega estilos al indicador dependiendo si es la pagina actual o no
+  //   const estiloIndicador = (numero) => {
+  //     return {
+  //       backgroundColor: compIndicadorActual(numero)
+  //         ? '#29E8E8'
+  //         : 'rgba(42, 74, 128, 0.4)',
+  //       width: '41px',
+  //       height: '10px'
+  //     }
+  //   }
+  //   return (
+  //     <>
+  //       <div
+  //         style={{
+  //           display: 'flex',
+  //           justifyContent: 'center',
+  //           alignContent: 'center',
+  //           alignItems: 'center',
+  //           height: '40px'
+  //         }}
+  //       >
+  //         <div
+  //           style={{
+  //             display: 'flex',
+  //             flexDirection: 'row',
+  //             gap: 15
+  //           }}
+  //         >
+  //           <div style={estiloIndicador(0)} />
+  //           <div style={estiloIndicador(1)} />
+  //           <div style={estiloIndicador(2)} />
+  //         </div>
+  //       </div>
+  //     </>
+  //   )
+  // }
 
   return (
     <>
