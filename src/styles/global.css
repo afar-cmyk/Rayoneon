@@ -325,3 +325,12 @@ body {
   font-size: 16px;
   line-height: 20px;
 }
+
+.pagina-dos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+}

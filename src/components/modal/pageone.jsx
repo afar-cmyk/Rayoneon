@@ -6,20 +6,6 @@ const pageone = () => {
       <section className='pagina-uno'>
         <h4>diluminar</h4>
         <div style={{ gap: '15px' }}>
-          {/* <p>
-            Proporcionar a nuestros clientes material publicitario y servicios
-            de la más alta calidad y el mayor valor posible.
-          </p>
-
-          <p>
-            diseñar, fabricar, instalar y mantener un paquete de identificación
-            que se adapte a las necesidades específicas de su empresa.
-          </p>
-
-          <p>
-            diseñadores que realiza diseños exclusivos y novedosos para su
-            establecimiento o empresa.
-          </p> */}
           <ul
             style={{
               listStyle: 'none',
