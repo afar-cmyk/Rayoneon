@@ -88,7 +88,7 @@ body {
 }
 
 #servicios-texto p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -98,7 +98,7 @@ body {
 
 #servicios-texto sub,
 #servicios-texto a {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   vertical-align: baseline;
   color: #cccccc;
@@ -136,7 +136,7 @@ body {
 }
 
 .icono-contacto p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   vertical-align: baseline;
   color: #9fa4a9;
@@ -175,7 +175,7 @@ body {
 }
 
 .cuadro-servicio p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -186,7 +186,7 @@ body {
 }
 
 .cuadro-servicio sub {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -278,11 +278,50 @@ body {
 .css-1k51tf5-MuiTooltip-tooltip {
   background-color: #314664 !important;
   color: #f2f2f2 !important;
-  font-family: 'Assistant' !important;
+  font-family: 'Assistant', sans-serif !important;
   font-weight: 600 !important;
   font-size: 12px !important;
 }
 
 .css-kudwh-MuiTooltip-arrow {
   color: #314664 !important;
+}
+
+.pagina-uno {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  gap: 15;
+}
+
+.pagina-uno h4 {
+  color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 55px;
+  font-family: 'Baloo 2';
+  font-weight: 600;
+  font-size: 80px;
+  align-self: center;
+}
+
+.pagina-uno h5 {
+  color: #f2f2f2;
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.pagina-uno p {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }

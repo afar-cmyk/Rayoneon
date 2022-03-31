@@ -30,27 +30,30 @@ const ModalMain = () => {
         }}
       >
         <Box sx={{ ...modalCanvas }}>
-          <div
-            style={{
-              display: 'flex',
-              flexDirection: 'row',
-              alignContent: 'center',
-              justifyContent: 'flex-end',
-              width: '100%'
-            }}
-          >
-            <Button
-              onClick={modalCerrado}
-              aria-label='cerrar ventana'
-              component='span'
+          <div style={{ width: '100%', height: '100%' }}>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                alignContent: 'center',
+                justifyContent: 'flex-end',
+                width: '100%',
+                height: '10%'
+              }}
             >
-              <CloseOutlined sx={{ ...botonCerrar }} />
-            </Button>
+              <Button
+                onClick={modalCerrado}
+                aria-label='cerrar ventana'
+                component='span'
+              >
+                <CloseOutlined sx={{ ...botonCerrar }} />
+              </Button>
+            </div>
+            <ContenedorNavegacion>
+              <Box component={listaPaginasModal[paginaModalActiva]} />
+            </ContenedorNavegacion>
+            <IndicadorPaginaActual />
           </div>
-          <ContenedorNavegacion>
-            <Box component={listaPaginasModal[paginaModalActiva]} />
-          </ContenedorNavegacion>
-          <IndicadorPaginaActual />
         </Box>
       </Modal>
     </>
@@ -81,7 +84,8 @@ const modalCanvas = {
   top: '50%',
   left: '50%',
   transform: 'translate(-50%, -50%)',
-  width: '38.214vw',
+  width: '76.8vw',
+  height: '70vh',
   background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
   boxShadow: 24,
   borderRadius: '6px',

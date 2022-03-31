@@ -11,7 +11,8 @@ const ContenedorNavegacion = ({ children }) => {
         display: 'flex',
         flexDirection: 'row',
         alignContent: 'center',
-        gap: '20px'
+        gap: '20px',
+        height: '75%'
       }}
     >
       <Button
