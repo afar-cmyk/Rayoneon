@@ -12,6 +12,7 @@ import {
 import SocialMedia from '../components/SocialMedia'
 import ModalMain from '../components/modal/ModalMain'
 import { ModalProvider } from '../components/modal/ModalContext'
+import logoRN from '../images/logoRN.svg'
 
 export default function index() {
   return (
@@ -38,6 +39,8 @@ const SeccionPrincipal = () => {
           <h1>diluminar</h1>
         </div>
         <div className='contenido-principal'>
+          <img src={logoRN} alt='Logo Rayo Neon' />
+
           <h2>Avisos de Neón</h2>
           <p>
             Somos una empresa <strong>100% colombiana</strong>, dedicada a la{' '}
