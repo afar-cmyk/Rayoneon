@@ -36,11 +36,13 @@ const SeccionPrincipal = () => {
     <>
       <FondoIndex>
         <div className='titulo-principal'>
-          <h1>diluminar</h1>
+          <img
+            src={logoRN}
+            alt='Logo Rayo Neon'
+            style={{ marginTop: '100px', width: '50vw' }}
+          />
         </div>
         <div className='contenido-principal'>
-          <img src={logoRN} alt='Logo Rayo Neon' />
-
           <h2>Avisos de Neón</h2>
           <p>
             Somos una empresa <strong>100% colombiana</strong>, dedicada a la{' '}
