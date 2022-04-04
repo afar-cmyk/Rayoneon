@@ -12,8 +12,7 @@ import {
 import SocialMedia from '../components/SocialMedia'
 import ModalMain from '../components/modal/ModalMain'
 import { ModalProvider } from '../components/modal/ModalContext'
-import logoRN from '../images/logoRN.svg'
-import { Logo as LogoSVG } from '../images/Logo'
+import Logo from '../images/Logo'
 
 export default function index() {
   return (
@@ -37,7 +36,7 @@ const SeccionPrincipal = () => {
     <>
       <FondoIndex>
         <div className='titulo-principal'>
-          <LogoSVG elemento='completo' />
+          <Logo elemento='completo' />
         </div>
         <div className='contenido-principal'>
           <h2>Avisos de Neón</h2>

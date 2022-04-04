@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Logo = (props) => {
+const Logo = (props) => {
   const { elemento } = props
   if (elemento === 'completo') {
     return <LogoRN />
@@ -13,6 +13,8 @@ export const Logo = (props) => {
     return <></>
   }
 }
+
+export default Logo
 
 const LogoRN = () => {
   return (
