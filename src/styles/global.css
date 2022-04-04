@@ -336,9 +336,12 @@ body {
 }
 
 .titulo-principal .logo-completo:not(:hover) * {
-  fill: #cccccc;
+  fill: #f2f2f2;
+  opacity: 0.9;
 }
 
 .titulo-principal .logo-completo {
   width: 45vw;
+  margin-top: 100px;
+  cursor: pointer;
 }
