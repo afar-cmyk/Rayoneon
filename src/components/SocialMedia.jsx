@@ -63,7 +63,7 @@ const SocialMedia = () => {
                 rel='noreferrer'
                 className={`cuadro-social-media ${clase}`}
               >
-                <Box component={icono} className='iconoMUI'></Box>
+                <Box component={icono} className='iconoMUI' />
               </a>
             </Tooltip>
           )

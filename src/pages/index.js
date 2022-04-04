@@ -39,7 +39,7 @@ const SeccionPrincipal = () => {
           <img
             src={logoRN}
             alt='Logo Rayo Neon'
-            style={{ marginTop: '100px', width: '50vw' }}
+            style={{ marginTop: '100px', width: '45vw' }}
           />
         </div>
         <div className='contenido-principal'>

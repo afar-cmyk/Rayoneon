@@ -21,7 +21,7 @@ export default function FondoIndex({ children }) {
 }
 
 let overlayFondo = {
-  background: 'linear-gradient(270deg, #041426d5 7.34%, #192940d5 80.71%)',
+  background: 'linear-gradient(270deg, #041426e0 7.34%, #192940e0 80.71%)',
   height: '100%',
   display: 'flex',
   flexDirection: 'column',
