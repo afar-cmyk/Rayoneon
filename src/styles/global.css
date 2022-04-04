@@ -334,3 +334,11 @@ body {
   justify-content: center;
   margin: 0;
 }
+
+.titulo-principal .logo-completo:not(:hover) * {
+  fill: #cccccc;
+}
+
+.titulo-principal .logo-completo {
+  width: 45vw;
+}
