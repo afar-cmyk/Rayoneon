@@ -336,8 +336,7 @@ body {
 }
 
 .titulo-principal .logo-completo:not(:hover) * {
-  fill: #f2f2f2;
-  opacity: 0.9;
+  fill: #cccccc;
 }
 
 .titulo-principal .logo-completo {
