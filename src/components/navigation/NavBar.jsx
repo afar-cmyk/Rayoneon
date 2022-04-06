@@ -108,5 +108,5 @@ const barraPrincipal = {
   flexWrap: 'nowrap',
   height: '68px',
   width: '100vw',
-  background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
+  background: '#0E0F12'
 }
