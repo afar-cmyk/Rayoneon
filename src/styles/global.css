@@ -359,3 +359,27 @@ body {
   fill: #44c6e9;
   opacity: 0.6;
 }
+
+.logo-barra:hover #Neon {
+  fill: #fe005f;
+}
+
+.logo-barra:hover #Rayo {
+  fill: #44c6e9;
+}
+
+.logo-barra:hover #Icono .obj-1 {
+  fill: #fe005f;
+}
+
+.logo-barra:hover #Icono .obj-2 {
+  fill: #44c6e9;
+}
+
+.activo .logo-barra #Icono .obj-1 {
+  fill: #fe005f;
+}
+
+.activo .logo-barra #Icono .obj-2 {
+  fill: #44c6e9;
+}
