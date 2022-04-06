@@ -23,7 +23,7 @@ const MenuResponsive = styled((props) => (
     borderRadius: 4,
     marginTop: theme.spacing(0.5),
     minWidth: 100,
-    background: '#192940',
+    background: '#25282E',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
     '& .MuiMenu-list': {
@@ -43,7 +43,7 @@ export default function SeccionesResponsive(props) {
     fontFamily: 'Assistant',
     fontStyle: 'normal',
     fontWeight: 600,
-    fontSize: '18px'
+    fontSize: '16px'
   }
 
   const estiloInactivo = {
@@ -52,7 +52,7 @@ export default function SeccionesResponsive(props) {
     fontFamily: 'Assistant',
     fontStyle: 'normal',
     fontWeight: 400,
-    fontSize: '18px'
+    fontSize: '16px'
   }
 
   // Manejador de estados y comportamiento del menu responsive
@@ -118,10 +118,8 @@ export default function SeccionesResponsive(props) {
               key={index}
               sx={{
                 ...contenedorPrincipal,
-                border: activo ? '1px solid rgba(175, 40, 162, 1)' : 'none',
-                boxShadow: activo
-                  ? '0px 0px 7px 4px rgba(175, 40, 162, 0.25)'
-                  : 'none',
+                border: activo ? '1px solid #fe005f' : 'none',
+                boxShadow: activo ? '0px 0px 7px 4px #fe005f5c' : 'none',
                 boxSizing: 'border-box',
                 borderRadius: 1,
                 '&:hover': {
