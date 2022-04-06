@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { Box } from '@mui/material'
 import SeccionesBarra from '../navigation/SeccionesBarra'
 import SeccionesResponsive from './SeccionesResponsive'
+import Logo from '../../images/Logo'
 
 export default function NavBar(props) {
   const estado = props.estado
@@ -38,12 +39,14 @@ export default function NavBar(props) {
   // Estilos para los enlaces
   const estiloActivo = {
     color: '#F2F2F2',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    display: 'flex'
   }
 
   const estiloInactivo = {
     color: '#CCCCCC',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    display: 'flex'
   }
 
   return (
@@ -58,7 +61,7 @@ export default function NavBar(props) {
             activeStyle={{ ...estiloActivo }}
             style={{ ...estiloInactivo }}
           >
-            diluminar
+            <Logo elemento='barra' />
           </Link>
         </Box>
         {/* Contenedor con enlaces */}

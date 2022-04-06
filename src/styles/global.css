@@ -344,3 +344,18 @@ body {
   margin-top: 100px;
   cursor: pointer;
 }
+
+.logo-barra {
+  width: 13vw;
+  min-width: 150px;
+}
+
+.activo .logo-barra #Neon {
+  fill: #fe005f;
+  opacity: 0.6;
+}
+
+.activo .logo-barra #Rayo {
+  fill: #44c6e9;
+  opacity: 0.6;
+}
