@@ -346,7 +346,7 @@ body {
 }
 
 .logo-barra {
-  width: 13vw;
+  width: 12vw;
   min-width: 150px;
 }
 
@@ -358,6 +358,16 @@ body {
 .activo .logo-barra #Rayo {
   fill: #44c6e9;
   opacity: 0.6;
+}
+
+.activo .logo-barra:hover #Neon {
+  fill: #fe005f;
+  opacity: 1;
+}
+
+.activo .logo-barra:hover #Rayo {
+  fill: #44c6e9;
+  opacity: 1;
 }
 
 .logo-barra:hover #Neon {
