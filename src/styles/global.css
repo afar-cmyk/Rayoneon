@@ -12,9 +12,12 @@ body {
 }
 
 #contenedor-padre {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: rgb(244, 247, 246);
+  z-index: 1;
+  transition: transform 0.5s ease-in-out 0s;
 }
 
 .titulo-principal {

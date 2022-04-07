@@ -51,7 +51,7 @@ export default function NavBar(props) {
 
   return (
     <>
-      <Box component='nav' sx={{ ...barraPrincipal }}>
+      <Box component='header' sx={{ ...barraPrincipal }}>
         {/* Logo que al presionarlo lleva al index */}
         <Box sx={{ ...contenedorLogo }}>
           <Link
@@ -66,8 +66,8 @@ export default function NavBar(props) {
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <SeccionesBarra datos={rutasArray} />
-          <SeccionesResponsive datos={rutasArray} />
+          <SeccionesBarra component='nav' datos={rutasArray} />
+          <SeccionesResponsive component='nav' datos={rutasArray} />
         </Box>
       </Box>
     </>
@@ -99,7 +99,7 @@ const links = {
 }
 
 const barraPrincipal = {
-  position: 'absolute',
+  position: 'sticky',
   display: 'flex',
   flexDirection: 'row',
   alignContent: 'center',
@@ -108,5 +108,11 @@ const barraPrincipal = {
   flexWrap: 'nowrap',
   height: '68px',
   width: '100vw',
-  background: '#0E0F12'
+  boxSizing: 'border-box',
+  transition: 'background .3s',
+  background: '#0E0F12',
+  top: 0,
+  margin: 0,
+  border: 0,
+  zIndex: 9
 }
