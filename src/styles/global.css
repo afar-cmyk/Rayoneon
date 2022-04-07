@@ -52,14 +52,14 @@ body {
 .contenido-principal h2 {
   font-family: 'Assistant', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 61px;
   margin: 0;
 }
 
 .contenido-principal p {
   font-family: 'Assistant', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 28px;
   margin: 0;
 }
@@ -395,4 +395,9 @@ body {
 
 .activo .logo-barra #Icono .obj-2 {
   fill: #44c6e9;
+}
+
+.logo-completo {
+  width: 63vw;
+  cursor: pointer;
 }
