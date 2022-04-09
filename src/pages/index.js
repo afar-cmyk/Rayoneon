@@ -18,6 +18,8 @@ export default function index() {
     <>
       <main id='contenedor-padre'>
         <NavBar estado={null} />
+        <SocialMedia />
+        <SeccionPrincipal />
         <SeccionPrincipal />
         {/* <SeccionPrincipal />
         <div className='seccion-servicios'>
