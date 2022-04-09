@@ -32,14 +32,6 @@ export default function index() {
 }
 
 const NuevoComponente = () => {
-  // let primero = {
-  //   background: 'linear-gradient(270deg, #041426e0 7.34%, #192940e0 80.71%)',
-  //   height: '100%',
-  //   display: 'flex',
-  //   flexDirection: 'column',
-  //   overflow: 'auto'
-  // }
-
   let primero = {
     background: '#12151B',
     position: 'relative',
@@ -55,35 +47,6 @@ const NuevoComponente = () => {
     paddingLeft: '96px',
     paddingRight: '95px'
   }
-
-  // let barra = {
-  //   position: 'sticky',
-  //   width: '100vw',
-  //   top: 0,
-  //   margin: 0,
-  //   border: 0,
-  //   boxSizing: 'border-box',
-  //   transition: 'background .3s',
-  //   zIndex: 9
-  // }
-
-  // let barraDentro = {
-  //   backgroundColor: '#0E0F12',
-  //   height: '68px',
-  //   width: '100%',
-  //   display: 'flex',
-  //   alignItems: 'center',
-  //   justifyContent: 'center'
-  // }
-
-  // let padre = {
-  //   position: 'relative',
-  //   width: '100%',
-  //   minHeight: '100%',
-  //   background: '#f4f7f6',
-  //   zIndex: 1,
-  //   transition: 'transform .5s ease-in-out'
-  // }
 
   return (
     <>
