@@ -5,9 +5,11 @@ import {
   Reviews,
   Pinterest,
   YouTube,
-  Email
+  Email,
+  MoreHorizRounded,
+  LocationOn
 } from '@mui/icons-material'
-import { Box, Tooltip } from '@mui/material'
+import { Box, Tooltip, Fade } from '@mui/material'
 
 const SocialMedia = () => {
   let iconosSocialmedia = [
@@ -41,31 +43,60 @@ const SocialMedia = () => {
       icono: Email,
       enlace: 'mailto:ventas@rayoneon.com',
       clase: 'E-mail'
+    },
+    {
+      icono: LocationOn,
+      enlace: 'https://goo.gl/maps/FcHoncUTB9HCkdP1A',
+      clase: 'Ubicación'
     }
-    // {
-    //   icono: 'google maps',
-    //   enlace: 'https://search.google.com/local/writereview?placeid=ChIJgbUtB52ZP44R-SxfYiejUfQ',
-    //   clase:'google-maps'
-    // }
   ]
+
+  const [estadoSocial, setEstadoSocial] = React.useState(true)
+  const [estadoBtnMenu, setEstadoBtnMenu] = React.useState(false)
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 68) {
+        setEstadoSocial(false)
+        setEstadoBtnMenu(true)
+      } else {
+        setEstadoSocial(true)
+        setEstadoBtnMenu(false)
+      }
+    })
+  }, [window.pageYOffset])
 
   return (
     <>
       <div className='contenedor-social-media'>
+        <Tooltip title='Redes Sociales' arrow>
+          <a
+            className='cuadro-social-media Menu'
+            onClick={() => setEstadoSocial(!estadoSocial)}
+            style={{
+              cursor: 'pointer',
+              width: '54px',
+              display: estadoBtnMenu ? 'flex' : 'none'
+            }}
+          >
+            <Box component={MoreHorizRounded} className='iconoMUI' />
+          </a>
+        </Tooltip>
         {iconosSocialmedia.map((datos, index) => {
           const { icono, enlace, clase } = datos
           return (
-            <Tooltip key={index} title={clase} arrow>
-              <a
-                key={index}
-                href={enlace}
-                target='_blank'
-                rel='noreferrer'
-                className={`cuadro-social-media ${clase}`}
-              >
-                <Box component={icono} className='iconoMUI' />
-              </a>
-            </Tooltip>
+            <Fade key={index} in={estadoSocial}>
+              <Tooltip key={index} title={clase} arrow>
+                <a
+                  href={enlace}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={`cuadro-social-media ${clase}`}
+                >
+                  <Box component={icono} className='iconoMUI' />
+                </a>
+              </Tooltip>
+            </Fade>
           )
         })}
       </div>

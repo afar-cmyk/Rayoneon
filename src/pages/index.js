@@ -16,7 +16,7 @@ import Logo from '../images/Logo'
 export default function index() {
   return (
     <>
-      <main id='contenedor-padre'>
+      <main>
         <NavBar estado={null} />
         <SocialMedia />
         <ContactIcon />
