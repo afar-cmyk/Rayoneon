@@ -154,7 +154,7 @@ body {
 .cuadro-servicio {
   width: 273px;
   height: 84px;
-  background: #192940;
+  background: #25282e;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -207,7 +207,7 @@ body {
 .cuadro-servicio-icono {
   width: 84.88px;
   height: 84px;
-  background: #192940;
+  background: #25282e;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
