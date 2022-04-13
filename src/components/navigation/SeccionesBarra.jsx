@@ -19,8 +19,8 @@ export default function SeccionesBarra(props) {
 
   // Estilos del indicador
   const indicador = {
-    background: 'rgba(175, 40, 162, 1)',
-    border: '1px solid rgba(175, 40, 162, 1)',
+    background: '#fe005f',
+    border: '1px solid #fe005f',
     boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
     boxSizing: 'border-box',
     width: '95%',

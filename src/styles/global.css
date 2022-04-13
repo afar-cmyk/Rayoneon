@@ -1,7 +1,7 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: auto !important;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -12,27 +12,29 @@ body {
 }
 
 #contenedor-padre {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  background: rgb(244, 247, 246);
+  z-index: 1;
+  transition: transform 0.5s ease-in-out 0s;
 }
 
-.titulo-principal {
-  height: 100%;
+.seccion-principal {
+  background: #12151b;
+  position: relative;
+  min-height: calc(100vh - 68px);
   display: flex;
-  flex-direction: column;
-  align-content: center;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  flex-wrap: nowrap;
-}
-
-.titulo-principal h1 {
-  margin-top: 100px;
-  margin-bottom: 0;
-  font-family: 'Baloo 2';
-  font-weight: 600;
-  font-size: 144px;
+  clear: both;
+  z-index: 0;
+  transition: padding 0.6s ease-in-out;
+  gap: 160px;
+  padding-left: 96px;
+  padding-right: 95px;
+  padding-top: 68px;
 }
 
 .contenido-principal {
@@ -46,17 +48,17 @@ body {
   margin-top: 0;
 }
 
-.contenido-principal h2 {
+.contenido-principal h1 {
   font-family: 'Assistant', sans-serif;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 61px;
   margin: 0;
 }
 
 .contenido-principal p {
   font-family: 'Assistant', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 19px;
   line-height: 28px;
   margin: 0;
 }
@@ -72,8 +74,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 56%;
-  height: 96%;
 }
 
 #servicios-texto h3 {
@@ -84,21 +84,21 @@ body {
   font-weight: 700;
   color: #f2f2f2;
   line-height: 96.8%;
-  width: 609px;
+  width: 592px;
 }
 
 #servicios-texto p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  width: 608px;
+  width: 592px;
 }
 
 #servicios-texto sub,
 #servicios-texto a {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   vertical-align: baseline;
   color: #cccccc;
@@ -115,28 +115,20 @@ body {
   margin-bottom: 45px;
 }
 
-.icono-contacto1 {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 90%;
-  top: 88%;
-}
-
 .icono-contacto {
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  bottom: 35px;
-  right: 35px;
+  bottom: 15px;
+  right: 15px;
   cursor: pointer;
   text-decoration: none;
+  z-index: 10;
 }
 
 .icono-contacto p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   vertical-align: baseline;
   color: #9fa4a9;
@@ -157,14 +149,12 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  width: 44%;
-  height: 95%;
 }
 
 .cuadro-servicio {
   width: 273px;
   height: 84px;
-  background: #192940;
+  background: #25282e;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
@@ -175,7 +165,7 @@ body {
 }
 
 .cuadro-servicio p {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 20px;
@@ -186,7 +176,7 @@ body {
 }
 
 .cuadro-servicio sub {
-  font-family: 'Assistant';
+  font-family: 'Assistant', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
@@ -217,7 +207,7 @@ body {
 .cuadro-servicio-icono {
   width: 84.88px;
   height: 84px;
-  background: #192940;
+  background: #25282e;
   border-radius: 12px;
   display: flex;
   flex-direction: row;
@@ -226,15 +216,19 @@ body {
 }
 
 .seccion-servicios {
-  background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
+  background: #12151b;
+  position: relative;
+  min-height: calc(100vh - 68px);
+  min-width: fit-content;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  height: 93vh;
-  width: 100vw;
+  clear: both;
+  z-index: 0;
+  transition: padding 0.6s ease-in-out 0s;
+  gap: 158px;
+  padding-top: 68px;
 }
 
 .contenedor-social-media {
@@ -243,10 +237,11 @@ body {
   align-content: center;
   align-items: center;
   justify-content: flex-start;
-  position: relative;
-  bottom: 22px;
-  left: 26px;
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
   gap: 12px;
+  z-index: 10;
 }
 
 .cuadro-social-media {
@@ -276,13 +271,115 @@ body {
 }
 
 .css-1k51tf5-MuiTooltip-tooltip {
-  background-color: #314664 !important;
+  background-color: #3a3d42 !important;
   color: #f2f2f2 !important;
-  font-family: 'Assistant' !important;
+  font-family: 'Assistant', sans-serif !important;
   font-weight: 600 !important;
   font-size: 12px !important;
 }
 
 .css-kudwh-MuiTooltip-arrow {
-  color: #314664 !important;
+  color: #3a3d42 !important;
+}
+
+.pagina-uno {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+  gap: 15;
+}
+
+.pagina-uno h4 {
+  color: #f2f2f2;
+  margin-top: 0;
+  margin-bottom: 55px;
+  font-family: 'Baloo 2';
+  font-weight: 600;
+  font-size: 80px;
+  align-self: center;
+}
+
+.pagina-uno h5 {
+  color: #f2f2f2;
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.pagina-uno p {
+  margin: 0;
+  font-family: 'Assistant', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagina-dos {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 0;
+}
+
+.logo-barra {
+  width: 12vw;
+  min-width: 150px;
+}
+
+.activo .logo-barra #Neon {
+  fill: #fe005f;
+  opacity: 0.6;
+}
+
+.activo .logo-barra #Rayo {
+  fill: #44c6e9;
+  opacity: 0.6;
+}
+
+.activo .logo-barra:hover #Neon {
+  fill: #fe005f;
+  opacity: 1;
+}
+
+.activo .logo-barra:hover #Rayo {
+  fill: #44c6e9;
+  opacity: 1;
+}
+
+.logo-barra:hover #Neon {
+  fill: #fe005f;
+}
+
+.logo-barra:hover #Rayo {
+  fill: #44c6e9;
+}
+
+.logo-barra:hover #Icono .obj-1 {
+  fill: #fe005f;
+}
+
+.logo-barra:hover #Icono .obj-2 {
+  fill: #44c6e9;
+}
+
+.activo .logo-barra #Icono .obj-1 {
+  fill: #fe005f;
+}
+
+.activo .logo-barra #Icono .obj-2 {
+  fill: #44c6e9;
+}
+
+.logo-completo {
+  width: 63vw;
+  cursor: pointer;
 }

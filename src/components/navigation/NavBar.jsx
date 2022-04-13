@@ -3,6 +3,7 @@ import { Link } from 'gatsby'
 import { Box } from '@mui/material'
 import SeccionesBarra from '../navigation/SeccionesBarra'
 import SeccionesResponsive from './SeccionesResponsive'
+import Logo from '../../images/Logo'
 
 export default function NavBar(props) {
   const estado = props.estado
@@ -38,17 +39,19 @@ export default function NavBar(props) {
   // Estilos para los enlaces
   const estiloActivo = {
     color: '#F2F2F2',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    display: 'flex'
   }
 
   const estiloInactivo = {
     color: '#CCCCCC',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    display: 'flex'
   }
 
   return (
     <>
-      <Box component='nav' sx={{ ...barraPrincipal }}>
+      <Box component='header' sx={{ ...barraPrincipal }}>
         {/* Logo que al presionarlo lleva al index */}
         <Box sx={{ ...contenedorLogo }}>
           <Link
@@ -58,13 +61,13 @@ export default function NavBar(props) {
             activeStyle={{ ...estiloActivo }}
             style={{ ...estiloInactivo }}
           >
-            diluminar
+            <Logo elemento='barra' />
           </Link>
         </Box>
         {/* Contenedor con enlaces */}
         <Box sx={{ ...links }}>
-          <SeccionesBarra datos={rutasArray} />
-          <SeccionesResponsive datos={rutasArray} />
+          <SeccionesBarra component='nav' datos={rutasArray} />
+          <SeccionesResponsive component='nav' datos={rutasArray} />
         </Box>
       </Box>
     </>
@@ -96,7 +99,7 @@ const links = {
 }
 
 const barraPrincipal = {
-  position: 'absolute',
+  position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
   alignContent: 'center',
@@ -105,5 +108,11 @@ const barraPrincipal = {
   flexWrap: 'nowrap',
   height: '68px',
   width: '100vw',
-  background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)'
+  boxSizing: 'border-box',
+  transition: 'background .3s',
+  background: '#0E0F12',
+  top: 0,
+  margin: 0,
+  border: 0,
+  zIndex: 9
 }

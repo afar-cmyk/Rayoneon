@@ -1,70 +1,130 @@
 import React from 'react'
-import InstagramIcon from '@mui/icons-material/Instagram'
-import FacebookIcon from '@mui/icons-material/Facebook'
-import ReviewsIcon from '@mui/icons-material/Reviews'
-import PinterestIcon from '@mui/icons-material/Pinterest'
-import YouTubeIcon from '@mui/icons-material/YouTube'
-import EmailIcon from '@mui/icons-material/Email'
-import { Box } from '@mui/material'
-import Tooltip from '@mui/material/Tooltip'
+import {
+  Instagram,
+  Facebook,
+  Reviews,
+  Pinterest,
+  YouTube,
+  Email,
+  MoreHorizRounded,
+  LocationOn
+} from '@mui/icons-material'
+import { Box, Tooltip, Fade } from '@mui/material'
 
 const SocialMedia = () => {
   let iconosSocialmedia = [
     {
-      icono: InstagramIcon,
+      icono: Instagram,
       enlace: 'https://www.instagram.com/rayoneon/',
       clase: 'Instagram'
     },
     {
-      icono: FacebookIcon,
+      icono: Facebook,
       enlace: 'https://www.facebook.com/Rayo-neon-1400859480129814',
       clase: 'Facebook'
     },
     {
-      icono: YouTubeIcon,
+      icono: YouTube,
       enlace: 'https://www.youtube.com/watch?v=Qwcv8hzs5Hc',
       clase: 'Youtube'
     },
     {
-      icono: PinterestIcon,
+      icono: Pinterest,
       enlace: 'https://es.pinterest.com/rayoneon/pins/',
       clase: 'Pinterest'
     },
     {
-      icono: ReviewsIcon,
+      icono: Reviews,
       enlace:
         'https://www.google.com/search?q=rayo+neon&oq=rayo+neon&aqs=chrome..69i57j0i22i30l4j69i60l3.1247j1j4&sourceid=chrome&ie=UTF-8#lrd=0x8e3f999d072db581:0xf451a327625f2cf9,1,,,',
       clase: 'Reseñas'
     },
     {
-      icono: EmailIcon,
+      icono: Email,
       enlace: 'mailto:ventas@rayoneon.com',
       clase: 'E-mail'
+    },
+    {
+      icono: LocationOn,
+      enlace: 'https://goo.gl/maps/FcHoncUTB9HCkdP1A',
+      clase: 'Ubicación'
     }
-    // {
-    //   icono: 'google maps',
-    //   enlace: 'https://search.google.com/local/writereview?placeid=ChIJgbUtB52ZP44R-SxfYiejUfQ',
-    //   clase:'google-maps'
-    // }
   ]
+
+  // Estados iniciales para los botones de redes sociales y el boton principal
+  const [estadoSocial, setEstadoSocial] = React.useState(true)
+  const [estadoBtnMenu, setEstadoBtnMenu] = React.useState(false)
+
+  // Comprueba si la pagina se encuentra en la posicion inicial
+  const compPaginaArriba = () => {
+    return window.innerHeight + window.scrollY >= document.body.offsetHeight
+  }
+
+  // Comprueba si la pagina se encuentra en la posicion final
+  const compPaginaAbajo = () => {
+    return window.pageYOffset === 0
+  }
+
+  // Establece los estados para abrir el menu y esconder el boton principal
+  const menuAbierto = () => {
+    setEstadoSocial(true)
+    setEstadoBtnMenu(false)
+  }
+
+  // Establece los estados para cerrar el menu y activar el boton principal
+  const menuCerrado = () => {
+    setEstadoSocial(false)
+    setEstadoBtnMenu(true)
+  }
+
+  // Logica conforme a la posicion de la pagina
+  const comportamientoMenu = () => {
+    if (compPaginaArriba() || compPaginaAbajo()) {
+      menuAbierto()
+    } else {
+      menuCerrado()
+    }
+  }
+
+  React.useEffect(() => {
+    window.addEventListener('scroll', comportamientoMenu)
+    return () => window.removeEventListener('scroll', comportamientoMenu)
+  })
 
   return (
     <>
       <div className='contenedor-social-media'>
+        <Tooltip title='Redes Sociales' arrow>
+          <div
+            className='cuadro-social-media Menu'
+            onClick={() => setEstadoSocial(!estadoSocial)}
+            onKeyPress={() => setEstadoSocial(!estadoSocial)}
+            role='button'
+            tabIndex='0'
+            style={{
+              cursor: 'pointer',
+              width: '54px',
+              display: estadoBtnMenu ? 'flex' : 'none'
+            }}
+          >
+            <Box component={MoreHorizRounded} className='iconoMUI' />
+          </div>
+        </Tooltip>
         {iconosSocialmedia.map((datos, index) => {
           const { icono, enlace, clase } = datos
           return (
-            <Tooltip title={clase} arrow>
-              <a
-                key={index}
-                href={enlace}
-                target='_blank'
-                rel='noreferrer'
-                className={`cuadro-social-media ${clase}`}
-              >
-                <Box component={icono} className='iconoMUI'></Box>
-              </a>
-            </Tooltip>
+            <Fade key={index} in={estadoSocial}>
+              <Tooltip key={index} title={clase} arrow>
+                <a
+                  href={enlace}
+                  target='_blank'
+                  rel='noreferrer'
+                  className={`cuadro-social-media ${clase}`}
+                >
+                  <Box component={icono} className='iconoMUI' />
+                </a>
+              </Tooltip>
+            </Fade>
           )
         })}
       </div>
