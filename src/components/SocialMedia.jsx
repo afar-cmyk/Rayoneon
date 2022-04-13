@@ -54,16 +54,33 @@ const SocialMedia = () => {
   const [estadoSocial, setEstadoSocial] = React.useState(true)
   const [estadoBtnMenu, setEstadoBtnMenu] = React.useState(false)
 
+  const compPaginaArriba = () => {
+    return window.innerHeight + window.scrollY >= document.body.offsetHeight
+  }
+  const compPaginaAbajo = () => {
+    return window.pageYOffset === 0
+  }
+
+  const menuAbierto = () => {
+    setEstadoSocial(true)
+    setEstadoBtnMenu(false)
+  }
+  const menuCerrado = () => {
+    setEstadoSocial(false)
+    setEstadoBtnMenu(true)
+  }
+
+  const comportamientoMenu = () => {
+    if (compPaginaArriba() || compPaginaAbajo()) {
+      menuAbierto()
+    } else {
+      menuCerrado()
+    }
+  }
+
   React.useEffect(() => {
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 68) {
-        setEstadoSocial(false)
-        setEstadoBtnMenu(true)
-      } else {
-        setEstadoSocial(true)
-        setEstadoBtnMenu(false)
-      }
-    })
+    window.addEventListener('scroll', comportamientoMenu)
+    return () => window.removeEventListener('scroll', comportamientoMenu)
   })
 
   return (
@@ -108,10 +125,3 @@ const SocialMedia = () => {
 }
 
 export default SocialMedia
-
-// else if (
-//         window.innerHeight + window.scrollY >=
-//         document.body.offsetHeight
-//       ) {
-//         console.log("you're at the bottom of the page")
-//       }
