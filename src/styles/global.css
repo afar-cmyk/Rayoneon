@@ -115,22 +115,13 @@ body {
   margin-bottom: 45px;
 }
 
-.icono-contacto1 {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  left: 90%;
-  top: 88%;
-}
-
 .icono-contacto {
   position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
   bottom: 15px;
-  right: 31px;
+  right: 15px;
   cursor: pointer;
   text-decoration: none;
   z-index: 10;
