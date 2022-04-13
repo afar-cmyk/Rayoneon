@@ -20,7 +20,7 @@ body {
   transition: transform 0.5s ease-in-out 0s;
 }
 
-.envoltura-principal {
+.seccion-principal {
   background: #12151b;
   position: relative;
   min-height: calc(100vh - 68px);
@@ -216,15 +216,19 @@ body {
 }
 
 .seccion-servicios {
-  background: linear-gradient(270deg, #041426 7.34%, #192940 80.71%);
+  background: #12151b;
+  position: relative;
+  min-height: calc(100vh - 68px);
+  min-width: fit-content;
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  align-content: center;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  height: 93vh;
-  width: 100vw;
+  clear: both;
+  z-index: 0;
+  transition: padding 0.6s ease-in-out 0s;
+  gap: 158px;
+  padding-top: 68px;
 }
 
 .contenedor-social-media {
