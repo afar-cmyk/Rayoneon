@@ -64,15 +64,18 @@ const SocialMedia = () => {
         setEstadoBtnMenu(false)
       }
     })
-  }, [window.pageYOffset])
+  })
 
   return (
     <>
       <div className='contenedor-social-media'>
         <Tooltip title='Redes Sociales' arrow>
-          <a
+          <div
             className='cuadro-social-media Menu'
             onClick={() => setEstadoSocial(!estadoSocial)}
+            onKeyPress={() => setEstadoSocial(!estadoSocial)}
+            role='button'
+            tabIndex='0'
             style={{
               cursor: 'pointer',
               width: '54px',
@@ -80,7 +83,7 @@ const SocialMedia = () => {
             }}
           >
             <Box component={MoreHorizRounded} className='iconoMUI' />
-          </a>
+          </div>
         </Tooltip>
         {iconosSocialmedia.map((datos, index) => {
           const { icono, enlace, clase } = datos
@@ -105,3 +108,10 @@ const SocialMedia = () => {
 }
 
 export default SocialMedia
+
+// else if (
+//         window.innerHeight + window.scrollY >=
+//         document.body.offsetHeight
+//       ) {
+//         console.log("you're at the bottom of the page")
+//       }
