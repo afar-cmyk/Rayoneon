@@ -51,25 +51,33 @@ const SocialMedia = () => {
     }
   ]
 
+  // Estados iniciales para los botones de redes sociales y el boton principal
   const [estadoSocial, setEstadoSocial] = React.useState(true)
   const [estadoBtnMenu, setEstadoBtnMenu] = React.useState(false)
 
+  // Comprueba si la pagina se encuentra en la posicion inicial
   const compPaginaArriba = () => {
     return window.innerHeight + window.scrollY >= document.body.offsetHeight
   }
+
+  // Comprueba si la pagina se encuentra en la posicion final
   const compPaginaAbajo = () => {
     return window.pageYOffset === 0
   }
 
+  // Establece los estados para abrir el menu y esconder el boton principal
   const menuAbierto = () => {
     setEstadoSocial(true)
     setEstadoBtnMenu(false)
   }
+
+  // Establece los estados para cerrar el menu y activar el boton principal
   const menuCerrado = () => {
     setEstadoSocial(false)
     setEstadoBtnMenu(true)
   }
 
+  // Logica conforme a la posicion de la pagina
   const comportamientoMenu = () => {
     if (compPaginaArriba() || compPaginaAbajo()) {
       menuAbierto()
