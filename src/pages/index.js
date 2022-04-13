@@ -21,7 +21,7 @@ export default function index() {
         <SocialMedia />
         <ContactIcon />
         <SeccionPrincipal />
-        <SeccionPrincipal />
+        <NuevoComponente />
 
         {/* <SeccionPrincipal />
         <div className='seccion-servicios'>
@@ -40,6 +40,7 @@ const NuevoComponente = () => {
     background: '#12151B',
     position: 'relative',
     minHeight: 'calc(100vh - 68px)',
+    minWidth: 'fit-content',
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'center',
@@ -47,31 +48,16 @@ const NuevoComponente = () => {
     clear: 'both',
     zIndex: 0,
     transition: 'padding .6s ease-in-out',
-    gap: '160px',
-    paddingLeft: '96px',
-    paddingRight: '95px'
+    gap: '158px',
+    paddingTop: '68px'
   }
 
   return (
     <>
       <section style={{ ...primero }}>
-        <Logo elemento='completo' />
-        <div className='contenido-principal'>
-          <h1>Avisos de Neón</h1>
-          <p>
-            Somos una empresa <strong>100% colombiana</strong>, dedicada a la{' '}
-            <strong>fabricación de material publicitario</strong>
-            {' ('}neón, avisos en acrílico, letras 3D, material p.o.p{').'}
-          </p>
-          <br />
-          <p>
-            Nuestra razón de ser es proporcionarle un servicio puntual y de{' '}
-            <strong>excelente calidad</strong> siempre a tiempo y en el lugar
-            donde nos indique.
-          </p>
-        </div>
+        <ServciosTexto />
+        <ServiciosIconos />
       </section>
-      <footer>footer</footer>
     </>
   )
 }

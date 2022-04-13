@@ -34,6 +34,7 @@ body {
   gap: 160px;
   padding-left: 96px;
   padding-right: 95px;
+  padding-top: 68px;
 }
 
 .contenido-principal {
@@ -73,8 +74,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 56%;
-  height: 96%;
 }
 
 #servicios-texto h3 {
@@ -85,7 +84,7 @@ body {
   font-weight: 700;
   color: #f2f2f2;
   line-height: 96.8%;
-  width: 609px;
+  width: 592px;
 }
 
 #servicios-texto p {
@@ -94,7 +93,7 @@ body {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
-  width: 608px;
+  width: 592px;
 }
 
 #servicios-texto sub,
@@ -159,8 +158,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 25px;
-  width: 44%;
-  height: 95%;
 }
 
 .cuadro-servicio {

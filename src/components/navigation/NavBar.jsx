@@ -99,7 +99,7 @@ const links = {
 }
 
 const barraPrincipal = {
-  position: 'sticky',
+  position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
   alignContent: 'center',
