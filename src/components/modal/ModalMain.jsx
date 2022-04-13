@@ -67,14 +67,14 @@ let botonMUI = {
   fontSize: '24px',
   color: '#cccccc',
   textTransform: 'initial',
-  border: '3px solid rgba(175, 6, 159, 0.7)',
+  border: '3px solid #fe005fb3',
   boxSizing: 'border-box',
   borderRadius: '4px',
   '&:hover': {
     color: '#F2F2F2',
-    border: '3px solid #AF069F',
+    border: '3px solid #fe005f',
     boxSizing: 'border-box',
-    boxShadow: '0px 0px 7px 4px rgba(175, 40, 162, 0.25)',
+    boxShadow: '0px 0px 7px 4px #fe005f40',
     borderRadius: '4px'
   }
 }
