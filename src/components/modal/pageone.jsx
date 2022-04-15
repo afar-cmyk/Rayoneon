@@ -1,16 +1,17 @@
 import React from 'react'
+import Logo from '../../images/Logo'
 
 const pageone = () => {
   return (
     <>
       <section className='pagina-uno'>
-        <h4>diluminar</h4>
+        <Logo elemento='completo' style={{ width: '25vw' }} />
         <div style={{ gap: '15px' }}>
           <ul
             style={{
               listStyle: 'none',
               display: 'grid',
-              gap: '45px',
+              gap: '40px',
               margin: 0,
               padding: 0
             }}

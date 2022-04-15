@@ -86,7 +86,7 @@ const modalCanvas = {
   transform: 'translate(-50%, -50%)',
   width: '76.8vw',
   height: '70vh',
-  background: 'linear-gradient(270deg, #041426 7.34%, #192940 80.71%)',
+  background: '#25282e',
   boxShadow: 24,
   borderRadius: '6px',
   display: 'flex',
