@@ -1,10 +1,12 @@
 import React from 'react'
 import Logo from '../../images/Logo'
+import bck_vid from '../../images/bck_vid.webm'
 
 const SeccionPrincipal = () => {
   return (
     <>
       <section className='seccion-principal'>
+        <video className='video-fondo' autoPlay loop muted src={bck_vid} />
         <Logo elemento='completo' />
         <div className='contenido-principal'>
           <h1>Avisos de Neón</h1>
