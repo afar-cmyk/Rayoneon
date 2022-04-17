@@ -3,23 +3,24 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const PageTwo = () => {
-  const { imagenFondo } = useStaticQuery(
+  const { imagenUno, imagenDos } = useStaticQuery(
     graphql`
       query {
-        imagenFondo: file(relativePath: { eq: "bck_img001.png" }) {
+        imagenUno: file(relativePath: { eq: "modal/modal001.webp" }) {
           childImageSharp {
-            gatsbyImageData(
-              quality: 90
-              webpOptions: { quality: 70 }
-              layout: FULL_WIDTH
-              placeholder: BLURRED
-            )
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        imagenDos: file(relativePath: { eq: "modal/modal002.webp" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
           }
         }
       }
     `
   )
-  const image = getImage(imagenFondo)
+  const image001 = getImage(imagenUno)
+  const image002 = getImage(imagenDos)
 
   return (
     <>
@@ -33,25 +34,20 @@ const PageTwo = () => {
               gap: 30
             }}
           >
-            <div
-              style={{
-                width: '20vw',
-                height: '45vh',
-                backgroundColor: 'blue',
-                borderRadius: '6px'
-              }}
-            />
-            <div
-              style={{
-                width: '20vw',
-                height: '45vh',
-                backgroundColor: 'blue',
-                borderRadius: '6px'
-              }}
-            >
+            <div>
               <GatsbyImage
-                image={image}
-                alt='Persona trabajando con luces de neón'
+                image={image001}
+                alt='Hombre doblando tubos de neón'
+                style={{ width: '20vw', height: '45vh' }}
+                imgStyle={{ borderRadius: '6px' }}
+              />
+            </div>
+            <div>
+              <GatsbyImage
+                image={image002}
+                alt='Persona sosteniendo una letra n de neón'
+                style={{ width: '20vw', height: '45vh' }}
+                imgStyle={{ borderRadius: '6px' }}
               />
             </div>
           </div>
