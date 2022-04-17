@@ -1,7 +1,7 @@
 import React from 'react'
 import Logo from '../../images/Logo'
 
-const pageone = () => {
+const PageOne = () => {
   return (
     <>
       <section className='pagina-uno'>
@@ -45,4 +45,4 @@ const pageone = () => {
   )
 }
 
-export default pageone
+export default PageOne

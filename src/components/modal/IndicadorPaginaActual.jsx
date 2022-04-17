@@ -7,9 +7,7 @@ const IndicadorPaginaActual = () => {
   // Agrega estilos al indicador dependiendo si es la pagina actual o no
   const estiloIndicador = (numero) => {
     return {
-      backgroundColor: compIndicadorActual(numero)
-        ? '#29E8E8'
-        : 'rgba(42, 74, 128, 0.4)',
+      backgroundColor: compIndicadorActual(numero) ? '#45c6e9' : '#576e74',
       width: '41px',
       height: '10px'
     }

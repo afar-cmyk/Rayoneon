@@ -1,6 +1,30 @@
 import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const pagetwo = () => {
+const PageTwo = () => {
+  // Carga de las imágenes con GraphQL
+  const { imagenUno, imagenDos } = useStaticQuery(
+    graphql`
+      query {
+        imagenUno: file(relativePath: { eq: "modal/modal001.webp" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+        imagenDos: file(relativePath: { eq: "modal/modal002.webp" }) {
+          childImageSharp {
+            gatsbyImageData(placeholder: BLURRED)
+          }
+        }
+      }
+    `
+  )
+
+  // Variables para cada una de las imagenes desde el esquema de GraphQL
+  const image001 = getImage(imagenUno)
+  const image002 = getImage(imagenDos)
+
   return (
     <>
       <section className='pagina-dos'>
@@ -13,22 +37,22 @@ const pagetwo = () => {
               gap: 30
             }}
           >
-            <div
-              style={{
-                width: '20vw',
-                height: '45vh',
-                backgroundColor: 'red',
-                borderRadius: '6px'
-              }}
-            />
-            <div
-              style={{
-                width: '20vw',
-                height: '45vh',
-                backgroundColor: 'red',
-                borderRadius: '6px'
-              }}
-            />
+            <div>
+              <GatsbyImage
+                image={image001}
+                alt='Hombre doblando tubos de neón'
+                style={{ width: '20vw', height: '45vh' }}
+                imgStyle={{ borderRadius: '6px' }}
+              />
+            </div>
+            <div>
+              <GatsbyImage
+                image={image002}
+                alt='Persona sosteniendo una letra n de neón'
+                style={{ width: '20vw', height: '45vh' }}
+                imgStyle={{ borderRadius: '6px' }}
+              />
+            </div>
           </div>
 
           <div
@@ -38,7 +62,7 @@ const pagetwo = () => {
               justifyContent: 'center'
             }}
           >
-            <p style={{ width: '37vw', marginBottom: 0, marginTop: '30px' }}>
+            <p style={{ width: '37vw', marginBottom: 0, marginTop: '15px' }}>
               Nuestro personal cuenta con la <strong>experiencia</strong> en la
               fabricación e instalación de todos nuestros productos con la mayor
               <strong> profesionalidad</strong> y <strong>puntualidad</strong>.
@@ -50,4 +74,4 @@ const pagetwo = () => {
   )
 }
 
-export default pagetwo
+export default PageTwo

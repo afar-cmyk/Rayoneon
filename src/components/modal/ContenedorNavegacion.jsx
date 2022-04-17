@@ -7,6 +7,7 @@ const ContenedorNavegacion = ({ children }) => {
   const { anteriorPagina, siguientePagina } = React.useContext(ModalContext)
   return (
     <div
+      className='navegacion-modal'
       style={{
         display: 'flex',
         flexDirection: 'row',
@@ -19,6 +20,7 @@ const ContenedorNavegacion = ({ children }) => {
         onClick={anteriorPagina}
         aria-label='anterior pagina'
         component='button'
+        className='flecha-izquierda'
       >
         <ArrowLeftOutlined sx={{ ...botonesNavegacion }} />
       </Button>
@@ -27,7 +29,7 @@ const ContenedorNavegacion = ({ children }) => {
         onClick={siguientePagina}
         aria-label='siguiente pagina'
         component='button'
-        sx={{ width: '40px' }}
+        className='flecha-derecha'
       >
         <ArrowRightOutlined sx={{ ...botonesNavegacion }} />
       </Button>
@@ -38,9 +40,6 @@ const ContenedorNavegacion = ({ children }) => {
 export default ContenedorNavegacion
 
 const botonesNavegacion = {
-  color: '#A7E5E5',
-  fontSize: '5.5rem',
-  '&:hover': {
-    color: '#29E8E8'
-  }
+  color: 'hsl(193deg 54% 40%)',
+  fontSize: '5.5rem'
 }
