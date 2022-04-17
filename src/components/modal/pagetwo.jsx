@@ -1,6 +1,26 @@
 import React from 'react'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
-const pagetwo = () => {
+const PageTwo = () => {
+  const { imagenFondo } = useStaticQuery(
+    graphql`
+      query {
+        imagenFondo: file(relativePath: { eq: "bck_img001.png" }) {
+          childImageSharp {
+            gatsbyImageData(
+              quality: 90
+              webpOptions: { quality: 70 }
+              layout: FULL_WIDTH
+              placeholder: BLURRED
+            )
+          }
+        }
+      }
+    `
+  )
+  const image = getImage(imagenFondo)
+
   return (
     <>
       <section className='pagina-dos'>
@@ -17,7 +37,7 @@ const pagetwo = () => {
               style={{
                 width: '20vw',
                 height: '45vh',
-                backgroundColor: 'red',
+                backgroundColor: 'blue',
                 borderRadius: '6px'
               }}
             />
@@ -25,10 +45,15 @@ const pagetwo = () => {
               style={{
                 width: '20vw',
                 height: '45vh',
-                backgroundColor: 'red',
+                backgroundColor: 'blue',
                 borderRadius: '6px'
               }}
-            />
+            >
+              <GatsbyImage
+                image={image}
+                alt='Persona trabajando con luces de neón'
+              />
+            </div>
           </div>
 
           <div
@@ -38,7 +63,7 @@ const pagetwo = () => {
               justifyContent: 'center'
             }}
           >
-            <p style={{ width: '37vw', marginBottom: 0, marginTop: '30px' }}>
+            <p style={{ width: '37vw', marginBottom: 0, marginTop: '15px' }}>
               Nuestro personal cuenta con la <strong>experiencia</strong> en la
               fabricación e instalación de todos nuestros productos con la mayor
               <strong> profesionalidad</strong> y <strong>puntualidad</strong>.
@@ -50,4 +75,4 @@ const pagetwo = () => {
   )
 }
 
-export default pagetwo
+export default PageTwo

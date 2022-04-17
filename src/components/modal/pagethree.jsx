@@ -1,6 +1,6 @@
 import React from 'react'
 
-const pagethree = () => {
+const PageThree = () => {
   return (
     <>
       <p style={{ width: '100%' }}>pagina tres</p>
@@ -8,4 +8,4 @@ const pagethree = () => {
   )
 }
 
-export default pagethree
+export default PageThree
