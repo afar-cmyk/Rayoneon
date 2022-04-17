@@ -3,6 +3,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { useStaticQuery, graphql } from 'gatsby'
 
 const PageTwo = () => {
+  // Carga de las imágenes con GraphQL
   const { imagenUno, imagenDos } = useStaticQuery(
     graphql`
       query {
@@ -19,6 +20,8 @@ const PageTwo = () => {
       }
     `
   )
+
+  // Variables para cada una de las imagenes desde el esquema de GraphQL
   const image001 = getImage(imagenUno)
   const image002 = getImage(imagenDos)
 
