@@ -390,3 +390,35 @@ body {
   opacity: 0.1;
   z-index: -1;
 }
+
+.navegacion-modal .MuiButton-root {
+  width: 40px;
+}
+
+.navegacion-modal .MuiButton-root:hover {
+  background-color: rgb(166 184 202 / 4%);
+}
+
+.btn-cerrar:hover .MuiButton-root {
+  background-color: rgb(166 184 202 / 4%);
+}
+
+.flecha-izquierda:hover .MuiSvgIcon-root {
+  color: hsl(193deg 57% 65%);
+}
+
+.flecha-derecha:hover .MuiSvgIcon-root {
+  color: hsl(193deg 57% 65%);
+}
+
+.btn-cerrar:hover .MuiSvgIcon-root {
+  color: #f2f2f2;
+}
+
+.navegacion-modal .MuiTouchRipple-root {
+  color: rgba(227, 234, 241, 0.37);
+}
+
+.btn-cerrar .MuiTouchRipple-root {
+  color: rgba(227, 234, 241, 0.37);
+}

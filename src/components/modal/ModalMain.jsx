@@ -32,6 +32,7 @@ const ModalMain = () => {
         <Box sx={{ ...modalCanvas }}>
           <div style={{ width: '100%', height: '100%' }}>
             <div
+              className='btn-cerrar'
               style={{
                 display: 'flex',
                 flexDirection: 'row',
@@ -97,9 +98,12 @@ const modalCanvas = {
 
 const botonCerrar = {
   color: '#CCCCCC',
-  fontSize: '2.680rem',
+  fontSize: '2rem',
   '&:hover': {
     color: '#F2F2F2'
+  },
+  '.MuiTouchRipple-root': {
+    color: 'red'
   }
 }
 
