@@ -6,7 +6,15 @@ const PageThree = () => {
   return (
     <>
       <section className='pagina-tres'>
-        <p>pagina tres</p>
+        <h3>Servicio Nacional por más de 15 años</h3>
+        <p style={{ marginTop: 0 }}>
+          La experiencia estructura y conocimiento, nos permiten presentarnos
+          con respaldo, calidad y cumplimiento.
+        </p>
+        <p style={{ marginBottom: '3px' }}>
+          Nuestra sede se encuentra actualmente en
+          <strong> Bogotá, Colombia.</strong>
+        </p>
         <div
           style={{
             width: '66vw',

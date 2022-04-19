@@ -333,7 +333,15 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   margin: 0;
-  gap: 22px;
+}
+
+.pagina-tres h3 {
+  font-family: 'Assistant';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 47px;
+  margin: 0;
 }
 
 .logo-barra {
