@@ -391,24 +391,39 @@ body {
   z-index: -1;
 }
 
+.navegacion-modal {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 50%;
+}
+
 .navegacion-modal .MuiButton-root {
-  width: 40px;
+  width: 45px;
+  min-width: 55px;
 }
 
 .navegacion-modal .MuiButton-root:hover {
   background-color: rgb(166 184 202 / 4%);
 }
 
+.btn-cerrar {
+  display: flex;
+  flex-direction: row;
+  place-content: center flex-end;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 11;
+}
+
 .btn-cerrar:hover .MuiButton-root {
   background-color: rgb(166 184 202 / 4%);
-}
-
-.flecha-izquierda:hover .MuiSvgIcon-root {
-  color: hsl(193deg 57% 65%);
-}
-
-.flecha-derecha:hover .MuiSvgIcon-root {
-  color: hsl(193deg 57% 65%);
 }
 
 .btn-cerrar:hover .MuiSvgIcon-root {
@@ -421,4 +436,36 @@ body {
 
 .btn-cerrar .MuiTouchRipple-root {
   color: rgba(227, 234, 241, 0.37);
+}
+
+.mapa {
+  border-radius: 6px;
+}
+
+.modal-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 76.8vw;
+  height: 70vh;
+  background: rgb(37, 40, 46);
+  border-radius: 6px;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.modal-envoltura-contenido {
+  display: flex;
+  flex-direction: column;
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-bottom: 10px;
+  z-index: 10;
 }

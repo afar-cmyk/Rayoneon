@@ -14,6 +14,39 @@ const ModalMain = () => {
     paginaModalActiva
   } = React.useContext(ModalContext)
 
+  const BotonCerrar = () => {
+    const botonCerrar = {
+      color: '#f2f2f2',
+      fontSize: '2rem'
+    }
+    return (
+      <>
+        <div
+          className='btn-cerrar'
+          // style={{
+          //   display: 'flex',
+          //   flexDirection: 'row',
+          //   alignContent: 'center',
+          //   justifyContent: 'flex-end',
+          //   position: 'absolute',
+          //   top: 0,
+          //   right: 0,
+          //   zIndex: 11
+          // }}
+        >
+          <Button
+            onClick={modalCerrado}
+            aria-label='cerrar ventana'
+            component='span'
+            sx={{ minWidth: '55px', width: '45px' }}
+          >
+            <CloseOutlined sx={{ ...botonCerrar }} />
+          </Button>
+        </div>
+      </>
+    )
+  }
+
   return (
     <>
       <Button onClick={modalAbierto} variant='outlined' sx={{ ...botonMUI }}>
@@ -29,31 +62,12 @@ const ModalMain = () => {
           }
         }}
       >
-        <Box sx={{ ...modalCanvas }}>
-          <div style={{ width: '100%', height: '100%' }}>
-            <div
-              className='btn-cerrar'
-              style={{
-                display: 'flex',
-                flexDirection: 'row',
-                alignContent: 'center',
-                justifyContent: 'flex-end',
-                width: '100%',
-                height: '10%'
-              }}
-            >
-              <Button
-                onClick={modalCerrado}
-                aria-label='cerrar ventana'
-                component='span'
-              >
-                <CloseOutlined sx={{ ...botonCerrar }} />
-              </Button>
-            </div>
-            <ContenedorNavegacion>
-              <Box component={listaPaginasModal[paginaModalActiva]} />
-            </ContenedorNavegacion>
-            <IndicadorPaginaActual />
+        <Box className='modal-canvas'>
+          <BotonCerrar />
+          <ContenedorNavegacion />
+          <IndicadorPaginaActual />
+          <div className='modal-envoltura-contenido'>
+            <Box component={listaPaginasModal[paginaModalActiva]} />
           </div>
         </Box>
       </Modal>
@@ -77,33 +91,6 @@ let botonMUI = {
     boxSizing: 'border-box',
     boxShadow: '0px 0px 7px 4px #fe005f40',
     borderRadius: '4px'
-  }
-}
-
-const modalCanvas = {
-  position: 'absolute',
-  top: '50%',
-  left: '50%',
-  transform: 'translate(-50%, -50%)',
-  width: '76.8vw',
-  height: '70vh',
-  background: '#25282e',
-  boxShadow: 24,
-  borderRadius: '6px',
-  display: 'flex',
-  flexDirection: 'column',
-  flexWrap: 'wrap',
-  alignContent: 'center'
-}
-
-const botonCerrar = {
-  color: '#CCCCCC',
-  fontSize: '2rem',
-  '&:hover': {
-    color: '#F2F2F2'
-  },
-  '.MuiTouchRipple-root': {
-    color: 'red'
   }
 }
 

@@ -20,16 +20,18 @@ const IndicadorPaginaActual = () => {
           justifyContent: 'center',
           alignContent: 'center',
           alignItems: 'center',
-          height: '15%'
+          height: '13%',
+          position: 'absolute',
+          bottom: 0
         }}
       >
         <div
           style={{
             display: 'flex',
             flexDirection: 'row',
-            gap: 15,
-            marginTop: '43px',
-            marginBottom: '36px'
+            gap: 15
+            // marginTop: '43px',
+            // marginBottom: '36px'
           }}
         >
           <div style={estiloIndicador(0)} />

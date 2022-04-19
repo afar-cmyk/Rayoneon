@@ -3,19 +3,10 @@ import { Button } from '@mui/material'
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@mui/icons-material'
 import ModalContext from './ModalContext'
 
-const ContenedorNavegacion = ({ children }) => {
+const ContenedorNavegacion = () => {
   const { anteriorPagina, siguientePagina } = React.useContext(ModalContext)
   return (
-    <div
-      className='navegacion-modal'
-      style={{
-        display: 'flex',
-        flexDirection: 'row',
-        alignContent: 'center',
-        gap: '20px',
-        height: '75%'
-      }}
-    >
+    <div className='navegacion-modal'>
       <Button
         onClick={anteriorPagina}
         aria-label='anterior pagina'
@@ -24,7 +15,6 @@ const ContenedorNavegacion = ({ children }) => {
       >
         <ArrowLeftOutlined sx={{ ...botonesNavegacion }} />
       </Button>
-      {children}
       <Button
         onClick={siguientePagina}
         aria-label='siguiente pagina'
@@ -40,6 +30,7 @@ const ContenedorNavegacion = ({ children }) => {
 export default ContenedorNavegacion
 
 const botonesNavegacion = {
-  color: 'hsl(193deg 54% 40%)',
-  fontSize: '5.5rem'
+  color: '#45c6e9',
+  fontSize: '4.5rem',
+  height: '2em'
 }
