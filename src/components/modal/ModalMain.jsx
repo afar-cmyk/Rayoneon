@@ -21,19 +21,7 @@ const ModalMain = () => {
     }
     return (
       <>
-        <div
-          className='btn-cerrar'
-          // style={{
-          //   display: 'flex',
-          //   flexDirection: 'row',
-          //   alignContent: 'center',
-          //   justifyContent: 'flex-end',
-          //   position: 'absolute',
-          //   top: 0,
-          //   right: 0,
-          //   zIndex: 11
-          // }}
-        >
+        <div className='btn-cerrar'>
           <Button
             onClick={modalCerrado}
             aria-label='cerrar ventana'

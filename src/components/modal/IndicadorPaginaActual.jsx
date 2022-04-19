@@ -30,8 +30,6 @@ const IndicadorPaginaActual = () => {
             display: 'flex',
             flexDirection: 'row',
             gap: 15
-            // marginTop: '43px',
-            // marginBottom: '36px'
           }}
         >
           <div style={estiloIndicador(0)} />

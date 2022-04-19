@@ -5,7 +5,6 @@ import ContactIcon from '../components/ContactIcon.jsx'
 import SocialMedia from '../components/SocialMedia'
 import SeccionPrincipal from '../components/index/SeccionPrincipal'
 import SeccionServicios from '../components/index/SeccionServicios'
-import ModalPrueba from '../components/index/ModalPrueba'
 
 export default function index() {
   return (
@@ -16,7 +15,6 @@ export default function index() {
         <ContactIcon />
         <SeccionPrincipal />
         <SeccionServicios />
-        <ModalPrueba />
       </main>
     </>
   )
