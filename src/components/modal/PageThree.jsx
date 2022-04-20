@@ -1,5 +1,6 @@
 import React from 'react'
-import { Map, Marker } from 'pigeon-maps'
+import { Map, Overlay } from 'pigeon-maps'
+import iconoRN from '../../images/IconoRN.png'
 
 const PageThree = () => {
   const coordenadas = [4.623235828150638, -74.0742739482184]
@@ -24,7 +25,9 @@ const PageThree = () => {
           }}
         >
           <Map defaultCenter={coordenadas} defaultZoom={19}>
-            <Marker width={45} anchor={coordenadas} color='red' />
+            <Overlay anchor={coordenadas} offset={[30, 20]}>
+              <img src={iconoRN} width={45.46} height={56.16} alt='' />
+            </Overlay>
           </Map>
         </div>
       </section>
