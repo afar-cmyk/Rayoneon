@@ -26,7 +26,12 @@ const PageThree = () => {
         >
           <Map defaultCenter={coordenadas} defaultZoom={19}>
             <Overlay anchor={coordenadas} offset={[30, 20]}>
-              <img src={iconoRN} width={45.46} height={56.16} alt='' />
+              <img
+                src={iconoRN}
+                width={45.46}
+                height={56.16}
+                alt='Logo de Rayo Neón'
+              />
             </Overlay>
           </Map>
         </div>
