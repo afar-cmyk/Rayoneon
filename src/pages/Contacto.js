@@ -1,12 +1,20 @@
 import React from 'react'
 import NavBar from '../components/navigation/NavBar'
+import bck_vid from '../images/bck_vid.webm'
 
 export default function Contacto() {
   return (
     <div>
       <NavBar estado={2} />
       <section className='pagina-contacto'>
-        <div>
+        <div
+          style={{
+            width: '100%',
+            background:
+              'linear-gradient(270deg, rgb(19 21 27 / 20%) 15%, rgb(19 21 27) 60%)',
+            minHeight: 'calc(100vh - 68px)'
+          }}
+        >
           <h1>¡Contactenos!</h1>
           <br />
           <h2>contacto@diluminar.com</h2>
@@ -28,6 +36,7 @@ export default function Contacto() {
             promociones.
           </p>
         </div>
+        <video className='video-fondo' autoPlay loop muted src={bck_vid} />
       </section>
     </div>
   )
