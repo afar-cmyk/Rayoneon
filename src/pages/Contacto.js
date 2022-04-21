@@ -5,10 +5,11 @@ export default function Contacto() {
   return (
     <div>
       <NavBar estado={2} />
-      <br />
-      <p>
-        Esta es la pagina <b>Contacto</b>
-      </p>
+      <section className='pagina-contacto'>
+        <p>
+          Esta es la pagina <b>Contacto</b>
+        </p>
+      </section>
     </div>
   )
 }
