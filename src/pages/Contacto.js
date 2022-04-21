@@ -36,8 +36,42 @@ export default function Contacto() {
             promociones.
           </p>
         </div>
+        <Footer />
         <video className='video-fondo' autoPlay loop muted src={bck_vid} />
       </section>
     </div>
+  )
+}
+
+const Footer = () => {
+  return (
+    <>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignContent: 'center',
+          justifyContent: 'space-between',
+          width: '100vw',
+          position: 'fixed',
+          bottom: '15px'
+        }}
+      >
+        <div
+          style={{
+            marginLeft: '75px'
+          }}
+        >
+          creditos rayo neon
+        </div>
+        <div
+          style={{
+            marginRight: '75px'
+          }}
+        >
+          creditos 01a01.art
+        </div>
+      </div>
+    </>
   )
 }
