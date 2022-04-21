@@ -46,30 +46,13 @@ export default function Contacto() {
 const Footer = () => {
   return (
     <>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          alignContent: 'center',
-          justifyContent: 'space-between',
-          width: '100vw',
-          position: 'fixed',
-          bottom: '15px'
-        }}
-      >
-        <div
-          style={{
-            marginLeft: '75px'
-          }}
-        >
-          creditos rayo neon
-        </div>
-        <div
-          style={{
-            marginRight: '75px'
-          }}
-        >
-          creditos 01a01.art
+      <div className='envoltura-creditos'>
+        <div className='creditos-sitio'>© Rayo Neón, 2022.</div>
+        <div className='creditos-web'>
+          Desarrollado por{' '}
+          <a href='https://01a01.art' target='_blank' rel='noreferrer'>
+            01a01.art
+          </a>
         </div>
       </div>
     </>

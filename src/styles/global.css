@@ -499,3 +499,40 @@ body {
   gap: 160px;
   padding-top: 68px;
 }
+
+.envoltura-creditos {
+  display: flex;
+  flex-direction: row;
+  place-content: center space-between;
+  width: 100vw;
+  position: fixed;
+  bottom: 15px;
+}
+
+.creditos-web {
+  margin-right: 75px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.creditos-sitio {
+  margin-left: 75px;
+  font-family: Assistant;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.creditos-web a {
+  font-weight: 600;
+  text-decoration: none;
+  color: #cccccc;
+}
+
+.creditos-web a:hover {
+  color: #f2f2f2;
+}
