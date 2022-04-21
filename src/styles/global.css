@@ -490,7 +490,7 @@ body {
   position: relative;
   min-height: calc(100vh - 68px);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   clear: both;
