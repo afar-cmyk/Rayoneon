@@ -511,7 +511,7 @@ body {
 
 .creditos-web {
   margin-right: 75px;
-  font-family: Assistant;
+  font-family: 'Assistant';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
@@ -525,11 +525,13 @@ body {
 
 .creditos-sitio {
   margin-left: 75px;
-  font-family: Assistant;
+  font-family: 'Assistant';
   font-style: normal;
   font-weight: 300;
   font-size: 16px;
   line-height: 21px;
+  display: flex;
+  align-items: center;
 }
 
 .creditos-web a {
