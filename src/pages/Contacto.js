@@ -1,6 +1,8 @@
 import React from 'react'
 import NavBar from '../components/navigation/NavBar'
 import bck_vid from '../images/bck_vid.webm'
+import { Box, Tooltip } from '@mui/material'
+import GitHubIcon from '@mui/icons-material/GitHub'
 
 export default function Contacto() {
   return (
@@ -47,14 +49,33 @@ const Footer = () => {
   return (
     <>
       <div className='envoltura-creditos'>
-        <div className='creditos-sitio'>© Rayo Neón, 2022.</div>
+        <div className='creditos-sitio'>© RAYO NEÓN, 2022.</div>
         <div className='creditos-web'>
           Desarrollado por{' '}
           <a href='https://01a01.art' target='_blank' rel='noreferrer'>
             01a01.art
           </a>
+          <IconoGithub />
         </div>
       </div>
+    </>
+  )
+}
+
+const IconoGithub = () => {
+  return (
+    <>
+      <Tooltip title='GitHub' arrow>
+        <a
+          href='https://github.com/afar-cmyk'
+          target='_blank'
+          rel='noreferrer'
+          className='cuadro-social-media GitHub'
+          style={{ marginLeft: '10px' }}
+        >
+          <Box component={GitHubIcon} className='iconoMUI' />
+        </a>
+      </Tooltip>
     </>
   )
 }
