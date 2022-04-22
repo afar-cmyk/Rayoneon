@@ -51,7 +51,9 @@ const Footer = () => {
   return (
     <>
       <div className='envoltura-creditos'>
-        <div className='creditos-sitio'>© RAYO NEÓN, 2022.</div>
+        <div className='creditos-sitio'>
+          © 2022 Rayo Neón. Todos los derechos reservados.
+        </div>
         <div className='creditos-web'>
           Desarrollado por{' '}
           <a href='https://01a01.art' target='_blank' rel='noreferrer'>
