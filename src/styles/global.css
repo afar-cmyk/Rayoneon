@@ -573,3 +573,14 @@ body {
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.redes-sociales-creditos {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  z-index: 10;
+  margin-top: 13px;
+}
