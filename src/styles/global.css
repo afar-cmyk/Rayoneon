@@ -584,3 +584,15 @@ body {
   z-index: 10;
   margin-top: 13px;
 }
+
+.logo-creditos {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  place-content: center;
+}
+
+.logo-creditos .logo-completo {
+  width: 36vw;
+  cursor: none;
+}

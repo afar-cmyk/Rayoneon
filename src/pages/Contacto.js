@@ -12,6 +12,7 @@ import {
   Email,
   LocationOn
 } from '@mui/icons-material'
+import Logo from '../images/Logo'
 
 export default function Contacto() {
   return (
@@ -23,7 +24,9 @@ export default function Contacto() {
             width: '100%',
             background:
               'linear-gradient(270deg, rgb(19 21 27 / 20%) 15%, rgb(19 21 27) 60%)',
-            minHeight: 'calc(100vh - 68px)'
+            minHeight: 'calc(100vh - 68px)',
+            display: 'flex',
+            flexDirection: 'row'
           }}
         >
           <div style={{ marginLeft: '75px' }}>
@@ -48,6 +51,9 @@ export default function Contacto() {
               promociones.
             </p>
             <SocialMedia />
+          </div>
+          <div className='logo-creditos'>
+            <Logo elemento='completo' />
           </div>
         </div>
         <Footer />
