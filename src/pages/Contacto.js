@@ -51,7 +51,14 @@ export default function Contacto() {
           </div>
         </div>
         <Footer />
-        <video className='video-fondo' autoPlay loop muted src={bck_vid} />
+        <video
+          className='video-fondo'
+          autoPlay
+          loop
+          muted
+          src={bck_vid}
+          style={{ opacity: 0.5 }}
+        />
       </section>
     </div>
   )
