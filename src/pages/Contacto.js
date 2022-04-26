@@ -34,7 +34,7 @@ export default function Contacto() {
               marginLeft: '75px',
               display: 'flex',
               flexDirection: 'column',
-              gap: { lg: '0px', xl: '20px' },
+              gap: { lg: '26px', xl: '50px' },
               '& > h1': {
                 fontSize: { xl: '90px' },
                 marginTop: { xl: '4rem' }
@@ -42,55 +42,54 @@ export default function Contacto() {
             }}
           >
             <h1>¡Contactenos!</h1>
-            <br />
+
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { xl: '35px' }
+                  fontSize: { lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xl: '18px' }
+                  fontSize: { lg: '15px', xl: '18px' },
+                  width: { lg: '383px', xl: '400px' }
                 }
               }}
             >
               <h2>contacto@rayo-neon.com</h2>
-              <p style={{ width: '400px' }}>
+              <p>
                 para trabajar con nosotros, cotizaciones, materiales y diseños,
                 con gusto le responderemos lo mas pronto posible!
               </p>
             </Box>
-            <br />
+
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { xl: '35px' }
+                  fontSize: { lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xl: '18px' }
+                  fontSize: { lg: '15px', xl: '18px' }
                 }
               }}
             >
               <h2>Colombia / Bogotá D.C.</h2>
-              <ul>
-                <li>Ak. 19 # 33a-36, Cundinamarca</li>
-                <li>(+57) 310 881 55 44</li>
-                <li>(601) 332 6290</li>
-              </ul>
+              <p>Ak. 19 # 33a-36, Cundinamarca</p>
+              <p>(+57) 310 881 55 44</p>
+              <p>(601) 332 6290</p>
             </Box>
 
-            <br />
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { xl: '35px' }
+                  fontSize: { lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xl: '18px' }
+                  fontSize: { lg: '15px', xl: '18px' },
+                  width: { lg: '366px', xl: '400px' }
                 }
               }}
             >
               <h2>Nuestras redes sociales</h2>
-              <p style={{ width: '400px' }}>
+              <p>
                 Siguenos para conocer nuestras ultimas noticias, proyectos y
                 promociones.
               </p>
