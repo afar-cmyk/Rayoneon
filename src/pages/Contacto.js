@@ -19,25 +19,31 @@ export default function Contacto() {
     <div>
       <NavBar estado={2} />
       <section className='pagina-contacto'>
-        <div
-          style={{
+        <Box
+          sx={{
             width: '100%',
-            background:
-              'linear-gradient(270deg, rgb(19 21 27 / 20%) 15%, rgb(19 21 27) 60%)',
+            background: {
+              xs: '#13151bcc',
+              md: 'linear-gradient(270deg, rgb(19 21 27 / 20%) 15%, rgb(19 21 27) 60%)'
+            },
             minHeight: 'calc(100vh - 68px)',
             display: 'flex',
-            flexDirection: 'row'
+            flexDirection: { xs: 'column', md: 'row' }
           }}
         >
           <Box
             sx={{
-              marginLeft: '75px',
+              order: { xs: 2, md: 1 },
+              marginLeft: { xs: 0, md: '75px' },
               display: 'flex',
               flexDirection: 'column',
-              gap: { md: '40px', lg: '26px', xl: '50px' },
+              gap: { xs: '35px', md: '40px', lg: '26px', xl: '50px' },
+              paddingBottom: { xs: '80px', md: 0 },
               '& > h1': {
-                fontSize: { md: '60px', xl: '90px' },
-                marginTop: { xl: '4rem' }
+                fontSize: { xs: '75px', md: '60px', xl: '90px' },
+                marginTop: { xs: '3rem', md: '1.4rem' },
+                marginLeft: { xs: 0 },
+                justifyContent: { xs: 'center', md: 'unset' }
               }
             }}
           >
@@ -45,12 +51,13 @@ export default function Contacto() {
 
             <Box
               sx={{
+                marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { md: '14px', lg: '15px', xl: '18px' },
-                  width: { md: '357px', lg: '383px', xl: '400px' }
+                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' },
+                  width: { xs: '400px', md: '357px', lg: '383px', xl: '400px' }
                 }
               }}
             >
@@ -63,11 +70,12 @@ export default function Contacto() {
 
             <Box
               sx={{
+                marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { md: '14px', lg: '15px', xl: '18px' }
+                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' }
                 }
               }}
             >
@@ -79,12 +87,13 @@ export default function Contacto() {
 
             <Box
               sx={{
+                marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { md: '14px', lg: '15px', xl: '18px' },
-                  width: { md: '341px', lg: '366px', xl: '400px' }
+                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' },
+                  width: { xs: '390px', md: '341px', lg: '366px', xl: '400px' }
                 }
               }}
             >
@@ -96,10 +105,19 @@ export default function Contacto() {
               <SocialMedia />
             </Box>
           </Box>
-          <div className='logo-creditos'>
-            <Logo elemento='completo' />
-          </div>
-        </div>
+          <Box
+            className='logo-creditos'
+            sx={{
+              order: { xs: 1, md: 2 },
+              marginTop: { xs: '80px', md: 0 },
+              '&:first-child $logo-completo': {
+                width: { sm: '80vw', md: '36vw' }
+              }
+            }}
+          >
+            <Box component={Logo} elemento='completo' sx={{}} />
+          </Box>
+        </Box>
         <Footer />
         <video
           className='video-fondo'
@@ -117,18 +135,33 @@ export default function Contacto() {
 const Footer = () => {
   return (
     <>
-      <div className='envoltura-creditos'>
-        <div className='creditos-sitio'>
+      <Box
+        className='envoltura-creditos'
+        sx={{ position: { xs: 'absolute', md: 'fixed' } }}
+      >
+        <Box
+          className='creditos-sitio'
+          sx={{
+            marginLeft: { xs: '37.5px', md: '75px' },
+            fontSize: { xs: '13px', md: '16px' }
+          }}
+        >
           © 2022 Rayo Neón. Todos los derechos reservados.
-        </div>
-        <div className='creditos-web'>
+        </Box>
+        <Box
+          className='creditos-web'
+          sx={{
+            marginRight: { xs: '37.5px', md: '75px' },
+            fontSize: { xs: '14px', md: '16px' }
+          }}
+        >
           Desarrollado por{' '}
           <a href='https://01a01.art' target='_blank' rel='noreferrer'>
             01a01.art
           </a>
           <IconoGithub />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   )
 }
