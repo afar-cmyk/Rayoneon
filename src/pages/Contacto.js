@@ -34,9 +34,9 @@ export default function Contacto() {
               marginLeft: '75px',
               display: 'flex',
               flexDirection: 'column',
-              gap: { lg: '26px', xl: '50px' },
+              gap: { md: '40px', lg: '26px', xl: '50px' },
               '& > h1': {
-                fontSize: { xl: '90px' },
+                fontSize: { md: '60px', xl: '90px' },
                 marginTop: { xl: '4rem' }
               }
             }}
@@ -46,11 +46,11 @@ export default function Contacto() {
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { lg: '31px', xl: '35px' }
+                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { lg: '15px', xl: '18px' },
-                  width: { lg: '383px', xl: '400px' }
+                  fontSize: { md: '14px', lg: '15px', xl: '18px' },
+                  width: { md: '357px', lg: '383px', xl: '400px' }
                 }
               }}
             >
@@ -64,10 +64,10 @@ export default function Contacto() {
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { lg: '31px', xl: '35px' }
+                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { lg: '15px', xl: '18px' }
+                  fontSize: { md: '14px', lg: '15px', xl: '18px' }
                 }
               }}
             >
@@ -80,11 +80,11 @@ export default function Contacto() {
             <Box
               sx={{
                 '& > h2': {
-                  fontSize: { lg: '31px', xl: '35px' }
+                  fontSize: { md: '28px', lg: '31px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { lg: '15px', xl: '18px' },
-                  width: { lg: '366px', xl: '400px' }
+                  fontSize: { md: '14px', lg: '15px', xl: '18px' },
+                  width: { md: '341px', lg: '366px', xl: '400px' }
                 }
               }}
             >
