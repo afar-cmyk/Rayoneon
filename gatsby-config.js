@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',

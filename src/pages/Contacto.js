@@ -13,6 +13,7 @@ import {
   LocationOn
 } from '@mui/icons-material'
 import Logo from '../images/Logo'
+import '../styles/global.css'
 
 export default function Contacto() {
   return (
