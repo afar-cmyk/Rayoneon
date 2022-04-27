@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    'gatsby-plugin-netlify',
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
@@ -31,15 +32,15 @@ module.exports = {
         ],
         display: 'swap'
       }
-    },
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        generateMatchPathRewrites: true // boolean to turn off automatic creation of redirect rules for client only paths
-      }
     }
+    // {
+    //   resolve: `gatsby-plugin-netlify`,
+    //   options: {
+    //     mergeSecurityHeaders: true, // boolean to turn off the default security headers
+    //     mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
+    //     mergeCachingHeaders: true, // boolean to turn off the default caching headers
+    //     generateMatchPathRewrites: true // boolean to turn off automatic creation of redirect rules for client only paths
+    //   }
+    // }
   ]
 }
