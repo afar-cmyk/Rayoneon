@@ -1,4 +1,5 @@
 import React from 'react'
+import '../styles/global.css'
 import NavBar from '../components/navigation/NavBar'
 import bck_vid from '../images/bck_vid.webm'
 import { Box, Tooltip } from '@mui/material'
