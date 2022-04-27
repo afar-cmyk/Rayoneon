@@ -37,11 +37,11 @@ export default function Contacto() {
               marginLeft: { xs: 0, md: '75px' },
               display: 'flex',
               flexDirection: 'column',
-              gap: { xs: '35px', md: '40px', lg: '26px', xl: '50px' },
-              paddingBottom: { xs: '80px', md: 0 },
+              gap: { xs: '51px', md: '40px', xl: '50px' },
+              paddingBottom: { xs: '110px', md: 0 },
               '& > h1': {
-                fontSize: { xs: '75px', md: '60px', xl: '90px' },
-                marginTop: { xs: '3rem', md: '1.4rem' },
+                fontSize: { xs: '3.7rem', md: '60px', xl: '90px' },
+                marginTop: { xs: '3.5rem', md: '1.4rem' },
                 marginLeft: { xs: 0 },
                 justifyContent: { xs: 'center', md: 'unset' }
               }
@@ -53,11 +53,16 @@ export default function Contacto() {
               sx={{
                 marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '1.7rem', md: '28px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' },
-                  width: { xs: '400px', md: '357px', lg: '383px', xl: '400px' }
+                  fontSize: {
+                    xs: '0.87rem',
+                    md: '14px',
+                    lg: '15px',
+                    xl: '18px'
+                  },
+                  width: { xs: '22rem', md: '357px', lg: '383px', xl: '400px' }
                 }
               }}
             >
@@ -72,10 +77,15 @@ export default function Contacto() {
               sx={{
                 marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '1.7rem', md: '28px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' }
+                  fontSize: {
+                    xs: '0.87rem',
+                    md: '14px',
+                    lg: '15px',
+                    xl: '18px'
+                  }
                 }
               }}
             >
@@ -89,11 +99,16 @@ export default function Contacto() {
               sx={{
                 marginLeft: { xs: '37.5px', md: 0 },
                 '& > h2': {
-                  fontSize: { xs: '35px', md: '28px', lg: '31px', xl: '35px' }
+                  fontSize: { xs: '1.7rem', md: '28px', xl: '35px' }
                 },
                 '& > p': {
-                  fontSize: { xs: '16px', md: '14px', lg: '15px', xl: '18px' },
-                  width: { xs: '390px', md: '341px', lg: '366px', xl: '400px' }
+                  fontSize: {
+                    xs: '0.87rem',
+                    md: '14px',
+                    lg: '15px',
+                    xl: '18px'
+                  },
+                  width: { xs: '21rem', md: '341px', xl: '400px' }
                 }
               }}
             >
@@ -108,11 +123,9 @@ export default function Contacto() {
           <Box
             className='logo-creditos'
             sx={{
+              display: { xs: 'none', lg: 'flex' },
               order: { xs: 1, md: 2 },
-              marginTop: { xs: '80px', md: 0 },
-              '&:first-child $logo-completo': {
-                width: { sm: '80vw', md: '36vw' }
-              }
+              marginTop: { xs: '80px', md: 0 }
             }}
           >
             <Box component={Logo} elemento='completo' sx={{}} />
@@ -143,7 +156,8 @@ const Footer = () => {
           className='creditos-sitio'
           sx={{
             marginLeft: { xs: '37.5px', md: '75px' },
-            fontSize: { xs: '13px', md: '16px' }
+            fontSize: { xs: '0.7rem', md: '16px' },
+            width: { xs: '8rem', sm: 'unset' }
           }}
         >
           © 2022 Rayo Neón. Todos los derechos reservados.
