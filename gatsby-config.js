@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    `gatsby-plugin-material-ui`,
     'gatsby-plugin-netlify',
     'gatsby-plugin-image',
     {
@@ -31,6 +32,12 @@ module.exports = {
           `Assistant:300,400,600,700,800` // you can also specify font weights and styles
         ],
         display: 'swap'
+      }
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        pathToEmotionCacheProps: `src/emotion-cache-props`
       }
     }
   ]
