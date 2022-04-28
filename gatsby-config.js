@@ -24,13 +24,14 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts-v2`,
       options: {
         fonts: [
-          `Baloo 2:600`,
-          `Assistant:300,400,600,700,800` // you can also specify font weights and styles
-        ],
-        display: 'swap'
+          {
+            family: 'Assistant',
+            weights: ['300', '400', '600', '700', '800']
+          }
+        ]
       }
     }
   ]
