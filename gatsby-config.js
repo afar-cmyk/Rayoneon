@@ -22,17 +22,17 @@ module.exports = {
     },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
-    {
-      resolve: `gatsby-plugin-google-fonts-v2`,
-      options: {
-        fonts: [
-          {
-            family: 'Assistant',
-            weights: ['300', '400', '600', '700', '800']
-          }
-        ]
-      }
-    },
+    // {
+    //   resolve: `gatsby-plugin-google-fonts-v2`,
+    //   options: {
+    //     fonts: [
+    //       {
+    //         family: 'Assistant',
+    //         weights: ['300', '400', '600', '700', '800']
+    //       }
+    //     ]
+    //   }
+    // },
     {
       resolve: `gatsby-plugin-netlify`,
       options: {
