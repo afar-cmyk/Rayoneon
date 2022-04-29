@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    `gatsby-plugin-netlify`,
     'gatsby-plugin-image',
     {
       resolve: 'gatsby-source-filesystem',
@@ -21,26 +22,6 @@ module.exports = {
       }
     },
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
-    // {
-    //   resolve: `gatsby-plugin-google-fonts-v2`,
-    //   options: {
-    //     fonts: [
-    //       {
-    //         family: 'Assistant',
-    //         weights: ['300', '400', '600', '700', '800']
-    //       }
-    //     ]
-    //   }
-    // },
-    {
-      resolve: `gatsby-plugin-netlify`,
-      options: {
-        mergeSecurityHeaders: true, // boolean to turn off the default security headers
-        mergeLinkHeaders: true, // boolean to turn off the default gatsby js headers
-        mergeCachingHeaders: true, // boolean to turn off the default caching headers
-        generateMatchPathRewrites: true // boolean to turn off automatic creation of redirect rules for client only paths
-      }
-    }
+    'gatsby-transformer-sharp'
   ]
 }

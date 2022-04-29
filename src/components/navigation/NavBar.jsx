@@ -11,17 +11,17 @@ export default function NavBar(props) {
   // Arreglo con los enlaces que tiene la barra de navegación
   const rutasArray = [
     {
-      ruta: '/Productos/',
+      ruta: '/productos/',
       etiqueta: 'Productos',
       activo: false
     },
     {
-      ruta: '/Portafolio/',
+      ruta: '/portafolio/',
       etiqueta: 'Portafolio',
       activo: false
     },
     {
-      ruta: '/Contacto/',
+      ruta: '/contacto/',
       etiqueta: 'Contacto',
       activo: false
     }

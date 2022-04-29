@@ -92,7 +92,7 @@ export default function Contacto() {
             >
               <h2>Colombia / Bogotá D.C.</h2>
               <p>Ak. 19 # 33a-36, Cundinamarca</p>
-              <p>(+57) 310 881 55 44 master</p>
+              <p>(+57) 310 881 55 44</p>
               <p>(601) 332 6290</p>
             </Box>
 
