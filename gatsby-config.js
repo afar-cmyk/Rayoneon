@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     'gatsby-plugin-image',
     {
@@ -22,6 +23,15 @@ module.exports = {
       }
     },
     'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp'
+    'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/index/`, `/404/`, `/contacto/`, `/productos/*`]
+      },
+      workboxConfig: {
+        globPatterns: ['/src/fonts/*', '/src/videos/*']
+      }
+    }
   ]
 }
