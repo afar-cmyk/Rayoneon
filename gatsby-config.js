@@ -28,9 +28,30 @@ module.exports = {
       resolve: `gatsby-plugin-offline`,
       options: {
         precachePages: [`/index/`, `/404/`, `/contacto/`, `/productos/*`]
+        // workboxConfig: {
+        //   globPatterns: ['**/*/.{woff,woff2,webm}']
+        //   // runtimeCaching: [
+        //   //   {
+        //   //     urlPattern: /^https?:.*\.(woff|woff2|webm|css)$/,
+        //   //     handler: 'NetworkFirst'
+        //   //   }
+        //   // ]
+        // }
       },
       workboxConfig: {
-        globPatterns: ['/src/fonts/*', '/src/videos/*']
+        globPatterns: ['**/*/.{css,woff,woff2,webm}']
+        // runtimeCaching: [
+        //   {
+        //     urlPattern: /^https?:.*\.(woff|woff2|webm|css)$/,
+        //     handler: 'NetworkFirst'
+        //   }
+        //]
+        // workboxConfig: {
+        //   // globPatterns: ['**/*.{woff,woff2,webm,css}']
+        //   // globPatterns: ['/src/fonts/*', '/src/videos/*']
+        //   // globPatterns: ['**/fonts*', '**/videos*']
+        //   globPatterns: ['/src/videos/*']
+        // }
       }
     }
   ]

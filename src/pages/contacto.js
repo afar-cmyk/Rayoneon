@@ -1,7 +1,7 @@
 import React from 'react'
 import '../styles/global.css'
 import NavBar from '../components/navigation/NavBar'
-import bck_vid from '../videos/bck_vid.webm'
+import bck_vid from '../static/bck_vid.webm'
 import { Box, Tooltip } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub'
 import {
