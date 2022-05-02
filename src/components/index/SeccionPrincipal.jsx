@@ -1,6 +1,6 @@
 import React from 'react'
 import Logo from '../../images/Logo'
-import bck_vid from '../../images/bck_vid.webm'
+import bck_vid from '../../static/videos/backgroundVideo.webm'
 
 const SeccionPrincipal = () => {
   return (
