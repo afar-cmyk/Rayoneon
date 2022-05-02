@@ -4,6 +4,7 @@ module.exports = {
     title: 'Rayoneon'
   },
   plugins: [
+    `gatsby-plugin-offline`,
     `gatsby-plugin-netlify`,
     'gatsby-plugin-image',
     {
@@ -15,13 +16,42 @@ module.exports = {
       __key: 'images'
     },
     'gatsby-plugin-sitemap',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-sharp',
     {
-      resolve: 'gatsby-plugin-manifest',
+      resolve: `gatsby-plugin-manifest`,
       options: {
-        icon: 'src/images/icon.png'
+        name: `Rayo Neón`,
+        short_name: `RayoNeón`,
+        start_url: `/`,
+        background_color: `#12151b`,
+        theme_color: `#12151b`,
+        display: `standalone`,
+        icon: 'src/static/images/iconoLogo.svg',
+        cache_busting_mode: 'none',
+        theme_color_in_head: false
       }
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp'
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [
+          `/index/*`,
+          `/404/*`,
+          `/contacto/*`,
+          `/productos/*`,
+          `/portafolio/*`
+        ],
+        workboxConfig: {
+          // globPatterns: ['**/src/static/images*'],
+          runtimeCaching: [
+            {
+              urlPattern: /(\.js$|\.css$|\.webm$|\.woff$|\.woff2$|\.svg$)/,
+              handler: `StaleWhileRevalidate`
+            }
+          ]
+        }
+      }
+    }
   ]
 }
