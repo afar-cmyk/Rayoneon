@@ -29,14 +29,19 @@ module.exports = {
       options: {
         precachePages: [
           `/index/*`,
-          `/404/`,
-          `/contacto/`,
+          `/404/*`,
+          `/contacto/*`,
           `/productos/*`,
-          `/portafolio/`
-        ]
-      },
-      workboxConfig: {
-        globPatterns: ['**/*/.{css,woff,woff2,webm}']
+          `/portafolio/*`
+        ],
+        workboxConfig: {
+          runtimeCaching: [
+            {
+              urlPattern: /(\.js$|\.css$|\.webm$|\.woff$|\.woff2$)/,
+              handler: `StaleWhileRevalidate`
+            }
+          ]
+        }
       }
     }
   ]
