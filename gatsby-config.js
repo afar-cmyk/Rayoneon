@@ -16,14 +16,22 @@ module.exports = {
       __key: 'images'
     },
     'gatsby-plugin-sitemap',
-    {
-      resolve: 'gatsby-plugin-manifest',
-      options: {
-        icon: 'src/images/icon.png'
-      }
-    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `Rayo Neón`,
+        short_name: `RayoNeón`,
+        start_url: `/`,
+        background_color: `#12151b`,
+        theme_color: `#12151b`,
+        display: `standalone`,
+        icon: 'src/static/images/iconoLogo.svg',
+        cache_busting_mode: 'none',
+        theme_color_in_head: false
+      }
+    },
     {
       resolve: `gatsby-plugin-offline`,
       options: {
@@ -35,9 +43,10 @@ module.exports = {
           `/portafolio/*`
         ],
         workboxConfig: {
+          // globPatterns: ['**/src/static/images*'],
           runtimeCaching: [
             {
-              urlPattern: /(\.js$|\.css$|\.webm$|\.woff$|\.woff2$)/,
+              urlPattern: /(\.js$|\.css$|\.webm$|\.woff$|\.woff2$|\.svg$)/,
               handler: `StaleWhileRevalidate`
             }
           ]
