@@ -99,6 +99,7 @@ const links = {
 }
 
 const barraPrincipal = {
+  overflowY: 'scroll',
   position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
