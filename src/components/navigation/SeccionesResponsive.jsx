@@ -21,8 +21,8 @@ const MenuResponsive = styled((props) => (
 ))(({ theme }) => ({
   '& .MuiPaper-root': {
     borderRadius: 4,
-    marginTop: theme.spacing(0.5),
-    minWidth: 100,
+    marginTop: theme.spacing(0.9),
+    minWidth: 130,
     background: '#25282E',
     boxShadow:
       'rgb(255, 255, 255) 0px 0px 0px 0px, rgba(0, 0, 0, 0.05) 0px 0px 0px 1px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px',
@@ -43,7 +43,7 @@ export default function SeccionesResponsive(props) {
     fontFamily: 'Assistant',
     fontStyle: 'normal',
     fontWeight: 600,
-    fontSize: '16px'
+    fontSize: '18px'
   }
 
   const estiloInactivo = {
@@ -52,7 +52,7 @@ export default function SeccionesResponsive(props) {
     fontFamily: 'Assistant',
     fontStyle: 'normal',
     fontWeight: 400,
-    fontSize: '16px'
+    fontSize: '18px'
   }
 
   // Manejador de estados y comportamiento del menu responsive
@@ -82,8 +82,9 @@ export default function SeccionesResponsive(props) {
       <IconButton
         id='boton-menu-responsive'
         sx={{
-          width: '1.2em',
-          height: '1.2em',
+          // width: '1.2em',
+          // height: '1.2em',
+          padding: 0,
           color: '#CCCCCC',
           '&:hover': { color: '#f2f2f2' },
           display: { xs: 'flex', sm: 'none' },
@@ -92,7 +93,13 @@ export default function SeccionesResponsive(props) {
         aria-controls='boton-menu'
         onClick={activadorMenu}
       >
-        {menuAbierto ? <Close /> : <MenuRounded />}
+        {menuAbierto ? (
+          <Close
+            sx={{ fontSize: '1.9rem', color: '#f2f2f2', cursor: 'pointer' }}
+          />
+        ) : (
+          <MenuRounded sx={{ fontSize: '1.9rem', color: '#cccccc' }} />
+        )}
       </IconButton>
       <MenuResponsive
         id='menu-responsive'
@@ -118,8 +125,8 @@ export default function SeccionesResponsive(props) {
               key={index}
               sx={{
                 ...contenedorPrincipal,
-                border: activo ? '1px solid #fe005f' : 'none',
-                boxShadow: activo ? '0px 0px 7px 4px #fe005f5c' : 'none',
+                border: activo ? '1px solid #44c6e9' : 'none',
+                boxShadow: activo ? '0px 0px 7px 1px #44c6e95c' : 'none',
                 boxSizing: 'border-box',
                 borderRadius: 1,
                 '&:hover': {
