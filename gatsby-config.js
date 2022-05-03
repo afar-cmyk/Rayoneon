@@ -28,7 +28,7 @@ module.exports = {
         background_color: `#12151b`,
         theme_color: `#12151b`,
         display: `standalone`,
-        icon: 'src/static/images/iconoLogo.svg',
+        icon: 'src/static/images/iconoLogoN.svg',
         cache_busting_mode: 'none',
         theme_color_in_head: false
       }
@@ -44,7 +44,6 @@ module.exports = {
           `/portafolio/*`
         ],
         workboxConfig: {
-          // globPatterns: ['**/src/static/images*'],
           runtimeCaching: [
             {
               urlPattern: /(\.js$|\.css$|\.webm$|\.woff$|\.woff2$|\.svg$)/,
