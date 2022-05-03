@@ -28,9 +28,12 @@ module.exports = {
         background_color: `#12151b`,
         theme_color: `#12151b`,
         display: `standalone`,
-        icon: 'src/static/images/iconoLogoN.svg',
         cache_busting_mode: 'none',
-        theme_color_in_head: false
+        // theme_color_in_head: false
+        icon: 'src/static/images/iconoLogo.svg',
+        icon_options: {
+          purpose: `any`
+        }
       }
     },
     {
