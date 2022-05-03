@@ -22,7 +22,8 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Rayo Neón`,
-        short_name: `RayoNeón`,
+        short_name: `Rayo Neón`,
+        description: `Avisos publicitarios de Neón y Acrilico, en Bogotá y a nivel nacional.`,
         start_url: `/`,
         background_color: `#12151b`,
         theme_color: `#12151b`,
