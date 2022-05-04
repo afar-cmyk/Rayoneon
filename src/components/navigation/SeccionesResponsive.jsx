@@ -82,8 +82,6 @@ export default function SeccionesResponsive(props) {
       <IconButton
         id='boton-menu-responsive'
         sx={{
-          // width: '1.2em',
-          // height: '1.2em',
           padding: 0,
           color: '#CCCCCC',
           '&:hover': { color: '#f2f2f2' },

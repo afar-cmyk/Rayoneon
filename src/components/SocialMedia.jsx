@@ -9,7 +9,8 @@ import {
   MoreHorizRounded,
   LocationOn
 } from '@mui/icons-material'
-import { Box, Tooltip, Fade } from '@mui/material'
+import { Box, Tooltip, Fade, useMediaQuery } from '@mui/material'
+import { useTheme } from '@mui/material/styles'
 
 const SocialMedia = () => {
   let iconosSocialmedia = [
@@ -55,6 +56,10 @@ const SocialMedia = () => {
   const [estadoSocial, setEstadoSocial] = React.useState(true)
   const [estadoBtnMenu, setEstadoBtnMenu] = React.useState(false)
 
+  // Devuelve true si la pagina no tiene un ancho mobile
+  const theme = useTheme()
+  const paginaGrande = useMediaQuery(theme.breakpoints.up('sm'))
+
   // Comprueba si la pagina se encuentra en la posicion inicial
   const compPaginaArriba = () => {
     return window.innerHeight + window.scrollY >= document.body.offsetHeight
@@ -93,7 +98,10 @@ const SocialMedia = () => {
 
   return (
     <>
-      <div className='contenedor-social-media'>
+      <div
+        className='contenedor-social-media'
+        style={{ display: paginaGrande ? 'flex' : 'none' }}
+      >
         <Tooltip title='Redes Sociales' arrow>
           <div
             className='cuadro-social-media Menu'
