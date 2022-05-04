@@ -99,7 +99,6 @@ const links = {
 }
 
 const barraPrincipal = {
-  overflowY: 'scroll',
   position: 'fixed',
   display: 'flex',
   flexDirection: 'row',
@@ -108,7 +107,7 @@ const barraPrincipal = {
   alignItems: 'center',
   flexWrap: 'nowrap',
   height: '68px',
-  width: '100vw',
+  minWidth: '100%',
   boxSizing: 'border-box',
   transition: 'background .3s',
   background: '#0E0F12',

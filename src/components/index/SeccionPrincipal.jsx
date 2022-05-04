@@ -1,11 +1,16 @@
 import React from 'react'
 import Logo from '../../images/Logo'
 import bck_vid from '../../static/videos/backgroundVideo.webm'
+import { Box } from '@mui/material'
 
 const SeccionPrincipal = () => {
   return (
     <>
-      <section className='seccion-principal'>
+      <Box
+        component='section'
+        className='seccion-principal'
+        sx={{ ...seccion }}
+      >
         <video className='video-fondo' autoPlay loop muted src={bck_vid} />
         <Logo elemento='completo' />
         <div className='contenido-principal'>
@@ -22,9 +27,16 @@ const SeccionPrincipal = () => {
             donde nos indique.
           </p>
         </div>
-      </section>
+      </Box>
     </>
   )
+}
+
+let seccion = {
+  px: {
+    xs: '37.5px',
+    sm: '96px'
+  }
 }
 
 export default SeccionPrincipal

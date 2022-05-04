@@ -39,7 +39,7 @@ export default function Contacto() {
               marginLeft: { xs: 0, md: '75px' },
               display: 'flex',
               flexDirection: 'column',
-              gap: { xs: '51px', md: '40px', xl: '50px' },
+              gap: { xs: '51px', md: '40px' },
               paddingBottom: { xs: '110px', md: 0 },
               '& > h1': {
                 fontSize: { xs: '3.7rem', md: '60px', xl: '90px' },
@@ -132,8 +132,9 @@ export default function Contacto() {
           >
             <Box component={Logo} elemento='completo' sx={{}} />
           </Box>
+          <Footer />
         </Box>
-        <Footer />
+
         <video
           className='video-fondo'
           autoPlay
