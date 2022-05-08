@@ -61,14 +61,6 @@ let contenido = {
     sm: '408px'
   },
   m: 0
-  // ml: {
-  //   xs: '0',
-  //   sm: '37px'
-  // },
-  // mb: {
-  //   xs: '0',
-  //   sm: '35px'
-  // }
 }
 
 let h1 = {
