@@ -46,7 +46,7 @@ const ModalPrueba = () => {
                     <h5>Nuestro equipo:</h5>
                     <p>
                       Diseñadores que realiza diseños exclusivos y novedosos
-                      para su establecimiento o empresa.
+                      para su establecimiento o empresaaa.
                     </p>
                   </li>
                 </ul>
