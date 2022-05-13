@@ -9,11 +9,17 @@ export default function Productos() {
         <p>
           Esta es la pagina <b>Productos</b>
         </p>
-        <div>Neón</div>
-        <div>Acrilico</div>
-        <div>Electronicos</div>
+        <div style={{ ...cartas }}>Neón</div>
+        <div style={{ ...cartas }}>Acrilico</div>
+        <div style={{ ...cartas }}>Electronicos</div>
       </section>
       <br />
     </div>
   )
+}
+
+let cartas = {
+  width: '250px',
+  height: '600px',
+  backgroundColor: 'white'
 }
