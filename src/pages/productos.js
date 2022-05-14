@@ -6,9 +6,6 @@ export default function Productos() {
     <div>
       <NavBar estado={0} />
       <section>
-        <p>
-          Esta es la pagina <b>Productos</b>
-        </p>
         <div style={{ ...cartas }}>Neón</div>
         <div style={{ ...cartas }}>Acrilico</div>
         <div style={{ ...cartas }}>Electronicos</div>
